@@ -1,0 +1,47 @@
+body {
+  background-color: aliceblue;
+}
+
+a:hover {
+  font-weight: bold;
+}
+
+.back-brigada {
+  background-image: url(https://img05.rl0.ru/afisha/e1200x600i/daily.afisha.ru/uploads/images/c/d8/cd88cee17b6d4a5dba5ea0b84cac0f42.jpg);
+  background-size: contain;
+  background-blend-mode: overlay;
+}
+
+
+
+.width400 {
+  width: 400px;
+}
+
+.txtbigger1 {
+  font-size: 0.9em;
+}
+
+.txtbigger2 {
+  font-size: 1.2em;
+}
+
+.txtbigger3 {
+  font-size: 1.1em;
+}
+
+.maxWidth {
+  width: max;
+}
+
+button .bi-caret-right {
+  float: left;
+}
+
+.rightBlockOverflow {
+  overflow-x: hidden;
+}
+
+.mainBg {
+  background-color: #88e3f5d1;
+}
