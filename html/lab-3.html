@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" class="animate__animated animate__fadeIn">
+<html dir="ltr" class="animate__animated animate__fadeIn" lang="uk">
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/prism.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <script src="../js/main2.js"></script>
+    <script src="../js/main3.js"></script>
     <script src="../js/prism.js"></script>
 </head>
 
@@ -73,52 +73,23 @@
                 <!-- Vertical menu -->
                 <div class="btn-group-vertical mw-100 p-3">
 
-                    <button value="description" type="button" onclick="changeMain(this)"
-                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Постановка задачі Лабораторної роботи № 2
-                    </button>
                     <button type="button" value="theme" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2 txtbigger2">Тема, мета лабараторної роботи, github
                     </button>
-                    <button type="button" value="lists" onclick="changeMain(this)"
-                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Списки
+                    <button type="button" value="macket-view" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Зовняшній вигляд макету
                     </button>
-                    <button type="button" value="idents" onclick="changeMain(this)"
-                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Ідентифікатори
+                    <button type="button" value="html-macket" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">HTML-код макету
                     </button>
-                    <button type="button" value="margs_pads" onclick="changeMain(this)"
-                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Відступи
+                    <button type="button" value="tables" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Розмітка сторінки за
+                        дпомогою таблиці
                     </button>
                     <button type="button" value="floaters" onclick="changeMain(this)"
-                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Плаваючі елементи
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Розмітка сторінки за
+                        дпомогою плаваючих блоків
                     </button>
-
-                    <button type="button" class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2" onclick="changeClass()"
-                            data-bs-toggle="collapse" href="#collapseStructe" role="button" aria-expanded="false"
-                            aria-controls="collapseStructe">Селектори
-                        <i id="changeArrow" class="bi-arrow-down-circle"></i></button>
-
-                    <!-- Выпидающее меню структуры документа -->
-                    <div class="collapse font-monospace w-100" id="collapseStructe">
-                        <div class="btn-group-vertical p-3 w-100">
-                            <button type="button" value="str_1" onclick="changeMain(this)"
-                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
-                                    class="bi-caret-right"></i> Селектори тегу і класу
-                            </button>
-                            <button type="button" value="str_2" onclick="changeMain(this)"
-                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
-                                    class="bi-caret-right"></i> Інші селектори
-                            </button>
-                            <button type="button" value="str_3" onclick="changeMain(this)"
-                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
-                                    class="bi-caret-right"></i> Групування селекторів
-                            </button>
-                            <!--                            <button type="button" value="str_4" onclick="changeMain(this)"-->
-                            <!--                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i-->
-                            <!--                                    class="bi-caret-right"></i> HTML-код посилання-->
-                            <!--                            </button>-->
-                        </div>
-                    </div>
-
                     <button type="button" value="conclusion" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Висновки
                     </button>
@@ -165,9 +136,8 @@
                 </div>
                 <!-- center info -->
                 <div class="container-fluid p-3 bg-light text-center mt-5">
-                    <h3 class="animate__animated animate__lightSpeedInRight">Лабаратаорна робота № 2</h3>
-                    <h4>На тему: Каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових
-                        елементів в html-документах.</h4>
+                    <h3 class="animate__animated animate__lightSpeedInRight">Лабаратаорна робота № 3</h3>
+                    <h4>На тему: Блочна верстка HTML-документу за макетом.</h4>
                 </div>
 
                 <!-- row -->
@@ -192,21 +162,15 @@
             <!-- ///Дефолтный контейнер -->
 
             <!-- Description block -->
-            <main id="description" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+            <main id="macket-view" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Постановка задачі Лабораторної роботи № 2: </h2>
+                    <h2 class="m-3"> Зовняшній вигляд макету: </h2>
                 </div>
-                <div class="container-fluid p-3 bg-light h4 mt-3">
-                    Дана лабораторна робота орієнтована на засвоєння теоретичного матеріалу, такого як основна теорія
-                    каскадних таблиць стилів, селекторів, ідентифікаторів, стильового оформлення текстових елементів в
-                    HTML-документах. За мету ставиться застосування теоретичних знань на практиці, методом використання
-                    різних селекторів та ідентифікаторів для удосконалення HTML-коду головної сторінки WEB-застосунку
-                    відповідно раніше обраної тематики.
+                <div class="container-fluid p-3 text-center">
+                    <img class="img mw-100" src="../img/lab3/real-maket.png" alt="реальный макет"><br><br>
+                    <img class="img mw-100" src="../img/lab3/maket.png" alt="макет">
                 </div>
-                <div class="container-fluid text-center mt-3">
-                    <img class="img img-responsive w-100"
-                         src="https://www.profguide.io/images/article/a/6/dTVdJ4dlfv.jpg" alt="Мета - це твоє життя!">
-                </div>
+
             </main>
             <!-- ///Description block -->
 
@@ -216,19 +180,23 @@
                     <h2 class="m-3"> Тема, мета лабараторної роботи, github: </h2>
                 </div>
                 <div class="container-fluid p-3 bg-light h4 mt-3">
-                    <b>Тема:</b> каскадні таблиці стилів. Селектори. Ідентифікатори. Стильове оформлення текстових
-                    елементів в html-документах.<br><br>
-                    <b>Мета:</b> придбати практичні навички роботи з селекторами,ідентифікаторами, списками,
-                    різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими
-                    елементами, оформленням текстових елементів.
+                    <b>Тема:</b> блочна верстка HTML-документу за макетом.<br><br>
+                    <b>Мета:</b> придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі
+                    плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок.
                 </div>
                 <!-- Button to github -->
                 <div class="text-center">
-                    <a href="https://github.com/shutuper/web_lab_2" alt="github: shutuper" class="btn">
+                    <a href="https://github.com/shutuper/web_lab_3" alt="github: shutuper" class="btn">
                         <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
-                            <i class="bi bi-github "></i> Check code
+                            <i class="bi bi-github "></i> Check lab code
                         </button>
                     </a>
+                    <br>
+                    <a href="https://github.com/shutuper/WEB_labs" alt="github: shutuper" class="btn">
+                    <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                        <i class="bi bi-github "></i> Check conclusion code
+                    </button>
+                </a>
                 </div>
                 <!-- ///Button to github -->
                 <div class="container-fluid text-center mt-3">
@@ -243,13 +211,12 @@
                     <h2 class="m-3"> Висновки: </h2>
                 </div>
                 <div class="container-fluid mt-3 h4 bg-light p-2">
-                    У ході даної лабораторної роботі ми нагадали основну теорію каскадних таблиць стилів, селекторів,
-                    ідентифікаторів, стильового оформлення текстових елементів в HTML-документах. Ми придбали практичні
-                    навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і
-                    фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів.
-                    Ці селектори та ідентифікатори ми використали для удосконалення HTML-коду головної сторінки
-                    WEB-застосунку відповідно раніше обраної тематики. Запустили даний документ у браузері для перевірки
-                    та переконалися, що все працює коректно.
+                    У ході виконання даної лабораторної роботи ми нагадали теорію про теги і атрибути таблиць, засоби
+                    CSS для розміщення елементів на веб-сторінці. Ми придбали практичні навички роботи верстки сторінок
+                    засобами CSS, верстки на основі плаваючих елементів, оцінили на власному досвіді переваги та
+                    недоліки різних типів макетів веб-сторінок. Дані технології ми використали для удосконалення
+                    HTML-коду головної сторінки WEB-застосунку відповідно раніше обраної тематики. Запустили даний
+                    документ у браузері і переконались, що все працює коректно.
                 </div>
                 <div class="container-fluid text-center mt-3">
                     <img class="img img-responsive"
@@ -257,34 +224,48 @@
                          alt="Мета - це твоє життя!">
                 </div>
             </main>
-            <!-- ///Task block -->
-            <!-- Href block -->
-            <main id="str_4" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+            <main id="tables" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3">HTML-код посилання</h2>
+                    <h2 class="m-3"> Розмітка сторінки за допомогою таблиці: </h2>
                 </div>
-                <div class="container-fluid text-center mt-3">
-                    <img class="img img-responsive" src="../img/link_img.jpg" alt="Мета - це твоє життя!">
+                <div class="container-fluid mt-3 h4 bg-light p-2">
+                    Веб-сторінки можуть містити різні об&rsquo;єкти: тексти, меню, зображення тощо. Для впорядкування об&rsquo;єктів
+                    на веб-сторінці її (всю або частину) можна розмічати як таблицю.
+                    Для створення таблиці використовується паринй тег &lt;table&gt; &lt;/table&gt; який створює таблицю
+                    в HTML документі. Таблиця має складатись хочаб з одног рядка &lt;tr&gt; та однієї комірки (&lt;th&gt;
+                    - комірка-заголовок або &lt;td&gt; - комірка таблиці)
+                    Таблиця, створена тегом &lt;table&gt; може бути розділена на верхній, нижній колонтитули та основну
+                    частину за допомогою тегів &lt;thead&gt;, &lt;tfoot&gt;, &lt;tbody&gt;.
+                    Атрибут rowspan визначає об'єднання рядків у один стовпчик. Атрибут colspan визначає об'єднання
+                    стовпців у один рядок. Значення атрибута вказує на те, скільки стовпчиків буде об'єднано.
                 </div>
+
                 <pre>
                   <code class="language-html">
-    &lt;div class=&quot;btn-group&quot;&gt;
-      &lt;a href=&quot;program_subject.html&quot; class=&quot;btn btn-primary border mt-2&quot;&gt;Cторінку с описом предметної галузі&lt;/a&gt;
-      &lt;a href=&quot;D:\Atom\WEB_labs\html\lab-1.html&quot; class=&quot;btn btn-primary border mt-2&quot;&gt;Висновок&lt;/a&gt;
-    &lt;/div&gt;     
+&lt;table id=&quot;table&quot; border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;th colspan=&quot;7&quot; id=&quot;cell&quot;&gt;1&lt;/th&gt;
+        &lt;div id=&quot;pos&quot;&gt;&lt;/div&gt;
+    &lt;/tr&gt;
+    &lt;tr id=&quot;heigher&quot;&gt;
+        &lt;td id=&quot;column_1&quot; colspan=&quot;1&quot;&gt;2&lt;/td&gt;
+        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;column_3&quot; colspan=&quot;1&quot;&gt;3&lt;/td&gt;
+        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;column_4&quot; colspan=&quot;1&quot;&gt;4&lt;/td&gt;
+        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;column_3&quot; colspan=&quot;1&quot;&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan=&quot;7&quot; id=&quot;footer&quot;&gt;6&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
                   </code>
               </pre>
-                <div class="container-fluid mt-3 h4 bg-light p-2">
-                    Для створення посилання необхідно повідомити браузеру, що є посиланням, а також вказати адресу
-                    документа, на який слід зробити посилання. Обидві дії виконуються за допомогою тега &lt;a&gt;.
-                    &lt;a href=&quot;URL&quot;&gt; текст посилання &lt;/a&gt;
-                    Атрибут href визначає URL (Universal Resource Locator, універсальний покажчик ресурсу), іншими
-                    словами, адресу документа, на який слід перейти, а вміст контейнера &lt;a&gt; є посиланням. Текст,
-                    розташований між тегами &lt;a&gt; і
-                    &lt;/a&gt;, за замовчуванням стає синього кольору і підкреслюється.
+                <div class="container-fluid p-3 text-center">
+                    <img src="../img/lab3/dima.png" alt="Плаваючі елементи">
                 </div>
             </main>
-            <!-- ///Href block -->
 
             <!-- Photo block -->
             <main id="team_photo" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
@@ -316,228 +297,211 @@
             </main>
             <!-- ///Photo block -->
 
-            <!-- Structure blocks -->
-
-            <!-- str_1 -->
-            <main id="str_1" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
-                <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Селектори тегу і класу: </h2>
-                </div>
-                <div class="container-fluid">
-                    <div class="container-fluid p-3 text-center">
-                        <img src="../img/lab2/str_1.png" alt="Селектори тегу і класу">
-                    </div>
-                    <pre>
-                    <code class="language-css">
-main {
-    background-color: #170521 !important;
-    padding: 100px;
-    margin: 0;
-    font-family: monospace;
-    height: max-content;
-}
-
-html {
-    background: #070916;
-}
-
-.photo-clown {
-    padding: 8px;
-}
-
-.main-div-float-left {
-    float: left;
-}
-
-main:last-child {
-    color: white;
-}
-                    </code>
-                </pre>
-                    <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                        В ролі селектора може виступати будь-який тег HTML, для якого визначаються правила форматування,
-                        такі як: колір, фон, розмір і т. Д. Правила задаються в наступному вигляді.
-                        Тег {властивість1: значення; властивість2: значення; ...}
-                        Спочатку вказується ім'я тега, оформлення якого буде перевизначеним. Усередині фігурних дужок
-                        пишеться стильова властивість, а після двокрапки - його значення.
-                        Селектори класу використовуються для визначення стилів для кількох елементів одного типу,
-                        розміщених у різних частинах або на різних сторінках веб-сайту. Для створення заголовка класу
-                        headline необхідно додати атрибут class з відповідним значенням в відкриваючий тег h1. Далі
-                        необхідно задати стиль для зазначеного класу. Даний стиль оформлення можна застосувати і для
-                        інших елементів.
-                    </div>
-                </div>
-            </main>
-
-            <!-- str_2 -->
-            <main id="str_2" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
-                <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Інші селектори </h2>
-                </div>
-                <div class="container-fluid">
-                    <div class="container-fluid p-3 text-center">
-                        <img src="../img/lab2/str_2_1.png" alt="Інші селектори">
-                        <img src="../img/lab2/str_2_2.png" alt="Інші селектори">
-                    </div>
-                    <pre>
-                    <code class="language-css">
-main:last-child {
-    color: white;
-}
-#text-bigger {
-    font-size: 1.3em;
-}
-div list li {
-    padding-left: 40px;
-    margin: 15px auto;
-}
-li[value="text"] {
-    font-style: italic;
-}
-* {
-    font-size: 1.3em;
-    font-family: monospace;
-}
-                    </code>
-                </pre>
-                </div>
-                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                    Універсальний селектор відповідає будь-якому елементу, наприклад, наступний запис обнулить відступи
-                    для всіх елементів веб-сайту:
-                    * {Margin: 0;}
-                    Селектор Ідентифікатора
-                    Селектори ідентифікатора використовуються для привласнення стилю одному конкретному елементу.
-                    Ідентифікатор id елемента можна використовувати в документі лише один раз, оскільки він виділяє
-                    унікальний елемент.
-                    Імена класів можуть складатися з латинських символів, цифр і знаків - і _. Ім'я класу має починатися
-                    з літери.
-                    Селектори атрибута
-                    Ці селектори уможливлюють вибір елемента, заснований тільки на наявності атрибута (наприклад, href)
-                    або на всіляких різного роду поєднаннях зі значенням атрибута.
-                    Сусідні і дочірні селектори
-                    Сусідніми називаються елементи веб-сторінки, коли вони йдуть безпосередньо один за одним в коді
-                    документа. Дочірнім називається елемент, який безпосередньо розташовується всередині батьківського
-                    елементу.
-                </div>
-            </main>
-
-            <!-- str_3 -->
-            <main id="str_3" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
-                <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Групування селекторів </h2>
-                </div>
-                <div class="container-fluid p-3 text-center">
-                    <img src="../img/lab2/str_3.png" alt="Групування селекторів">
-                </div>
-                <pre>
-                  <code class="language-css">
-html, main {
-    background: #070916;
-}
-                  </code>
-              </pre>
-                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                    Коли ви групуєте селектори CSS, ви застосовуєте однакові стилі до декількох різних елементів, не
-                    повторюючи стилів у вашій таблиці стилів.
-                    Щоб групувати CSS-селектори на аркуші стилів, ви використовуєте коми для розділення кількох
-                    згрупованих селекторів у стилі.
-                    Приклад: div, p {color: # f00; }
-                    Кома означає "і", тому цей селектор застосовується до всіх елементів абзацу та всіх елементів
-                    поділу. Якщо кома відсутня, селектор замість цього застосовується до всіх елементів абзацу, які є
-                    дочірнім поділом.
-                    Будь-яка форма селектора може бути згрупована з будь-яким іншим селектором.
-                    Ви можете згрупувати будь-яку кількість селекторів, включаючи селектори, що представляють собою
-                    окремі слова та сполучники.
-                    Будь-який дійсний селектор може бути розміщений у групі, і всі елементи в документі, які
-                    відповідають усім згрупованим елементам, матимуть однаковий стиль на основі цього властивості стилю.
-                </div>
-            </main>
             <!-- Floaters -->
             <main id="floaters" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Плаваючі елементи </h2>
+                    <h2 class="m-3"> Розмітка сторінки за допомогою плаваючих блоків: </h2>
                 </div>
-                <div class="container-fluid p-3 text-center">
-                    <img class="img mw-100" src="../img/lab2/floaters.png" alt="Плаваючі елементи">
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    При блоковій верстці істотне значення приділяється універсальному тегу &lt;div&gt;, який виконує
+                    безліч функцій. Завдяки цьому тегу HTML-код розпадається на ряд чітких наочних блоків, код при цьому
+                    виходить більш компактним, ніж при табличній верстці, до того ж пошукові системи його краще
+                    індексують.
+                    Через різні класи і ідентифікатори div-блокам задається відповідне CSS-оформлення. Наприклад, щоб
+                    було зручніше писати стилі для шапки сайту, можна додати до блоку клас .header, а для футера &mdash;
+                    клас .footer.<br>
+                    Перевагами даного типу є:<br>
+                    &bull; Кешування блоків браузером, за рахунок чого швидке завантаження сторінок;<br>
+                    &bull; Необмежені можливості по створенню складних дизайнів;<br>
+                    &bull; Чітке відділення частини з контентом;<br>
+                    &bull; Простота реалізації програмної частини;
                 </div>
-                <pre>
-                  <code class="language-css">
-.main-div-float-left {
+
+                <div class="container-fluid row">
+                    <div class="container col-6 p-2"><pre>
+                            <code class="language-css">
+.maxim {
+    width: available;
+    background-color: blue;
+    color: white;
+    height: 20%;
+}
+.yel-1 {
     float: left;
+    background-color: yellow;
+    height: 60%;
+    width: 25%;
 }
-                  </code>
-              </pre>
-                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                    Плаваючими будемо називати такі елементи, які обтікають по контуру іншими об'єктами веб-сторінки,
-                    так і з текстом.
-                    Плаваючі елементи досить активно застосовуються при верстці веб-сторінок і служать для реалізації
-                    цих і не тільки завдань:<br>
-                    • обтікання картинок текстом;<br>
-                    • створення врізки;<br>
-                    • горизонтальні меню;<br>
-                    • колонки.<br>
-                    Обтікання відбувається за допомогою стильової властивості float із значенням left або right. За
-                    замовчуванням обтікання для елементів не встановлюється, але якщо це з яких-небудь причин необхідно
-                    вказати явно, слід використовувати значення none.
+.wh {
+    background-color: white;
+    float: left;
+    height: 60%;
+    width: 50%;
+}
+.yel-2 {
+    background-color: yellow;
+    height: 60%;
+}
+.bl-b {
+    background-color: blue;
+    color: white;
+}
+                    </code>   </pre>
+                    </div>
+                    <div class="container col-6 p-2"><pre>
+                  <code class="language-html">
+&lt;div class=&quot;maxim&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;yel-1&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;wh&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;yel-2&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;bl-b&quot;&gt;3&lt;/div&gt;
+                  </code></pre>
+                    </div>
+                    <div class="container-fluid p-3 text-center">
+                        <img src="../img/lab3/egor.png" alt="Плаваючі елементи">
+                    </div>
                 </div>
+
             </main>
 
-            <main id="margs_pads" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+            <main id="html-macket" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Відступи: </h2>
-                </div>
-                <div class="container-fluid p-3 text-center">
-                    <img src="../img/lab2/margs_pads.png" alt="Плаваючі елементи">
+                    <h2 class="m-3"> HTML-код макету: </h2>
                 </div>
                 <pre>
-                  <code class="language-css">
-main {
-    background-color: #170521 !important;
-    padding: 100px;
-    margin: 0;
-    font-family: monospace;
-    height: max-content;
-}
-                  </code>
-              </pre>
-                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                    Відступ - відхилення від краю колонки однієї або декількох рядків, що йдуть підряд.
-                    Види відступів:<br>
-                    • margin-bottom - встановлює величину відступу від нижнього краю елемента.<br>
-                    • margin-left - встановлює величину відступу від лівого краю елемента.<br>
-                    • margin-right - встановлює величину відступу від правого краю елемента.<br>
-                    • margin-top - встановлює величину відступу від верхнього краю елемента.<br>
-                    • margin - встановлює величину відступу від кожного краю елемента.<br>
-                </div>
-            </main>
+                  <code class="language-html">
+&lt;main class=&quot;container-fluid px-5 py-3 mt-2&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-6 &quot;&gt;
+            &lt;p class=&quot;container-fluid  w-100 border bg-dark text-white text-monospace h4 p-3 fw-bold&quot;&gt;
+                Перуки в стилі &quot;Clown&quot;:
+            &lt;/p&gt;
+            &lt;div class=&quot;row mx-0 container-fluid w-100 p-3&quot; style=&quot;background-color: #27182c;&quot;&gt;
+                &lt;div class=&quot;col-6&quot;&gt;
+                    &lt;img class=&quot;img img-responsive mt-3 w-100 border rounded photo-clown&quot; src=&quot;../img/kosobyc.jpg&quot;
+                         alt=&quot;Косуб клоун&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-6&quot;&gt;
+                    &lt;img class=&quot;img img-responsive mt-3 w-100 border rounded photo-clown&quot;
+                         src=&quot;https://mandarinonline.ru/images/stories/virtuemart/product/%D0%9F%D0%9A162,2.jpg&quot;
+                         alt=&quot;Клоун не косуб&quot;&gt;
+                &lt;/div&gt;
 
-            <main id="idents" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
-                <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Ідентифікатори: </h2>
-                </div>
-                <div class="container-fluid p-3 text-center">
-                    <img class="img mw-100" src="../img/lab2/idents.png" alt="Плаваючі елементи">
-                </div>
-                <pre>
-                  <code class="language-css">
-#text-bigger {
-    font-size: 1.3em;
-}
+                &lt;div class=&quot;container-fluid py-3 mt-2 h5 mt-3&quot;&gt;
+                    &lt;table class=&quot;table table-hover table-dark&quot;&gt;
+                        &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th scope=&quot;col&quot;&gt;id&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Товар&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Кількість&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Вартість&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                        &lt;tr onclick=&quot;changeItemInForm('Clown baby')&quot;&gt;
+                            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+                            &lt;td&gt;&quot;Clown baby&quot;&lt;/td&gt;
+                            &lt;td&gt;12&lt;/td&gt;
+                            &lt;td&gt;4$&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr onclick=&quot;changeItemInForm('Demon mask')&quot;&gt;
+                            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                            &lt;td&gt;&quot;Demon mask&quot;&lt;/td&gt;
+                            &lt;td&gt;3&lt;/td&gt;
+                            &lt;td&gt;40$&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr onclick=&quot;changeItemInForm('Iradron MEGA')&quot;&gt;
+                            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+                            &lt;td&gt;&quot;Iradron MEGA&quot;&lt;/td&gt;
+                            &lt;td&gt;123&lt;/td&gt;
+                            &lt;td&gt;0.5$&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr onclick=&quot;changeItemInForm('Clown Bob')&quot;&gt;
+                            &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
+                            &lt;td&gt;&quot;Clown Bob&quot;&lt;/td&gt;
+                            &lt;td&gt;33&lt;/td&gt;
+                            &lt;td&gt;11$&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;btn-group&quot;&gt;
+                &lt;a href=&quot;program_subject.html&quot; class=&quot;btn btn-primary border mt-2&quot;&gt;Cторінку с описом предметної
+                    галузі&lt;/a&gt;
+                &lt;a href=&quot;../../../WEB_labs/html/lab-2.html&quot; class=&quot;btn btn-primary border mt-2&quot;&gt;Висновок&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;col-6 animate__animated animate__fadeInRight&quot;&gt;
+            &lt;p class=&quot;container-fluid  w-100 border bg-dark text-white text-monospace h4 p-3 fw-bold&quot;&gt;
+                Замовлення перук:
+            &lt;/p&gt;
+            &lt;div id=&quot;text-bigger&quot; class=&quot;container-fluid p-3 mt-3 mh-100 text-white text-monospace&quot;
+                 style=&quot;background-color: #27182c;&quot;&gt;
+                &lt;form&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;product&quot; class=&quot;form-label&quot;&gt;Товар:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;product&quot; aria-describedby=&quot;emailProduct&quot;&gt;
+                        &lt;div id=&quot;emailHelp&quot; class=&quot;form-text&quot;&gt;Tap on product you want to buy.&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;quantity&quot; class=&quot;form-label&quot;&gt;Кількість:&lt;/label&gt;
+                        &lt;input type=&quot;number&quot; min=&quot;0&quot; class=&quot;form-control&quot; id=&quot;quantity&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;firstName&quot; class=&quot;form-label&quot;&gt;Ім'я:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;firstName&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;lastName&quot; class=&quot;form-label&quot;&gt;Прізвище:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;lastName&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;numberOfTelephone&quot; class=&quot;form-label&quot;&gt;Телефон:&lt;/label&gt;
+                        &lt;input type=&quot;tel&quot; class=&quot;form-control&quot; id=&quot;numberOfTelephone&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;postOffice&quot; class=&quot;form-label&quot;&gt;Місто, номер відділення НП:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;postOffice&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Продовжити&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Text after main block--&gt;
+    &lt;div class=&quot;container-fluid mt-2 text-white h5 h-100&quot;&gt;
+        &lt;div class=&quot;main-div-float-left mt-3 p-3 w-50&quot;&gt;
+            Контактна інформація
+            Адреса магазину: вулиця Академіка Янгеля, 20 м.Київ
+            На період карантину звертайтеся за телефоном:
+            &lt;ol&gt;
+                &lt;li value=&quot;text&quot;&gt;
+                    + 38 (097) 438 78 53 &mdash; адміністратор
+                &lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;ul&gt;
+                &lt;li value=&quot;text&quot;&gt;+ 38 (096) 412 97 15 &mdash; консультант&lt;/li&gt;
+            &lt;/ul&gt;
+            Email: dimakukold@gmail.com
+        &lt;/div&gt;
+        &lt;div class=&quot;main-div-float-left mt-3 p-3 w-50&quot;&gt;
+            У вихідні дні працюємо з 10 до 22 +380 99 911 1473 - наш консультант вихідного дня
+            Email: sashaignor24na7@gmail.com
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- ///Text after main block--&gt;
+
+&lt;/main&gt;
                   </code>
               </pre>
-                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                    Ідентифікатор (званий також «ID селектор») визначає унікальне ім'я елемента, яке використовується
-                    для зміни його стилю і звернення до нього через скрипти.
-                    Синтаксис застосування ідентифікатора наступний.
-                    # Ім'я ідентифікатора {властивість1: значення; властивість2: значення; ...}
-                    При описі ідентифікатора спочатку вказується символ решітки (#), потім йде ім'я ідентифікатора. Воно
-                    повинно починатися з латинської символу і може містити в собі символ дефіса (-) і підкреслення (_).
-                    Використання російських букв в іменах ідентифікатора неприпустимо. На відміну від класів
-                    ідентифікатори повинні бути унікальні, іншими словами, зустрічатися в коді документа лише один раз.
-                    Звернення до ідентифікатора відбувається аналогічно класам, але в якості ключового слова у тега
-                    використовується атрибут id, значенням якого виступає ім'я ідентифікатора. Символ решітки при цьому
-                    вже не вказується.
-                </div>
             </main>
 
             <main id="lists" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
