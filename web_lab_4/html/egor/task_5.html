@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5 Task</title>
+    <meta content="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../js/main.js"></script>
+    <script src="../js/prism.js"></script>
+    <link rel="stylesheet" href="../css/main.css"/>
+    <style>
+        html, main {
+            background-color: #3e3e3e !important;
+            padding: 100px;
+            margin: 0;
+            font-family: monospace;
+
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container pd-2">
+        <p class="container h3 pd-4 bg-warning">Enter size of future random array:</p>
+        <form class="form" id="formIdName">
+            <label class="label text-white h5" for="arr_size">Size:</label>
+            <input class="input form-control-sm" type="number" id="arr_size"/>
+            <p id="add_button" onClick="arr()" class="btn btn-success mt-3">submit</p>
+        </form>
+        <div class="container h5 pd-2 d-none text-white" id="dnone">
+            Random array:
+            <p id="random_arr"></p>
+            Result array:<br>
+            <p id="sorted_arr"></p>
+            2n+1 min and max:
+            <p id="n-th"></p><br>
+            2n min and max:
+            <p id="2n-th"></p>
+        </div>
+    </div>
+</main>
+<script>
+    function arr() {
+        document.getElementById('dnone').classList.remove('d-none');
+        const adduser_input = document.getElementById('arr_size').value;
+        var rand_arr = Array(parseInt(adduser_input)) // array size is 10
+            .fill()
+            .map(() => Math.round(1_000 * Math.random()));
+        document.getElementById('random_arr').innerText = '[' + rand_arr.toString() + ']';
+        var sorted_arr = selectionSort(rand_arr);
+        document.getElementById('sorted_arr').innerText = '[' + sorted_arr.toString() + ']';
+        var nth;
+        var n2th;
+        if (sorted_arr.length < 4) {
+            nth = 'array is small(';
+            n2th = 'array is small(';
+        } else {
+            if (sorted_arr.length % 2 === 0) {
+                nth = sorted_arr[sorted_arr.length - 2] + ' ' + sorted_arr[1];
+                n2th = sorted_arr[sorted_arr.length - 1] + ' ' + sorted_arr[0];
+            } else {
+                nth = sorted_arr[sorted_arr.length - 1] + ' ' + sorted_arr[1];
+                n2th = sorted_arr[sorted_arr.length - 2] + ' ' + sorted_arr[0];
+            }
+        }
+        document.getElementById('n-th').innerText = '[' + nth + ']';
+        document.getElementById('2n-th').innerText = '[' + n2th + ']';
+    }
+
+    function selectionSort(inputArr) {
+        let n = inputArr.length;
+
+        for (let i = 0; i < n; i++) {
+            // Finding the smallest number in the subarray
+            let min = i;
+            for (let j = i + 1; j < n; j++) {
+                if (inputArr[j] > inputArr[min]) {
+                    min = j;
+                }
+            }
+            if (min !== i) {
+                // Swapping the elements
+                let tmp = inputArr[i];
+                inputArr[i] = inputArr[min];
+                inputArr[min] = tmp;
+            }
+        }
+        return inputArr;
+    }
+</script>
+</body>
+</html>
