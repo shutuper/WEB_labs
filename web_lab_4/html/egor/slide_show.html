@@ -134,7 +134,7 @@
     <div class="col-6 p-3">
         <div class="container h5 bg-warning" id="heighter">
             <p class="mt-2 label container">Change delay (s):</p>
-            <input type="number" class="col-1 mx-5" id="delay">
+            <input type="number" class="col-1 mx-5" id="delay" value="2">
             <button class="btn-sm btn-primary" onClick="changeDelay()">Change</button>
         </div>
     </div>
@@ -222,10 +222,10 @@
     }
 
     function changeDelay() {
-        delay = parseInt(document.getElementById('delay').value)*1000;
+        delay = parseInt(document.getElementById('delay').value) * 1000;
         clearInterval(interval);
         showSlides();
-        document.getElementById('n').innerText = (delay/1000) + 's';
+        document.getElementById('n').innerText = (delay / 1000) + 's';
     }
 
     function cycleDo() {
