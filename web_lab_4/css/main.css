@@ -8,6 +8,7 @@ main {
 
 html, main {
     background: #070916;
+    font-size: 0.9em;
 }
 
 .photo-clown {
@@ -23,7 +24,7 @@ main:last-child {
 }
 
 #text-bigger {
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 div list li {
