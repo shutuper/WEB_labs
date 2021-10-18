@@ -1,0 +1,16 @@
+*{
+    background: beige;
+    font: 12pt sans-serif;
+}
+input:required {
+    background: #faece4;
+}
+input {
+    width: 20%
+}
+input[type = "submit"]{
+    width: 20.7%;
+}
+b{
+    font-weight: 600;
+}

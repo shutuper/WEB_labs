@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+JavaScript
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ААА</title>
+    <link href="../../css/ira`s css/last`sCSS.css" rel="stylesheet">
+    <script src="../../js/ira`s js/last`sJS.js"></script>
+</head>
+<body>
+<br><br>
+<b>Complete the following form:</b><br><br>
+<form name="form" action="first.html" method="POST">
+    <input type="text" name="name" placeholder="Your name*" pattern="\D*" required/><br>
+    <input type="text" name="surname" placeholder="Your surname" pattern="\D*"/><br>
+    <input type="text" name="count" placeholder="How much wigs do you have?"/><br>
+    <input type="text" name="number" placeholder="Your favorite number"
+           onkeyup="this.value = this.value.replace(/\.(?=.*\.)|[^\d\.eE-]/g, '');"/><br>
+    <input type="text" name="bday" placeholder="B-Day in format DD.MM.YYYY*" required/><br>
+    <!--    pattern="^[0123]\d\.[01]\d\.\d{4}" required/><br>-->
+    <input type="password" name="passwordF" placeholder="Choose password*" required/><br>
+    <input type="password" name="passwordS" placeholder="Repeat password*" required/><br>
+    <input type="submit" value="Complete!" onclick="return Validate()"/>
+</form>
+</body>
+</html>
