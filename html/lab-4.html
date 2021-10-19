@@ -79,7 +79,7 @@
                     <button type="button" value="task" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Постановка задачі
                     </button>
-                    <button type="button" value="html-macket" onclick="changeMain(this)"
+                    <button type="button" value="arrays" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Масиви
                     </button>
                     <button type="button" value="tables" onclick="changeMain(this)"
@@ -257,9 +257,9 @@
                     коректно.
                 </div>
                 <div class="container-fluid text-center mt-3">
-                    <img class="img img-responsive"
-                         src="https://pyrogiv.kiev.ua/wp-content/uploads/08964be5f4846a01f8b847968ae0ca11-400x188.jpg"
-                         alt="Мета - це твоє життя!">
+                    <img class="img img-responsive"/>
+                    src="https://pyrogiv.kiev.ua/wp-content/uploads/08964be5f4846a01f8b847968ae0ca11-400x188.jpg"
+                    alt="Мета - це твоє життя!">
                 </div>
             </main>
 
@@ -411,136 +411,251 @@
                 <div class="container-fluid p-2 bg-info">
                     <h2 class="m-3"> Масиви: </h2>
                 </div>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    Масиви в мові JavaScript - це спеціалізована форма об'єктів, а індекси масивів означають трохи
+                    більше, ніж просто імена властивостей, які по збігу є цілими числами.<br>
+                    Масиви в мові JavaScript є нетипізованими: елементи масиву можуть мати будь-який тип, причому різні
+                    елементи одного і того ж масиву можуть мати різні типи. Елементи масиву можуть навіть бути об'єктами
+                    або іншими масивами, що дозволяє створювати складні структури даних, такі як масиви об'єктів і
+                    масиви масивів.
+                    Відлік індексів масивів в мові JavaScript починається з нуля і для них використовуються 32-бітові
+                    цілі числа - перший елемент масиву має індекс 0. Масиви в JavaScript є динамічними: вони можуть
+                    збільшуватися і зменшуватися в розмірах у міру необхідності; немає необхідності оголошувати
+                    фіксовані розміри масивів при їх створенні або повторно розподіляти пам'ять при зміні їх розмірів.
+                </div>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    <div class="container-fluid p-3 text-center">
+                        <img class="img mw-100" src="../img/lab4/ira1.png" alt="">
+                    </div>
+                </div>
                 <pre>
-                  <code class="language-html">
-&lt;main class=&quot;container-fluid px-5 py-3 mt-2&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-6 &quot;&gt;
-            &lt;p class=&quot;container-fluid  w-100 border bg-dark text-white text-monospace h4 p-3 fw-bold&quot;&gt;
-                Перуки в стилі &quot;Clown&quot;:
-            &lt;/p&gt;
-            &lt;div class=&quot;row mx-0 container-fluid w-100 p-3&quot; style=&quot;background-color: #27182c;&quot;&gt;
-                &lt;div class=&quot;col-6&quot;&gt;
-                    &lt;img class=&quot;img img-responsive mt-3 w-100 border rounded photo-clown&quot; src=&quot;../img/kosobyc.jpg&quot;
-                         alt=&quot;Косуб клоун&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;col-6&quot;&gt;
-                    &lt;img class=&quot;img img-responsive mt-3 w-100 border rounded photo-clown&quot;
-                         src=&quot;https://mandarinonline.ru/images/stories/virtuemart/product/%D0%9F%D0%9A162,2.jpg&quot;
-                         alt=&quot;Клоун не косуб&quot;&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;container-fluid py-3 mt-2 h5 mt-3&quot;&gt;
-                    &lt;table class=&quot;table table-hover table-dark&quot;&gt;
-                        &lt;thead&gt;
-                        &lt;tr&gt;
-                            &lt;th scope=&quot;col&quot;&gt;id&lt;/th&gt;
-                            &lt;th scope=&quot;col&quot;&gt;Товар&lt;/th&gt;
-                            &lt;th scope=&quot;col&quot;&gt;Кількість&lt;/th&gt;
-                            &lt;th scope=&quot;col&quot;&gt;Вартість&lt;/th&gt;
-                        &lt;/tr&gt;
-                        &lt;/thead&gt;
-                        &lt;tbody&gt;
-                        &lt;tr onclick=&quot;changeItemInForm('Clown baby')&quot;&gt;
-                            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
-                            &lt;td&gt;&quot;Clown baby&quot;&lt;/td&gt;
-                            &lt;td&gt;12&lt;/td&gt;
-                            &lt;td&gt;4$&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr onclick=&quot;changeItemInForm('Demon mask')&quot;&gt;
-                            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
-                            &lt;td&gt;&quot;Demon mask&quot;&lt;/td&gt;
-                            &lt;td&gt;3&lt;/td&gt;
-                            &lt;td&gt;40$&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr onclick=&quot;changeItemInForm('Iradron MEGA')&quot;&gt;
-                            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
-                            &lt;td&gt;&quot;Iradron MEGA&quot;&lt;/td&gt;
-                            &lt;td&gt;123&lt;/td&gt;
-                            &lt;td&gt;0.5$&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;tr onclick=&quot;changeItemInForm('Clown Bob')&quot;&gt;
-                            &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
-                            &lt;td&gt;&quot;Clown Bob&quot;&lt;/td&gt;
-                            &lt;td&gt;33&lt;/td&gt;
-                            &lt;td&gt;11$&lt;/td&gt;
-                        &lt;/tr&gt;
-                        &lt;/tbody&gt;
-                    &lt;/table&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;btn-group&quot;&gt;
-                &lt;a href=&quot;program_subject.html&quot; class=&quot;btn btn-primary border mt-2&quot;&gt;Cторінку с описом предметної
-                    галузі&lt;/a&gt;
-                &lt;a href=&quot;../../../WEB_labs/html/lab-2.html&quot; class=&quot;btn btn-primary border mt-2&quot;&gt;Висновок&lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;col-6 animate__animated animate__fadeInRight&quot;&gt;
-            &lt;p class=&quot;container-fluid  w-100 border bg-dark text-white text-monospace h4 p-3 fw-bold&quot;&gt;
-                Замовлення перук:
-            &lt;/p&gt;
-            &lt;div id=&quot;text-bigger&quot; class=&quot;container-fluid p-3 mt-3 mh-100 text-white text-monospace&quot;
-                 style=&quot;background-color: #27182c;&quot;&gt;
-                &lt;form&gt;
-                    &lt;div class=&quot;mb-3&quot;&gt;
-                        &lt;label for=&quot;product&quot; class=&quot;form-label&quot;&gt;Товар:&lt;/label&gt;
-                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;product&quot; aria-describedby=&quot;emailProduct&quot;&gt;
-                        &lt;div id=&quot;emailHelp&quot; class=&quot;form-text&quot;&gt;Tap on product you want to buy.&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;mb-3&quot;&gt;
-                        &lt;label for=&quot;quantity&quot; class=&quot;form-label&quot;&gt;Кількість:&lt;/label&gt;
-                        &lt;input type=&quot;number&quot; min=&quot;0&quot; class=&quot;form-control&quot; id=&quot;quantity&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;mb-3&quot;&gt;
-                        &lt;label for=&quot;firstName&quot; class=&quot;form-label&quot;&gt;Ім'я:&lt;/label&gt;
-                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;firstName&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;mb-3&quot;&gt;
-                        &lt;label for=&quot;lastName&quot; class=&quot;form-label&quot;&gt;Прізвище:&lt;/label&gt;
-                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;lastName&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;mb-3&quot;&gt;
-                        &lt;label for=&quot;numberOfTelephone&quot; class=&quot;form-label&quot;&gt;Телефон:&lt;/label&gt;
-                        &lt;input type=&quot;tel&quot; class=&quot;form-control&quot; id=&quot;numberOfTelephone&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;mb-3&quot;&gt;
-                        &lt;label for=&quot;postOffice&quot; class=&quot;form-label&quot;&gt;Місто, номер відділення НП:&lt;/label&gt;
-                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;postOffice&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Продовжити&lt;/button&gt;
-                &lt;/form&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+                  <code class="language-javascript">
+function myFunction() {
 
 
-    &lt;!-- Text after main block--&gt;
-    &lt;div class=&quot;container-fluid mt-2 text-white h5 h-100&quot;&gt;
-        &lt;div class=&quot;main-div-float-left mt-3 p-3 w-50&quot;&gt;
-            Контактна інформація
-            Адреса магазину: вулиця Академіка Янгеля, 20 м.Київ
-            На період карантину звертайтеся за телефоном:
-            &lt;ol&gt;
-                &lt;li value=&quot;text&quot;&gt;
-                    + 38 (097) 438 78 53 &mdash; адміністратор
-                &lt;/li&gt;
-            &lt;/ol&gt;
-            &lt;ul&gt;
-                &lt;li value=&quot;text&quot;&gt;+ 38 (096) 412 97 15 &mdash; консультант&lt;/li&gt;
-            &lt;/ul&gt;
-            Email: dimakukold@gmail.com
-        &lt;/div&gt;
-        &lt;div class=&quot;main-div-float-left mt-3 p-3 w-50&quot;&gt;
-            У вихідні дні працюємо з 10 до 22 +380 99 911 1473 - наш консультант вихідного дня
-            Email: sashaignor24na7@gmail.com
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;!-- ///Text after main block--&gt;
+    const length = document.querySelector('#input').value;
+    let arrayOfNumbers = [];
+    let maxNum, maxNumIndex, minNum, minNumIndex
+    for (let i = 0; i < length; i++) {
+        const value = unique();
+        if (i % 2 === 1) {
+            if (maxNum === undefined) {
+                maxNum = value
+                minNum = value
+                maxNumIndex = i
+                minNumIndex = i
+            } else {
+                if (value < minNum) {
+                    minNum = value
+                    minNumIndex = i
+                }
+                if (value > maxNum) {
+                    maxNum = value
+                    maxNumIndex = i
+                }
+            }
+        }
+        arrayOfNumbers.push(value)
+    }
 
-&lt;/main&gt;
+    function unique() {
+        let value = Math.floor(Math.random() * 30);
+        if (arrayOfNumbers.indexOf(value) !== -1) {
+            value = unique()
+        }
+        return value
+    }
+
+    console.log(arrayOfNumbers)
+    document.getElementById("first").innerHTML = arrayOfNumbers.join(", ");
+
+    if (length >= 4) {
+        arrayOfNumbers[maxNumIndex] = minNum
+        arrayOfNumbers[minNumIndex] = maxNum
+    }
+    document.getElementById("second").innerHTML = arrayOfNumbers.join(", ");
+
+    document.getElementById("last").innerHTML = insertionSort(arrayOfNumbers).join(", ");
+
+    function insertionSort(array) {
+        const n = array.length
+        for (let i = 0; i < n; i++) {
+            let v = array[i], j = i - 1
+            while (j >= 0 && array[j] > v) {
+                array[j + 1] = array[j]
+                j--
+            }
+            array[j + 1] = v
+        }
+        return array
+    }
+
+}
                   </code>
               </pre>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    <div class="container-fluid p-3 text-center">
+                        <img class="img mw-100" src="../img/lab4/sashka1.png" alt="">
+                    </div>
+                </div>
+                <pre>
+                  <code class="language-javascript">
+ const arrIn = [1, 2, 3, 4, 5, 6, 12, 9];
+var arr2 = [];
+var arr6 = [];
+var arr3= [];
+
+arrIn.forEach(function(item, i, arr) {
+    if((item%2) === 0){
+        arr2.push(item);
+    }
+    if((item%6) === 0){
+        arr6.push(item);
+    }
+    if((item%3) === 0){
+        arr3.push(item);
+    }
+});
+
+const arrOut = arr2.concat(arr6, arr3);
+console.log(arrIn);
+console.log(arrOut);
+
+function quickSort(arr) {
+    if (arr.length < 2) return arr;
+    let pivot = arr[0];
+    const left = [];
+    const right = [];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (pivot > arr[i]) {
+            left.push(arr[i]);
+        } else {
+            right.push(arr[i]);
+        }
+    }
+    return quickSort(left).concat(pivot, quickSort(right));
+}
+
+document.write(&quot;&lt;p style='color: #7e0084'&gt;Вхідний масив:&lt;/p&gt;&quot;);
+document.write(arrIn);
+document.write(&quot;&lt;p style='color: #7e0084'&gt; Вихідний масив: &lt;/p&gt;&quot;);
+document.write(arrOut);
+document.write(&quot;&lt;p style='color: #7e0084'&gt;Відсортований масив (Quicksort): &lt;/p&gt;&quot;);
+document.write(quickSort(arrOut));
+                  </code>
+              </pre>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    <div class="container-fluid p-3 text-center">
+                        <img class="img mw-100" src="../img/lab4/dima1.png" alt="">
+                    </div>
+                </div>
+                <pre>
+                  <code class="language-javascript">
+&lt;script&gt;
+    function quickSort(originalArr) {
+        if (originalArr.length &lt;= 1) {
+            return originalArr;
+        } else {
+            const leftArr = [];
+            const rightArr = [];
+            const newArr = [];
+            const pivot = originalArr.pop();      //  Take a pivot value
+            const length = originalArr.length;
+            for (let i = 0; i &lt; length; i++) {
+                if (originalArr[i] &lt;= pivot) {    // using pivot value start comparing
+                    leftArr.push(originalArr[i]);
+                } else {
+                    rightArr.push(originalArr[i]);
+                }
+            }
+            return newArr.concat(quickSort(leftArr), pivot, quickSort(rightArr)); // array will be                                                                            //returned untill sorting occurs
+        }
+    }
+
+    let sum = 0;
+    const grades = [];
+    let i;
+    for (i = 0; i &lt; 10; i++) {
+
+        grades.push(Number(prompt(&quot;Enter your grades:&quot; + (i + 1), &quot;0-100&quot;)));
+    }
+    document.write(&quot;Your grades: &quot; + grades);
+
+    const sortedArray = quickSort(grades);
+    let min = sortedArray[0];
+    let max = sortedArray[sortedArray.length - 1];
+    for (let i=0;i &lt; sortedArray.length;i++){
+        if (sortedArray[i] &gt; min &amp;&amp; sortedArray[i] &lt; max){
+            sum += sortedArray[i];
+        }
+    }
+    document.write(&quot;&lt;br&gt;&quot; + &quot;Sorted array: &quot; + sortedArray)
+    document.write(&quot;&lt;br&gt;&quot; + sum + &quot; syma&quot;)
+    document.write(&quot;&lt;br&gt;&quot; + min)
+    document.write(&quot;&lt;br&gt;&quot; + max)
+&lt;/script&gt;/
+                  </code>
+              </pre>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    <div class="container-fluid p-3 text-center">
+                        <img class="img mw-100" src="../img/lab4/egor1.png" alt="">
+                    </div>
+                </div>
+                <pre>
+                  <code class="language-javascript">
+&lt;script&gt;
+    function arr() {
+        document.getElementById('dnone').classList.remove('d-none');
+        const adduser_input = document.getElementById('arr_size').value;
+        var rand_arr = Array(parseInt(adduser_input)) // array size is 10
+            .fill()
+            .map(() =&gt; Math.round(1_000 * Math.random()));
+        document.getElementById('random_arr').innerText = '[' + rand_arr.toString() + ']';
+        var sorted_arr = selectionSort(rand_arr);
+        document.getElementById('sorted_arr').innerText = '[' + sorted_arr.toString() + ']';
+        var nth;
+        var n2th;
+        if (sorted_arr.length &lt; 4) {
+            nth = 'array is small(';
+            n2th = 'array is small(';
+        } else {
+            if (sorted_arr.length % 2 === 0) {
+                nth = sorted_arr[sorted_arr.length - 2] + ' ' + sorted_arr[1];
+                n2th = sorted_arr[sorted_arr.length - 1] + ' ' + sorted_arr[0];
+            } else {
+                nth = sorted_arr[sorted_arr.length - 1] + ' ' + sorted_arr[1];
+                n2th = sorted_arr[sorted_arr.length - 2] + ' ' + sorted_arr[0];
+            }
+        }
+        document.getElementById('n-th').innerText = '[' + nth + ']';
+        document.getElementById('2n-th').innerText = '[' + n2th + ']';
+    }
+
+    function selectionSort(inputArr) {
+        let n = inputArr.length;
+
+        for (let i = 0; i &lt; n; i++) {
+            // Finding the smallest number in the subarray
+            let min = i;
+            for (let j = i + 1; j &lt; n; j++) {
+                if (inputArr[j] &gt; inputArr[min]) {
+                    min = j;
+                }
+            }
+            if (min !== i) {
+                // Swapping the elements
+                let tmp = inputArr[i];
+                inputArr[i] = inputArr[min];
+                inputArr[min] = tmp;
+            }
+        }
+        return inputArr;
+    }
+&lt;/script&gt;
+                  </code>
+              </pre>
+
             </main>
 
             <main id="lists" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
