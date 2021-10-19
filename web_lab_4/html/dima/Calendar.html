@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="start">Start date:</label>
+
+<input type="date" id="start" name="trip-start"
+       value="2021-09-22"
+       min="2021-01-01" max="2022-12-31">
+
+<script>
+  Date.prototype.getWeek = function () {
+    var target  = new Date(this.valueOf());
+    var dayNr   = (this.getDay() + 6) % 7;
+    target.setDate(target.getDate() - dayNr + 3);
+    var firstThursday = target.valueOf();
+    target.setMonth(0, 1);
+    if (target.getDay() != 4) {
+      target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+    }
+    return 1 + Math.ceil((firstThursday - target) / 604800000);
+  }
+
+  var DW = document.querySelector('#week'),
+          NW = document.querySelector('#week ~ output'),
+          NWG = document.querySelector('#week ~ output ~ output');
+
+  DW.value = new Date().toJSON().slice(0,10);
+  NW.innerHTML = new Date(DW.value).getWeek();
+  NWG.innerHTML = new Date(new Date(DW.value).getFullYear(),11,28).getWeek();
+
+  DW.oninput = function() {
+    NW.innerHTML = new Date(DW.value).getWeek();
+    NWG.innerHTML = new Date(new Date(DW.value).getFullYear(),11,28).getWeek();
+  }
+
+</script>
+</body>
+</html>
