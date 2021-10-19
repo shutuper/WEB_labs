@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html dir="ltr" class="animate__animated animate__fadeIn" lang="uk">
+
+<head>
+    <meta charset="utf-8">
+    <title>7 бригада</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../js/main4.js"></script>
+    <script src="../js/prism.js"></script>
+</head>
+
+<body>
+
+<!-- Верхний контейнер -->
+<header class="container-fluid bg-dark p-4 text-center text-white text-monospace back-brigada" data-bs-toggle="collapse"
+        href="#collapsedLabs" role="button" aria-expanded="false" aria-controls="collapsedLabs">
+    <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ
+        ІЗ ДИСЦИПЛІНИ «РОЗРОБЛЕННЯ WEB-ЗАСТОСУВАННЬ»
+    </h2>
+    <code>
+        <h4>7 БРИГАДА ІА-01 <i class="bi-award"></i></h4>
+    </code>
+</header>
+<!-- ///Верхний контейнер -->
+
+<!-- Навигация по лабах (выпадающий блок) -->
+<nav class="collapse text-center p-1 table-responsive" style="background-color: #a0a0a0;" id="collapsedLabs">
+    <div class="btn-group btn-group-lg btn-outline font-monospace text-dark btn-group-toggle animate__animated animate__flipInX"
+         role="group" data-toggle="buttons" aria-label="Basic example">
+        <!-- файл для следующей лабы размещаете в той же директории  -->
+        <button type="button" class="btn btn-muted"><a href="lab-1.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 1</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-2.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 2</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-3.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 3</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-4.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 4</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-5.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 5</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-6.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 6</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-7.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 7</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-8.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 8</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-9.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 9</a></button>
+    </div>
+</nav>
+
+<!-- Блок слевой стороны со структурой лабараторных -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 text-center">
+            <div class="container float-start p-4 font-monospace" style="background-color: #88e3f5d1">
+
+                <!-- Vertical menu -->
+                <div class="btn-group-vertical mw-100 p-3">
+
+                    <button type="button" value="theme" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2 txtbigger2">Тема, мета лабараторної роботи, github
+                    </button>
+                    <button type="button" value="task" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Постановка задачі
+                    </button>
+                    <button type="button" value="html-macket" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Масиви
+                    </button>
+                    <button type="button" value="tables" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Виконання 6 пункту
+                    </button>
+
+                    <button type="button" class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2" onclick="changeClass()"
+                            data-bs-toggle="collapse" href="#collapseStructe" role="button" aria-expanded="false"
+                            aria-controls="collapseStructe">Способи функціонального застосування Javascript
+                        <i id="changeArrow" class="bi-arrow-down-circle"></i></button>
+
+                    <!-- Выпидающее меню структуры документа -->
+                    <div class="collapse font-monospace w-100" id="collapseStructe">
+                        <div class="btn-group-vertical p-3 w-100">
+                            <button type="button" value="str_1" onclick="changeMain(this)"
+                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
+                                    class="bi-caret-right"></i> Схема URL
+                            </button>
+                            <button type="button" value="str_2" onclick="changeMain(this)"
+                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
+                                    class="bi-caret-right"></i> Обробка подій
+                            </button>
+                            <button type="button" value="str_3" onclick="changeMain(this)"
+                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
+                                    class="bi-caret-right"></i> Підстановка Entity
+                            </button>
+                            <button type="button" value="str_4" onclick="changeMain(this)"
+                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
+                                    class="bi-caret-right"></i> Вставка (SCRIPT)
+                            </button>
+                            <!--                            <button type="button" value="str_4" onclick="changeMain(this)"-->
+                            <!--                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i-->
+                            <!--                                    class="bi-caret-right"></i> HTML-код посилання-->
+                            <!--                            </button>-->
+                        </div>
+                    </div>
+
+                    <button type="button" value="conclusion" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Висновки
+                    </button>
+
+                </div>
+                <button type="button" class="btn btn-dark py-1 px-5" value="team_photo" onclick="changeMain(this)"
+                        name="button">Team photo
+                </button>
+            </div>
+
+        </div>
+        <!-- ///Блок слевой стороны со структурой лабараторных -->
+
+        <!-- Right block -->
+        <div class="col-9 p-3 font-monospace rightBlockOverflow">
+
+            <!-- ______________Example code of images and code !!! _______________________
+
+    <img class="img img-responsive m-2 container" src="http://www.shukach.com/sites/default/files/imagecache/node-gallery-display/post_images/14/p1290798-53274.jpg" alt="">
+    <pre>
+        <code class="language-html">
+              &lt;div class=&quot;col-8 rightBlock&quot;&gt;
+      &lt;!-- блок для основной инфы --&gt;
+      &lt;main class=&quot;container-fluid p-2 &quot;&gt;
+        </code>
+    </pre>     -->
+
+            <!-- Блок для основной инфы -->
+            <!-- Дефолтный контейнер -->
+            <main id="default"
+                  class="container-fluid bg-light p-3 mh-100 animate__animated animate__fadeIn border border-secondary">
+                <div class="container-fluid p-2 bg-light text-center">
+                    <!-- header -->
+                    <img src="../img/kpi_header.png"
+                         class="animate__animated animate__lightSpeedInRight mw-100 img img-responsive" alt="kpi">
+                    <h4 class="m-3">
+                        Міністерство освіти і науки України
+                        Національний технічний університет України
+                        “Київський політехнічний інститут імені Ігоря Сікорського”
+                        Факультет інформатики та обчислювальної техніки
+                        Кафедра автоматики та управління в технічних системах
+                    </h4>
+                </div>
+                <!-- center info -->
+                <div class="container-fluid p-3 bg-light text-center mt-5">
+                    <h3 class="animate__animated animate__lightSpeedInRight">Лабаратаорна робота № 4</h3>
+                    <h4>На тему: Функціональне застосування javascript у html-документі. класи,об’єкти, функції, в мові
+                        javascript. Події та обробка подій. Програмна взаємодія з html документами на основі dom
+                        арі..</h4>
+                </div>
+
+                <!-- row -->
+                <div class="container-fluid row mt-5">
+                    <!-- column -->
+                    <div class="col-6 text-center mt-3 mb-5">
+                        <h4>Виконали: Гнітій Є.,<br>
+                            Терещенко Д., Дронь О.,<br>
+                            Телесненко І.</h4>
+                    </div>
+
+                    <!-- column -->
+                    <div class="col-6 text-center mt-4 mb-4">
+                        <h4>Перевірила: Проскура С. Л.</h4>
+                    </div>
+
+                </div>
+                <div class="container-fluid text-center h4 ">
+                    Київ 2021
+                </div>
+            </main>
+            <!-- ///Дефолтный контейнер -->
+
+            <!-- Description block -->
+            <main id="task" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Постановка задачі: </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    Основна наша задача полягає в тому щоб придбати практичні навички роботи
+                    маніпулювання
+                    інформаційним вмістом Web-документа засобами мови Javasсript, навчитись використовувати об’єкти,
+                    масиви,
+                    функції, події, обробники подій у сценаріях на мові JavaScript. Крім того кожен з нас маємо
+                    реалізувати
+                    окреме завдання на побудову практичного засобу взаємодії з користувачем написаного на Javascript-і.
+                    Той таке.
+                </div>
+
+            </main>
+            <!-- ///Description block -->
+
+            <!-- Theme block -->
+            <main id="theme" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Тема, мета лабараторної роботи, github: </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Тема:</b> функціональне застосування javascript у html-документі. класи,об’єкти, функції, в мові
+                    javascript. Події та обробка подій. Програмна взаємодія з html документами на основі dom
+                    арі.<br><br>
+                    <b>Мета:</b> придбати практичні навички роботи маніпулювання інформаційним вмістом Web-документа
+                    засобами мови Javasсript, використання об’єктів,масивів, функцій, подій, обробників подій у
+                    сценаріях на мові JavaScript.
+                </div>
+                <!-- Button to github -->
+                <div class="text-center">
+                    <a href="https://github.com/shutuper/WEB_labs/web_lab_4" alt="github: shutuper" class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check lab code
+                        </button>
+                    </a>
+                    <br>
+                    <a href="https://github.com/shutuper/WEB_labs" alt="github: shutuper" class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check conclusion code
+                        </button>
+                    </a>
+                </div>
+                <!-- ///Button to github -->
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/bussisman.jpg" alt="Мета - це твоє життя!">
+                </div>
+            </main>
+            <!-- ///Theme block -->
+
+            <!-- Task block -->
+            <main id="conclusion" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3">Висновки: </h2>
+                </div>
+                <div class="container-fluid mt-3 h4 bg-light p-2">
+                    У ході виконання даної лабораторної роботі ми нагадали основні інструменти для використання
+                    JavaScript у HTML-документі. Ми опрацювали теорію про класи, об’єкти, функції, події та обробку
+                    подій в мові JavaScript. Використовуючи вивчений матеріал на практиці при виконанні завдань, ми
+                    також придбали практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами
+                    мови Javasсript, використання об’єктів,масивів, функцій, подій, обробників подій у сценаріях на мові
+                    JavaScript. Запустили даний документ у браузері для перевірки та переконалися, що все працює
+                    коректно.
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive"
+                         src="https://pyrogiv.kiev.ua/wp-content/uploads/08964be5f4846a01f8b847968ae0ca11-400x188.jpg"
+                         alt="Мета - це твоє життя!">
+                </div>
+            </main>
+
+            <main id="tables" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Розмітка сторінки за допомогою таблиці: </h2>
+                </div>
+                <div class="container-fluid mt-3 h4 bg-light p-2">
+                    Веб-сторінки можуть містити різні об&rsquo;єкти: тексти, меню, зображення тощо. Для впорядкування об&rsquo;єктів
+                    на веб-сторінці її (всю або частину) можна розмічати як таблицю.
+                    Для створення таблиці використовується паринй тег &lt;table&gt; &lt;/table&gt; який створює таблицю
+                    в HTML документі. Таблиця має складатись хочаб з одног рядка &lt;tr&gt; та однієї комірки (&lt;th&gt;
+                    - комірка-заголовок або &lt;td&gt; - комірка таблиці)
+                    Таблиця, створена тегом &lt;table&gt; може бути розділена на верхній, нижній колонтитули та основну
+                    частину за допомогою тегів &lt;thead&gt;, &lt;tfoot&gt;, &lt;tbody&gt;.
+                    Атрибут rowspan визначає об'єднання рядків у один стовпчик. Атрибут colspan визначає об'єднання
+                    стовпців у один рядок. Значення атрибута вказує на те, скільки стовпчиків буде об'єднано.
+                </div>
+
+                <pre>
+                  <code class="language-html">
+&lt;table id=&quot;table&quot; border=&quot;1&quot;&gt;
+    &lt;tr&gt;
+        &lt;th colspan=&quot;7&quot; id=&quot;cell&quot;&gt;1&lt;/th&gt;
+        &lt;div id=&quot;pos&quot;&gt;&lt;/div&gt;
+    &lt;/tr&gt;
+    &lt;tr id=&quot;heigher&quot;&gt;
+        &lt;td id=&quot;column_1&quot; colspan=&quot;1&quot;&gt;2&lt;/td&gt;
+        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;column_3&quot; colspan=&quot;1&quot;&gt;3&lt;/td&gt;
+        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;column_4&quot; colspan=&quot;1&quot;&gt;4&lt;/td&gt;
+        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
+        &lt;td class=&quot;column_3&quot; colspan=&quot;1&quot;&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td colspan=&quot;7&quot; id=&quot;footer&quot;&gt;6&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                  </code>
+              </pre>
+                <div class="container-fluid p-3 text-center">
+                    <img src="../img/lab3/dima.png" alt="Плаваючі елементи">
+                </div>
+            </main>
+
+            <!-- Photo block -->
+            <main id="team_photo" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Фото гарних людей: </h2>
+                </div>
+                <div class="container-fluid mt-3 h4 bg-light p-2">
+                    <div class="row">
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Терещенко Дмитро</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/dima.jpg" alt="фото">
+                        </div>
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Телесненко Ірина</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/ira.jpg" alt="фото">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Дронь Олександра</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/sashka.jpg" alt="фото">
+                        </div>
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Єгор Гнітій</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/egor.jpg" alt="фото">
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ///Photo block -->
+
+            <!-- Floaters -->
+            <main id="floaters" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Розмітка сторінки за допомогою плаваючих блоків: </h2>
+                </div>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    При блоковій верстці істотне значення приділяється універсальному тегу &lt;div&gt;, який виконує
+                    безліч функцій. Завдяки цьому тегу HTML-код розпадається на ряд чітких наочних блоків, код при цьому
+                    виходить більш компактним, ніж при табличній верстці, до того ж пошукові системи його краще
+                    індексують.
+                    Через різні класи і ідентифікатори div-блокам задається відповідне CSS-оформлення. Наприклад, щоб
+                    було зручніше писати стилі для шапки сайту, можна додати до блоку клас .header, а для футера &mdash;
+                    клас .footer.<br>
+                    Перевагами даного типу є:<br>
+                    &bull; Кешування блоків браузером, за рахунок чого швидке завантаження сторінок;<br>
+                    &bull; Необмежені можливості по створенню складних дизайнів;<br>
+                    &bull; Чітке відділення частини з контентом;<br>
+                    &bull; Простота реалізації програмної частини;
+                </div>
+
+                <div class="container-fluid row">
+                    <div class="container col-6 p-2"><pre>
+                            <code class="language-css">
+.maxim {
+    width: available;
+    background-color: blue;
+    color: white;
+    height: 20%;
+}
+.yel-1 {
+    float: left;
+    background-color: yellow;
+    height: 60%;
+    width: 25%;
+}
+.wh {
+    background-color: white;
+    float: left;
+    height: 60%;
+    width: 50%;
+}
+.yel-2 {
+    background-color: yellow;
+    height: 60%;
+}
+.bl-b {
+    background-color: blue;
+    color: white;
+}
+                    </code>   </pre>
+                    </div>
+                    <div class="container col-6 p-2"><pre>
+                  <code class="language-html">
+&lt;div class=&quot;maxim&quot;&gt;1&lt;/div&gt;
+
+&lt;div class=&quot;yel-1&quot;&gt;2&lt;/div&gt;
+
+&lt;div class=&quot;wh&quot;&gt;4&lt;/div&gt;
+
+&lt;div class=&quot;yel-2&quot;&gt;5&lt;/div&gt;
+
+&lt;div class=&quot;bl-b&quot;&gt;3&lt;/div&gt;
+                  </code></pre>
+                    </div>
+                    <div class="container-fluid p-3 text-center">
+                        <img src="../img/lab3/egor.png" alt="Плаваючі елементи">
+                    </div>
+                </div>
+
+            </main>
+
+            <main id="arrays" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Масиви: </h2>
+                </div>
+                <pre>
+                  <code class="language-html">
+&lt;main class=&quot;container-fluid px-5 py-3 mt-2&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-6 &quot;&gt;
+            &lt;p class=&quot;container-fluid  w-100 border bg-dark text-white text-monospace h4 p-3 fw-bold&quot;&gt;
+                Перуки в стилі &quot;Clown&quot;:
+            &lt;/p&gt;
+            &lt;div class=&quot;row mx-0 container-fluid w-100 p-3&quot; style=&quot;background-color: #27182c;&quot;&gt;
+                &lt;div class=&quot;col-6&quot;&gt;
+                    &lt;img class=&quot;img img-responsive mt-3 w-100 border rounded photo-clown&quot; src=&quot;../img/kosobyc.jpg&quot;
+                         alt=&quot;Косуб клоун&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-6&quot;&gt;
+                    &lt;img class=&quot;img img-responsive mt-3 w-100 border rounded photo-clown&quot;
+                         src=&quot;https://mandarinonline.ru/images/stories/virtuemart/product/%D0%9F%D0%9A162,2.jpg&quot;
+                         alt=&quot;Клоун не косуб&quot;&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;container-fluid py-3 mt-2 h5 mt-3&quot;&gt;
+                    &lt;table class=&quot;table table-hover table-dark&quot;&gt;
+                        &lt;thead&gt;
+                        &lt;tr&gt;
+                            &lt;th scope=&quot;col&quot;&gt;id&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Товар&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Кількість&lt;/th&gt;
+                            &lt;th scope=&quot;col&quot;&gt;Вартість&lt;/th&gt;
+                        &lt;/tr&gt;
+                        &lt;/thead&gt;
+                        &lt;tbody&gt;
+                        &lt;tr onclick=&quot;changeItemInForm('Clown baby')&quot;&gt;
+                            &lt;th scope=&quot;row&quot;&gt;1&lt;/th&gt;
+                            &lt;td&gt;&quot;Clown baby&quot;&lt;/td&gt;
+                            &lt;td&gt;12&lt;/td&gt;
+                            &lt;td&gt;4$&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr onclick=&quot;changeItemInForm('Demon mask')&quot;&gt;
+                            &lt;th scope=&quot;row&quot;&gt;2&lt;/th&gt;
+                            &lt;td&gt;&quot;Demon mask&quot;&lt;/td&gt;
+                            &lt;td&gt;3&lt;/td&gt;
+                            &lt;td&gt;40$&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr onclick=&quot;changeItemInForm('Iradron MEGA')&quot;&gt;
+                            &lt;th scope=&quot;row&quot;&gt;3&lt;/th&gt;
+                            &lt;td&gt;&quot;Iradron MEGA&quot;&lt;/td&gt;
+                            &lt;td&gt;123&lt;/td&gt;
+                            &lt;td&gt;0.5$&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;tr onclick=&quot;changeItemInForm('Clown Bob')&quot;&gt;
+                            &lt;th scope=&quot;row&quot;&gt;4&lt;/th&gt;
+                            &lt;td&gt;&quot;Clown Bob&quot;&lt;/td&gt;
+                            &lt;td&gt;33&lt;/td&gt;
+                            &lt;td&gt;11$&lt;/td&gt;
+                        &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;btn-group&quot;&gt;
+                &lt;a href=&quot;program_subject.html&quot; class=&quot;btn btn-primary border mt-2&quot;&gt;Cторінку с описом предметної
+                    галузі&lt;/a&gt;
+                &lt;a href=&quot;../../../WEB_labs/html/lab-2.html&quot; class=&quot;btn btn-primary border mt-2&quot;&gt;Висновок&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;col-6 animate__animated animate__fadeInRight&quot;&gt;
+            &lt;p class=&quot;container-fluid  w-100 border bg-dark text-white text-monospace h4 p-3 fw-bold&quot;&gt;
+                Замовлення перук:
+            &lt;/p&gt;
+            &lt;div id=&quot;text-bigger&quot; class=&quot;container-fluid p-3 mt-3 mh-100 text-white text-monospace&quot;
+                 style=&quot;background-color: #27182c;&quot;&gt;
+                &lt;form&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;product&quot; class=&quot;form-label&quot;&gt;Товар:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;product&quot; aria-describedby=&quot;emailProduct&quot;&gt;
+                        &lt;div id=&quot;emailHelp&quot; class=&quot;form-text&quot;&gt;Tap on product you want to buy.&lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;quantity&quot; class=&quot;form-label&quot;&gt;Кількість:&lt;/label&gt;
+                        &lt;input type=&quot;number&quot; min=&quot;0&quot; class=&quot;form-control&quot; id=&quot;quantity&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;firstName&quot; class=&quot;form-label&quot;&gt;Ім'я:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;firstName&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;lastName&quot; class=&quot;form-label&quot;&gt;Прізвище:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;lastName&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;numberOfTelephone&quot; class=&quot;form-label&quot;&gt;Телефон:&lt;/label&gt;
+                        &lt;input type=&quot;tel&quot; class=&quot;form-control&quot; id=&quot;numberOfTelephone&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;mb-3&quot;&gt;
+                        &lt;label for=&quot;postOffice&quot; class=&quot;form-label&quot;&gt;Місто, номер відділення НП:&lt;/label&gt;
+                        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;postOffice&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Продовжити&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;!-- Text after main block--&gt;
+    &lt;div class=&quot;container-fluid mt-2 text-white h5 h-100&quot;&gt;
+        &lt;div class=&quot;main-div-float-left mt-3 p-3 w-50&quot;&gt;
+            Контактна інформація
+            Адреса магазину: вулиця Академіка Янгеля, 20 м.Київ
+            На період карантину звертайтеся за телефоном:
+            &lt;ol&gt;
+                &lt;li value=&quot;text&quot;&gt;
+                    + 38 (097) 438 78 53 &mdash; адміністратор
+                &lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;ul&gt;
+                &lt;li value=&quot;text&quot;&gt;+ 38 (096) 412 97 15 &mdash; консультант&lt;/li&gt;
+            &lt;/ul&gt;
+            Email: dimakukold@gmail.com
+        &lt;/div&gt;
+        &lt;div class=&quot;main-div-float-left mt-3 p-3 w-50&quot;&gt;
+            У вихідні дні працюємо з 10 до 22 +380 99 911 1473 - наш консультант вихідного дня
+            Email: sashaignor24na7@gmail.com
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- ///Text after main block--&gt;
+
+&lt;/main&gt;
+                  </code>
+              </pre>
+            </main>
+
+            <main id="lists" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Списки: </h2>
+                </div>
+                <div class="container-fluid p-3 text-center">
+                    <img class="img mw-100" src="../img/lab2/lists.png" alt="Списки">
+                </div>
+                <pre>
+                  <code class="language-html">
+&lt;list&gt;
+    &lt;li value=&quot;text&quot;&gt;
+        + 38 (097) 438 78 53 &mdash; адміністратор
+    &lt;/li&gt;
+    &lt;li value=&quot;text&quot;&gt;+ 38 (096) 412 97 15 &mdash; консультант&lt;/li&gt;
+&lt;/list&gt;
+                  </code>
+              </pre>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    Списком називається взаємо пов'язаний набір окремих фраз чи речень. Списки надають можливість
+                    упорядкувати та систематизувати різні данні та представити їх в наочному і зручному для користувача
+                    вигляді.
+                    Списки бувають:<br>
+                    &bull; маркировані: контейнер &lt;ul&gt; та пункт списку починається з тега &lt;li&gt;<br>
+                    &bull; нумеровні: контейнер &lt;ol&gt; та пункт списку починається з тега &lt;li&gt;<br>
+                    &bull; список визначень: контейнер &lt;dl&gt;, термін &lt;dt&gt;<br>
+                </div>
+            </main>
+
+            <!-- ///Structure blocks -->
+
+        </div>
+        <!-- ///Right block -->
+
+    </div>
+    <!-- ///row -->
+
+</div>
+<!-- ///Блок слевой стороны со структурой лабараторных -->
+
+<!-- Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
