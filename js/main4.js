@@ -9,7 +9,7 @@ function changeClass() {
 }
 
 function changeMain(id) {
-    const allIds = ['default', 'team_photo', 'task', 'arrays', 'floaters', 'tables', 'theme', 'conclusion','str_1','str_2','str_3','str_4',];
+    const allIds = ['default', 'team_photo', 'task', 'arrays', '6punkt', 'theme', 'conclusion', 'str_1', 'str_2', 'str_3', 'str_4'];
     for (let i = 0; i < allIds.length; i++) {
         if (!document.getElementById(allIds[i]).classList.contains('d-none')) {
             document.getElementById(allIds[i]).classList.add('d-none');

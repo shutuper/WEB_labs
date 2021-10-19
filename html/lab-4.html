@@ -82,7 +82,7 @@
                     <button type="button" value="arrays" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Масиви
                     </button>
-                    <button type="button" value="tables" onclick="changeMain(this)"
+                    <button type="button" value="6punkt" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Виконання 6 пункту
                     </button>
 
@@ -199,7 +199,8 @@
                     маніпулювання
                     інформаційним вмістом Web-документа засобами мови Javasсript, навчитись використовувати об’єкти,
                     масиви,
-                    функції, події, обробники подій у сценаріях на мові JavaScript. Крім того кожен з нас маємо
+                    функції, події, обробники подій у сценаріях на мові JavaScript.<br>
+                    Крім того кожен з нас маємо
                     реалізувати
                     окреме завдання на побудову практичного засобу взаємодії з користувачем написаного на Javascript-і.
                     Той таке.
@@ -223,7 +224,8 @@
                 </div>
                 <!-- Button to github -->
                 <div class="text-center">
-                    <a href="https://github.com/shutuper/WEB_labs/web_lab_4" alt="github: shutuper" class="btn">
+                    <a href="https://github.com/shutuper/WEB_labs/tree/master/web_lab_4" alt="github: shutuper"
+                       class="btn">
                         <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
                             <i class="bi bi-github "></i> Check lab code
                         </button>
@@ -250,60 +252,213 @@
                 <div class="container-fluid mt-3 h4 bg-light p-2">
                     У ході виконання даної лабораторної роботі ми нагадали основні інструменти для використання
                     JavaScript у HTML-документі. Ми опрацювали теорію про класи, об’єкти, функції, події та обробку
-                    подій в мові JavaScript. Використовуючи вивчений матеріал на практиці при виконанні завдань, ми
+                    подій в мові JavaScript.<br>
+                    Використовуючи вивчений матеріал на практиці при виконанні завдань, ми
                     також придбали практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами
                     мови Javasсript, використання об’єктів,масивів, функцій, подій, обробників подій у сценаріях на мові
                     JavaScript. Запустили даний документ у браузері для перевірки та переконалися, що все працює
                     коректно.
                 </div>
                 <div class="container-fluid text-center mt-3">
-                    <img class="img img-responsive"/>
-                    src="https://pyrogiv.kiev.ua/wp-content/uploads/08964be5f4846a01f8b847968ae0ca11-400x188.jpg"
-                    alt="Мета - це твоє життя!">
+                    <img class="img img-responsive"
+                         src="https://pyrogiv.kiev.ua/wp-content/uploads/08964be5f4846a01f8b847968ae0ca11-400x188.jpg"
+                         alt="Мета - це твоє життя!">
                 </div>
             </main>
 
-            <main id="tables" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+            <main id="6punkt" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Розмітка сторінки за допомогою таблиці: </h2>
-                </div>
-                <div class="container-fluid mt-3 h4 bg-light p-2">
-                    Веб-сторінки можуть містити різні об&rsquo;єкти: тексти, меню, зображення тощо. Для впорядкування об&rsquo;єктів
-                    на веб-сторінці її (всю або частину) можна розмічати як таблицю.
-                    Для створення таблиці використовується паринй тег &lt;table&gt; &lt;/table&gt; який створює таблицю
-                    в HTML документі. Таблиця має складатись хочаб з одног рядка &lt;tr&gt; та однієї комірки (&lt;th&gt;
-                    - комірка-заголовок або &lt;td&gt; - комірка таблиці)
-                    Таблиця, створена тегом &lt;table&gt; може бути розділена на верхній, нижній колонтитули та основну
-                    частину за допомогою тегів &lt;thead&gt;, &lt;tfoot&gt;, &lt;tbody&gt;.
-                    Атрибут rowspan визначає об'єднання рядків у один стовпчик. Атрибут colspan визначає об'єднання
-                    стовпців у один рядок. Значення атрибута вказує на те, скільки стовпчиків буде об'єднано.
+                    <h2 class="m-3"> Виконання 6 пункту: </h2>
                 </div>
 
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    <div class="container-fluid p-3 text-center">
+                        <img class="img mw-100" src="../img/lab4/egor2.png" alt="">
+                    </div>
+                </div>
                 <pre>
-                  <code class="language-html">
-&lt;table id=&quot;table&quot; border=&quot;1&quot;&gt;
-    &lt;tr&gt;
-        &lt;th colspan=&quot;7&quot; id=&quot;cell&quot;&gt;1&lt;/th&gt;
-        &lt;div id=&quot;pos&quot;&gt;&lt;/div&gt;
-    &lt;/tr&gt;
-    &lt;tr id=&quot;heigher&quot;&gt;
-        &lt;td id=&quot;column_1&quot; colspan=&quot;1&quot;&gt;2&lt;/td&gt;
-        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
-        &lt;td class=&quot;column_3&quot; colspan=&quot;1&quot;&gt;3&lt;/td&gt;
-        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
-        &lt;td class=&quot;column_4&quot; colspan=&quot;1&quot;&gt;4&lt;/td&gt;
-        &lt;td class=&quot;column_2&quot; colspan=&quot;1&quot;&gt;&lt;/td&gt;
-        &lt;td class=&quot;column_3&quot; colspan=&quot;1&quot;&gt;5&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td colspan=&quot;7&quot; id=&quot;footer&quot;&gt;6&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
+                  <code class="language-javascript">
+  var slideIndex = 0;
+    var delay = 2000;
+    var cycle = true;
+    showSlides();
+
+    function bigger() {
+        var mySlides = document.getElementsByClassName('mySlides');
+        var it = true;
+        const h = 'h-';
+        const w = 'w-';
+        var change = 100;
+
+        for (let i = 0; i < mySlides.length; i++) {
+            if (it) {
+                if (mySlides[i].classList.contains('w-25'))
+                    change = 50;
+                if (mySlides[i].classList.contains('w-50'))
+                    change = 75;
+                it = false;
+            }
+            mySlides[i].classList.remove(h + (change - 25).toString());
+            mySlides[i].classList.remove(w + (change - 25).toString());
+            mySlides[i].classList.add(w + change.toString());
+            mySlides[i].classList.add(h + change.toString());
+        }
+
+    }
+
+    function smaller() {
+        var mySlides = document.getElementsByClassName('mySlides');
+        var it = true;
+        var h = 'h-';
+        var w = 'w-'
+        var change = 25;
+        for (let i = 0; i < mySlides.length; i++) {
+            if (it) {
+                if (mySlides[i].classList.contains('w-100'))
+                    change = 75;
+                if (mySlides[i].classList.contains('w-75'))
+                    change = 50;
+                it = false;
+            }
+            mySlides[i].classList.remove(h + (change + 25).toString());
+            mySlides[i].classList.remove(w + (change + 25).toString());
+            mySlides[i].classList.add(w + change.toString());
+            mySlides[i].classList.add(h + change.toString());
+        }
+
+    }
+
+    var loli = false;
+
+    function showSlides() {
+        interval = setInterval(function () {
+            if (!loli || slideIndex < 3) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        }, delay);
+    }
+
+    function changeDelay() {
+        delay = parseInt(document.getElementById('delay').value) * 1000;
+        clearInterval(interval);
+        showSlides();
+        document.getElementById('n').innerText = (delay / 1000) + 's';
+    }
+
+    function cycleDo() {
+        cycle = !cycle;
+        var text = 'Iteration';
+        if (!cycle) text = 'Cycle';
+        document.getElementById('cycle').innerText = text;
+        loli = !loli;
+        slideIndex = 0;
+        clearInterval(interval);
+        showSlides();
+    }
                   </code>
               </pre>
-                <div class="container-fluid p-3 text-center">
-                    <img src="../img/lab3/dima.png" alt="Плаваючі елементи">
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    <div class="container-fluid p-3 text-center">
+                        <img class="img mw-100" src="../img/lab4/sashka2.png" alt="">
+                    </div>
                 </div>
+                <pre>
+                  <code class="language-javascript">
+var optionList = ["Sashko", "Sashka", "Ira", "Dima", "Egor", "ILoveWeb"];
+
+function fillDataList() {
+    var container = document.getElementById('my-text-box'),
+        i = 0,
+        len = optionList.length,
+        dl = document.createElement('datalist');
+
+    dl.id = 'dlNames';
+    for (; i < len; i += 1) {
+        var option = document.createElement('option');
+        option.value = optionList[i];
+        dl.appendChild(option);
+    }
+    container.appendChild(dl);
+}
+fillDataList();
+                  </code>
+              </pre>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    <div class="container-fluid p-3 text-center">
+                        <img class="img mw-100" src="../img/lab4/dima2.png" alt="">
+                    </div>
+                </div>
+                <pre>
+                  <code class="language-javascript">
+Date.prototype.getWeek = function () {
+    var target  = new Date(this.valueOf());
+    var dayNr   = (this.getDay() + 6) % 7;
+    target.setDate(target.getDate() - dayNr + 3);
+    var firstThursday = target.valueOf();
+    target.setMonth(0, 1);
+    if (target.getDay() != 4) {
+      target.setMonth(0, 1 + ((4 - target.getDay()) + 7) % 7);
+    }
+    return 1 + Math.ceil((firstThursday - target) / 604800000);
+  }
+
+  var DW = document.querySelector('#week'),
+          NW = document.querySelector('#week ~ output'),
+          NWG = document.querySelector('#week ~ output ~ output');
+
+  DW.value = new Date().toJSON().slice(0,10);
+  NW.innerHTML = new Date(DW.value).getWeek();
+  NWG.innerHTML = new Date(new Date(DW.value).getFullYear(),11,28).getWeek();
+
+  DW.oninput = function() {
+    NW.innerHTML = new Date(DW.value).getWeek();
+    NWG.innerHTML = new Date(new Date(DW.value).getFullYear(),11,28).getWeek();
+  }
+
+                  </code>
+              </pre>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    <div class="container-fluid p-3 text-center">
+                        <img class="img mw-100" src="../img/lab4/ira2.png" alt="">
+                    </div>
+                </div>
+                <pre>
+                  <code class="language-javascript">
+function Validate() {
+    let date = document.forms["form"]["bday"].value.split(".")
+    let count = document.forms["form"]["count"].value
+    let pass1 = document.forms["form"]["passwordF"].value
+    let pass2 = document.forms["form"]["passwordS"].value
+    if (!isNaN(count) && !Number.isInteger(+count)) {
+        alert("Halves don`t count..")
+        return  false
+    } else if (+date[0] > 31 || +date[1] > 12 || +date[2] > new Date().getFullYear()) {
+        alert("Date invalid!")
+        return  false
+    } else if (pass1 !== pass2) {
+        alert("Passwords are different!")
+        return  false
+    }
+    return true
+}
+
+                  </code>
+              </pre>
+
             </main>
 
             <!-- Photo block -->
@@ -337,73 +492,158 @@
             <!-- ///Photo block -->
 
             <!-- Floaters -->
-            <main id="floaters" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+            <main id="str_1" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Розмітка сторінки за допомогою плаваючих блоків: </h2>
+                    <h2 class="m-3"> Схема URL: </h2>
                 </div>
                 <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                    При блоковій верстці істотне значення приділяється універсальному тегу &lt;div&gt;, який виконує
-                    безліч функцій. Завдяки цьому тегу HTML-код розпадається на ряд чітких наочних блоків, код при цьому
-                    виходить більш компактним, ніж при табличній верстці, до того ж пошукові системи його краще
-                    індексують.
-                    Через різні класи і ідентифікатори div-блокам задається відповідне CSS-оформлення. Наприклад, щоб
-                    було зручніше писати стилі для шапки сайту, можна додати до блоку клас .header, а для футера &mdash;
-                    клас .footer.<br>
-                    Перевагами даного типу є:<br>
-                    &bull; Кешування блоків браузером, за рахунок чого швидке завантаження сторінок;<br>
-                    &bull; Необмежені можливості по створенню складних дизайнів;<br>
-                    &bull; Чітке відділення частини з контентом;<br>
-                    &bull; Простота реалізації програмної частини;
+                    Схема URL - це один з основних елементів Web- технології. Кожен інформаційний ресурс в Web має свій
+                    унікальний URL. URL вказують в атрибуті HREF контейнера A, в атрибуті SRC контейнера IMG, в атрибуті
+                    ACTION контейнера FORM і т.д.
+                    За допомогою схеми Url-javascript можна перехоплювати не тільки стандартні гіпертекстові посилання,
+                    але і атрибут action у html форм
+                    Основним завданням мови програмування гіпертекстової системи є програмування гіпертекстових
+                    переходів. Це означає, що при виборі тієї чи іншої гіпертекстового посилання викликається програма
+                    реалізації гіпертекстового переходу. У Web-технології стандартною програмою є програма завантаження
+                    сторінки. JavaScript дозволяє поміняти стандартну програму на програму користувача.
+
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab4/str_1.jpg" alt="Мета - це твоє життя!">
                 </div>
 
-                <div class="container-fluid row">
-                    <div class="container col-6 p-2"><pre>
-                            <code class="language-css">
-.maxim {
-    width: available;
-    background-color: blue;
-    color: white;
-    height: 20%;
-}
-.yel-1 {
-    float: left;
-    background-color: yellow;
-    height: 60%;
-    width: 25%;
-}
-.wh {
-    background-color: white;
-    float: left;
-    height: 60%;
-    width: 50%;
-}
-.yel-2 {
-    background-color: yellow;
-    height: 60%;
-}
-.bl-b {
-    background-color: blue;
-    color: white;
-}
-                    </code>   </pre>
-                    </div>
-                    <div class="container col-6 p-2"><pre>
-                  <code class="language-html">
-&lt;div class=&quot;maxim&quot;&gt;1&lt;/div&gt;
-
-&lt;div class=&quot;yel-1&quot;&gt;2&lt;/div&gt;
-
-&lt;div class=&quot;wh&quot;&gt;4&lt;/div&gt;
-
-&lt;div class=&quot;yel-2&quot;&gt;5&lt;/div&gt;
-
-&lt;div class=&quot;bl-b&quot;&gt;3&lt;/div&gt;
-                  </code></pre>
-                    </div>
-                    <div class="container-fluid p-3 text-center">
-                        <img src="../img/lab3/egor.png" alt="Плаваючі елементи">
-                    </div>
+                <div class="container-fluid p-2"><pre>
+                            <code class="language-html">
+    &lt;form method=&quot;post&quot; name=&quot;form&quot;
+          action=&quot;JavaScript:form.e.value='Нажали кнопку: Заполнить';void(0);&quot;&gt;
+        &lt;a href=&quot;JavaScript:alert('Внимание!!!');&quot;&gt;Кликни здесь&lt;/a&gt;&lt;form&gt;
+                    </code>
+                    </pre>
                 </div>
+
+
+            </main>
+            <main id="str_2" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Обробник подій: </h2>
+                </div>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    Такі програми, як обробники подій, вказуються в атрибутах контейнерів, з якими ці події пов'язані.
+                    Наприклад, при натисканні на кнопку відбувається подія Click і відповідно викликається обробник цієї
+                    події onClick.
+                    А в момент завершення повного завантаження документа (він пов'язаний з контейнером
+                    &lt;body&gt;) відбувається подія Load і, відповідно, буде викликаний оброблювач цієї події onLoad.
+
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab4/str_1.jpg" alt="Мета - це твоє життя!">
+                </div>
+
+                <div class="container-fluid p-2"><pre>
+                            <code class="language-html">
+    &lt;script&gt; function l() {
+        str = window.location.href;
+        return (str.length);
+    }
+    &lt;/script&gt;
+    &lt;form method=&quot;post&quot; name=&quot;form&quot;
+          action=&quot;JavaScript:form.e.value='Нажали кнопку: Заполнить';void(0);&quot;&gt;
+        &lt;a href=&quot;JavaScript:alert('Внимание!!!');&quot;&gt;Кликни здесь&lt;/a&gt;
+        &lt;input type=text NAME=e SIZE=30 VALUE=&quot;&quot;&gt;&lt;BR&gt;
+        &lt;input type=submit VALUE=&quot;Заполнить&quot;&gt;
+        &lt;input type=reset VALUE=&quot;Очистить&quot;&gt;
+    &lt;input type=button VALUE=&quot;Кнопка&quot;
+           onClick=&quot;alert('Вы нажали кнопку');&quot;&gt;&lt;/form&gt;
+                    </code>
+                    </pre>
+                </div>
+
+
+            </main>
+            <main id="str_3" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Підстановка (entity): </h2>
+                </div>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    Підстановка (entity) - це досить потужний інструмент генерації HTML-сторінки на стороні браузера.
+                    Підстановки використовуються в якості значень атрибутів HTML-контейнерів. Наприклад, як значення за
+                    замовчуванням поля форми, що визначає домашню сторінку користувача, буде вказано URL поточної
+                    сторінки.
+                    Підстановки мають формат: & {код_программи}; і використовуються в якості значень атрибутів
+                    HTML-контейнерів.
+                    У разі підстановки JavaScript-інтерпретатор отримує управління в момент розбору браузером
+                    HTML-документа. Як тільки парсер зустрічає конструкцію & {..}; у атрибута контейнера, він передає
+                    управління JavaScript-інтерпретатора, який, в свою чергу, після виконання коду це управління
+                    повертає парсеру.
+
+                </div>
+
+
+                <div class="container-fluid p-2"><pre>
+                            <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/html&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Task3&lt;/title&gt;
+    &lt;SCRIPT&gt; function l() {
+        str = window.location.href;
+        return (str.length);
+    }
+    &lt;/SCRIPT&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;form&gt;
+    &lt;input TYPE=text SIZE=&quot;&amp;{l()};&quot; VALUE=&quot;&amp;{window.location.href};&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                    </pre>
+                </div>
+
+
+            </main>
+            <main id="str_4" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Вставка (SCRIPT): </h2>
+                </div>
+                <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
+                    Тег &lt;script&gt; використовується для вставки скриптів (сценаріїв) у html-документ.
+                    Сам скрипт може розташовуватися як у html-документі (всередині тегів head або body), так і в
+                    зовнішньому файлі, такий підхід дозволяє використовувати одні і ті ж загальні функції на багатьох
+                    веб-сторінках і прискорює їх завантаження, тому що зовнішній файл кешуєтся при першому завантаженні
+                    і скрипт виконується швидше при наступних викликах.
+                    Скрипти, які повинні виконуватися в першу чергу, звичайно поміщають в заголовок документа.
+                    Елемент &lt;script&gt; в собі містить скрипт, або, за допомогою атрибута src, вказує на зовнішній
+                    файл зі сценаріями. Якщо атрибут &quot;src&quot; присутній, елемент &lt;script&gt; повинен бути
+                    порожнім.
+
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab4/str_4.jpg" alt="Мета - це твоє життя!">
+                </div>
+
+                <div class="container-fluid p-2"><pre>
+                            <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Task4&lt;/title&gt;
+    &lt;SCRIPT&gt;
+        d = new Date();
+        document.write('Момент загрузки страницы: ' + d.getHours() + ':'
+            + d.getMinutes() + ':' + d.getSeconds());
+    &lt;/SCRIPT&gt;
+&lt;/head&gt;
+&lt;BODY onLoad=&quot;time_scroll()&quot;&gt;
+&lt;/BODY&gt;
+&lt;/html&gt;
+                    </code>
+                    </pre>
+                </div>
+
 
             </main>
 
