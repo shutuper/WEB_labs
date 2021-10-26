@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html dir="ltr" class="animate__animated animate__fadeIn text-monospace">
+
+<head>
+    <meta charset="utf-8">
+    <title>7 бригада</title>
+    <meta content="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../js/prism.js"></script>
+</head>
+
+<body>
+<script>
+    function changeClass() {
+        if (document.getElementById("changeArrow").classList.contains('bi-arrow-down-circle')) {
+            document.getElementById("changeArrow").classList.remove('bi-arrow-down-circle');
+            document.getElementById("changeArrow").classList.add('bi-arrow-up-circle');
+        } else {
+            document.getElementById("changeArrow").classList.remove('bi-arrow-up-circle');
+            document.getElementById("changeArrow").classList.add('bi-arrow-down-circle');
+        }
+    }
+
+    function changeMain(id) {
+        const allIds = ['default', 'team_photo', 'socials', 'informs', 'punkt3', 'theme', 'conclusion', 'str_1', 'str_2', 'str_3'];
+        for (let i = 0; i < allIds.length; i++) {
+            if (!document.getElementById(allIds[i]).classList.contains('d-none')) {
+                document.getElementById(allIds[i]).classList.add('d-none');
+                break;
+            }
+        }
+        document.getElementById(id.value).classList.remove('d-none');
+    }</script>
+
+<!-- Верхний контейнер -->
+<header class="container-fluid bg-dark p-4 text-center text-white text-monospace back-brigada" data-bs-toggle="collapse"
+        href="#collapsedLabs" role="button" aria-expanded="false" aria-controls="collapsedLabs">
+    <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ
+        ІЗ ДИСЦИПЛІНИ «РОЗРОБЛЕННЯ WEB-ЗАСТОСУВАННЬ»
+    </h2>
+    <code>
+        <h4>7 БРИГАДА ІА-01 <i class="bi-award"></i></h4>
+    </code>
+</header>
+<!-- ///Верхний контейнер -->
+
+<!-- Навигация по лабах (выпадающий блок) -->
+<nav class="collapse text-center p-1 table-responsive" style="background-color: #a0a0a0;" id="collapsedLabs">
+    <div class="btn-group btn-group-lg btn-outline font-monospace text-dark btn-group-toggle animate__animated animate__flipInX"
+         role="group" data-toggle="buttons" aria-label="Basic example">
+        <!-- файл для следующей лабы размещаете в той же директории  -->
+        <button type="button" class="btn btn-muted"><a href="lab-1.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 1</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-2.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 2</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-3.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 3</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-4.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 4</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-5.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 5</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-6.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 6</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-7.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 7</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-8.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 8</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-9.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 9</a></button>
+    </div>
+</nav>
+
+<!-- Блок слевой стороны со структурой лабараторных -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 text-center">
+            <div class="container float-start p-4 font-monospace" style="background-color: #88e3f5d1">
+
+                <!-- Vertical menu -->
+                <div class="btn-group-vertical mw-100 p-3">
+
+                    <button type="button" value="theme" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Тема, постановка задачі лабараторної
+                        роботи
+                    </button>
+                    <button type="button" value="punkt3" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Динамічні елементи 3-го пункту
+                        роботи
+                    </button>
+
+                    <button type="button" class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2" onclick="changeClass()"
+                            data-bs-toggle="collapse" href="#collapseStructe" role="button" aria-expanded="false"
+                            aria-controls="collapseStructe">Галерея UniteGallery
+                        <i id="changeArrow" class="bi-arrow-down-circle"></i></button>
+
+                    <!-- Выпидающее меню структуры документа -->
+                    <div class="collapse font-monospace w-100" id="collapseStructe">
+                        <div class="btn-group-vertical p-3 w-100">
+                            <button type="button" value="str_1" onclick="changeMain(this)"
+                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
+                                    class="bi-caret-right"></i> Фотогалерея
+                            </button>
+                            <button type="button" value="str_2" onclick="changeMain(this)"
+                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
+                                    class="bi-caret-right"></i> Слайдер фотографій
+                            </button>
+                            <button type="button" value="str_3" onclick="changeMain(this)"
+                                    class="btn btn-warning p-3 h4 txtbigger3 animate__animated animate__rollIn"><i
+                                    class="bi-caret-right"></i> Слайдер відео
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="button" value="socials" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Кнопки соціальних мереж
+                    </button>
+                    <button type="button" value="informs" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Інформери
+                        роботи
+                    </button>
+
+                    <button type="button" value="conclusion" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Висновки
+                    </button>
+
+                    <button type="button" class="btn btn-dark py-1 px-5" value="team_photo" onclick="changeMain(this)"
+                            name="button">Team photo
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- ///Блок слевой стороны со структурой лабараторных -->
+
+        <!-- Right block -->
+        <div class="col-9 p-3 font-monospace rightBlockOverflow">
+            <!--            Example code of images and code !!!-->
+            <!-- ______________Example code of images and code !!! _______________________
+
+    <img class="img img-responsive m-2 container" src="http://www.shukach.com/sites/default/files/imagecache/node-gallery-display/post_images/14/p1290798-53274.jpg" alt="">
+    <pre>
+        <code class="language-html">
+              &lt;div class=&quot;col-8 rightBlock&quot;&gt;
+      &lt;!-- блок для основной инфы --&gt;
+      &lt;main class=&quot;container-fluid p-2 &quot;&gt;
+        </code>
+    </pre>     -->
+
+            <!-- Блок для основной инфы -->
+            <!-- Дефолтный контейнер -->
+            <main id="default"
+                  class="container-fluid bg-light p-3 h-100 animate__animated animate__fadeIn border border-secondary">
+                <div class="container-fluid p-2 bg-light text-center">
+                    <!-- header -->
+                    <img src="../img/kpi_header.png"
+                         class="animate__animated animate__lightSpeedInRight mw-100 img img-responsive" alt="kpi">
+                    <h4 class="m-3">
+                        Міністерство освіти і науки України
+                        Національний технічний університет України
+                        “Київський політехнічний інститут імені Ігоря Сікорського”
+                        Факультет інформатики та обчислювальної техніки
+                        Кафедра автоматики та управління в технічних системах
+                    </h4>
+                </div>
+                <!-- center info -->
+                <div class="container-fluid p-3 bg-light text-center mt-5">
+                    <h3 class="animate__animated animate__lightSpeedInRight">Лабаратаорна робота № 5</h3>
+                    <h4>На тему: Використання в сценаріях javascript бібліотек крос-браузерних інтерфейсів методів dom.
+                        Бібліотека Jquery Ui.
+                        Засоби налагодження і тестування сценаріїв javascript.</h4>
+                </div>
+
+                <!-- row -->
+                <div class="container-fluid row mt-5">
+                    <!-- column -->
+                    <div class="col-6 text-center mt-3 mb-5">
+                        <h4>Виконали: Гнітій Є.,<br>
+                            Терещенко Д., Дронь О.,<br>
+                            Телесненко І.</h4>
+                    </div>
+
+                    <!-- column -->
+                    <div class="col-6 text-center mt-4 mb-4">
+                        <h4>Перевірила: Проскура С. Л.</h4>
+                    </div>
+
+                </div>
+            </main>
+            <!-- ///Дефолтный контейнер -->
+
+            <!-- Desription block -->
+            <main id="description" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Опис предметного середовища </h2>
+                </div>
+                <div class="container p-3">
+            <pre>
+              <code class="language-html">
+            &lt;main  id=&quot;problem&quot; class=&quot;container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn&quot;&gt;
+              &lt;div class=&quot;container-fluid p-2 bg-info&quot;&gt;
+                &lt;h2 class=&quot;m-3&quot;&gt; Проблема &lt;/h2&gt;
+              &lt;/div&gt;
+            &lt;/main&gt;
+            &lt;main  id=&quot;task&quot; class=&quot;container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn&quot;&gt;
+              &lt;div class=&quot;container-fluid p-2 bg-info&quot;&gt;
+                &lt;h2 class=&quot;m-3&quot;&gt; Основна задача &lt;/h2&gt;
+              &lt;/div&gt;
+            &lt;/main&gt;
+              </code>
+            </pre>
+                </div>
+            </main>
+            <!-- ///Desription block -->
+
+            <!-- Theme block -->
+            <main id="theme" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Тема, мета лабараторної роботи </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Тема:</b> використання в сценаріях javascript бібліотек крос-браузерних інтерфейсів методів dom.
+                    Бібліотека Jquery Ui.
+                    Засоби налагодження і тестування сценаріїв javascript.<br><br>
+                    <b>Мета:</b> придбати практичні навички роботи jQuery UI, вміти додавати до сайту динамічні елементи
+                    цієї бібіліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.
+                    <br>
+                    <br>
+                    <b>Постановка задачі:</b>
+                </div>
+                <div class="text-center">
+                    <a href="https://github.com/shutuper/WEB_labs/tree/master/web_lab_5" alt="github: shutuper"
+                       class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check lab code
+                        </button>
+                    </a>
+                    <br>
+                    <a href="https://github.com/shutuper/WEB_labs" alt="github: shutuper" class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check conclusion code
+                        </button>
+                    </a>
+                </div>
+                <!-- ///Button to github -->
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/bussisman.jpg" alt="Мета - це твоє життя!">
+                </div>
+            </main>
+            <!-- ///Theme block -->
+
+            <!-- Сonclusion block -->
+            <main id="conclusion" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Висновки </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+
+                </div>
+            </main>
+            <!-- ///Сonclusion block -->
+
+            <!-- Structure blocks -->
+
+            <!-- str_1 -->
+            <main id="str_1" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Фотогалерея </h2>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive"
+                         src="../img/lab5/egor4-1.jpg"
+                         alt="Мета - це твоє життя!">
+                </div>
+                <pre>
+                    <code class="language-html">
+ &lt;p class=&quot;container bg-warning mt-3 p-2 h2 w-50&quot;&gt;Gallery&lt;/p&gt;
+    &lt;div class=&quot;col-6 p-3 offset-3&quot;&gt;
+        &lt;div id=&quot;gallery1&quot; style=&quot;display:none;&quot;&gt;
+
+            &lt;img alt=&quot;Image 1&quot; src=&quot;../../img/egor/1.jpg&quot;
+                 data-image=&quot;../../img/egor/1.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 2&quot; src=&quot;../../img/egor/2.jpg&quot;
+                 data-image=&quot;../../img/egor/2.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 3&quot; src=&quot;../../img/egor/3.jpg&quot;
+                 data-image=&quot;../../img/egor/3.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 4&quot; src=&quot;../../img/egor/4.jpg&quot;
+                 data-image=&quot;../../img/egor/4.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;div data-type=&quot;youtube&quot;
+                 data-videoid=&quot;A3PDXmYoF5U&quot;
+                 data-thumb=&quot;../../img/egor/5.jpg&quot;
+                 data-title=&quot;GoPro Demo&quot;
+                 data-description=&quot;by Go Pro&quot;&gt;&lt;/div&gt;
+
+            &lt;img alt=&quot;Image 5&quot; src=&quot;../../img/egor/5.jpg&quot;
+                 data-image=&quot;../../img/egor/5.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 2&quot; src=&quot;../../img/egor/2.jpg&quot;
+                 data-image=&quot;../../img/egor/2.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 4&quot; src=&quot;../../img/egor/4.jpg&quot;
+                 data-image=&quot;../../img/egor/4.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+        &lt;/div&gt;
+                    </code></pre>
+                <br>
+                <pre>
+                    <code class="language-javascript">
+    jQuery(document).ready(function () {
+        jQuery("#gallery1").unitegallery({
+            gallery_theme: "tiles",
+            tiles_type: "justified"
+        });
+    });
+                    </code></pre>
+            </main>
+
+            <!-- str_2 -->
+            <main id="str_2" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Слайдер фотографій </h2>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive"
+                         src="../img/lab5/egor4-2.jpg"
+                         alt="Мета - це твоє життя!">
+                </div>
+                <pre>
+                    <code class="language-html">
+        &lt;p class=&quot;container bg-warning mt-3 p-2 h2&quot;&gt;Photo slider&lt;/p&gt;
+        &lt;div id=&quot;gallery2&quot; style=&quot;display:none;&quot;&gt;
+
+            &lt;img alt=&quot;Image 1&quot; src=&quot;../../img/egor/1.jpg&quot;
+                 data-image=&quot;../../img/egor/1.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 2&quot; src=&quot;../../img/egor/2.jpg&quot;
+                 data-image=&quot;../../img/egor/2.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 3&quot; src=&quot;../../img/egor/3.jpg&quot;
+                 data-image=&quot;../../img/egor/3.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 4&quot; src=&quot;../../img/egor/4.jpg&quot;
+                 data-image=&quot;../../img/egor/4.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+            &lt;img alt=&quot;Image 5&quot; src=&quot;../../img/egor/5.jpg&quot;
+                 data-image=&quot;../../img/egor/5.jpg&quot;
+                 data-description=&quot;nature&quot;&gt;
+
+        &lt;/div&gt;
+                    </code></pre>
+                <br>
+                <pre>
+                    <code class="language-javascript">
+    jQuery("#gallery2").unitegallery({
+        gallery_theme: "slider"
+    });
+                    </code></pre>
+            </main>
+
+            <!-- str_3 -->
+            <main id="str_3" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Слайдер відео </h2>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive"
+                         src="../img/lab5/egor4-3.jpg"
+                         alt="Мета - це твоє життя!">
+                </div>
+                <pre>
+                    <code class="language-html">
+ &lt;p class=&quot;container bg-warning mt-3 p-2 h2&quot;&gt;Video slider&lt;/p&gt;
+        &lt;div id=&quot;gallery3&quot; style=&quot;display:none;&quot;&gt;
+
+            &lt;div data-type=&quot;youtube&quot;
+                 data-videoid=&quot;z6p9zT3wEw8&quot;
+                 data-title=&quot;Ogon&quot;
+                 data-description=&quot;Oh yeee&quot;&gt;&lt;/div&gt;
+
+            &lt;div data-type=&quot;youtube&quot;
+                 data-videoid=&quot;A3PDXmYoF5U&quot;
+                 data-title=&quot;GoPro Demo&quot;
+                 data-description=&quot;by Go Pro&quot;&gt;&lt;/div&gt;
+
+
+            &lt;div data-type=&quot;youtube&quot;
+                 data-videoid=&quot;lGWhZptUnNU&quot;
+                 data-title=&quot;Vikings&quot;
+                 data-description=&quot;Viking's music&quot;&gt;&lt;/div&gt;
+
+            &lt;div data-type=&quot;youtube&quot;
+                 data-videoid=&quot;wLlovxa3VJ0&quot;
+                 data-title=&quot;Bard's music&quot;
+                 data-description=&quot;Bard's music&quot;&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
+                    </code></pre>
+                <br>
+                <pre>
+                    <code class="language-javascript">
+    jQuery("#gallery2").unitegallery({
+        gallery_theme: "slider"
+    });
+                    </code></pre>
+            </main>
+
+            <!-- ///Structure blocks -->
+
+        </div>
+        <!-- ///Right block -->
+
+    </div>
+    <!-- ///row -->
+
+</div>
+<!-- ///Блок слевой стороны со структурой лабараторных -->
+
+<!-- Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
