@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-dark">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 4</title>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type='text/javascript' src='../../js/egor/unitegallery/dist/js/unitegallery.min.js'></script>
+    <meta content="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel='stylesheet' href='../../js/egor/unitegallery/dist/css/unite-gallery.css' type='text/css'/>
+    <script type='text/javascript' src='../../js/egor/unitegallery/dist/themes/carousel/ug-theme-carousel.js'></script>
+    <script type='text/javascript' src='../../js/egor/unitegallery/dist/themes/tiles/ug-theme-tiles.js'></script>
+    <script type='text/javascript' src='../../js/egor/unitegallery/dist/themes/slider/ug-theme-slider.js'></script>
+    <script type='text/javascript' src='../../js/egor/unitegallery/dist/themes/default/ug-theme-default.js'></script>
+    <link rel='stylesheet' href='../../js/egor/unitegallery/dist/themes/default/ug-theme-default.css' type='text/css'/>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+            max-height: fit-content;
+        }
+    </style>
+</head>
+
+<body class="overflow-auto">
+<div class="container-fluid text-center p-5 bg-dark text-monospace h-100 w-100">
+    <p class="container bg-warning mt-3 p-2 h2 w-50">Gallery</p>
+    <div class="col-6 p-3 offset-3">
+        <div id="gallery1" style="display:none;">
+
+
+            <img alt="Image 1" src="../../img/egor/1.jpg"
+                 data-image="../../img/egor/1.jpg"
+                 data-description="nature">
+
+            <img alt="Image 2" src="../../img/egor/2.jpg"
+                 data-image="../../img/egor/2.jpg"
+                 data-description="nature">
+
+            <img alt="Image 3" src="../../img/egor/3.jpg"
+                 data-image="../../img/egor/3.jpg"
+                 data-description="nature">
+
+            <img alt="Image 4" src="../../img/egor/4.jpg"
+                 data-image="../../img/egor/4.jpg"
+                 data-description="nature">
+
+            <div data-type="youtube"
+                 data-videoid="A3PDXmYoF5U"
+                 data-thumb="../../img/egor/5.jpg"
+                 data-title="GoPro Demo"
+                 data-description="by Go Pro"></div>
+
+            <img alt="Image 5" src="../../img/egor/5.jpg"
+                 data-image="../../img/egor/5.jpg"
+                 data-description="nature">
+
+            <img alt="Image 2" src="../../img/egor/2.jpg"
+                 data-image="../../img/egor/2.jpg"
+                 data-description="nature">
+
+            <img alt="Image 4" src="../../img/egor/4.jpg"
+                 data-image="../../img/egor/4.jpg"
+                 data-description="nature">
+
+        </div>
+        <p class="container bg-warning mt-3 p-2 h2">Photo slider</p>
+        <div id="gallery2" style="display:none;">
+
+            <img alt="Image 1" src="../../img/egor/1.jpg"
+                 data-image="../../img/egor/1.jpg"
+                 data-description="nature">
+
+            <img alt="Image 2" src="../../img/egor/2.jpg"
+                 data-image="../../img/egor/2.jpg"
+                 data-description="nature">
+
+            <img alt="Image 3" src="../../img/egor/3.jpg"
+                 data-image="../../img/egor/3.jpg"
+                 data-description="nature">
+
+            <img alt="Image 4" src="../../img/egor/4.jpg"
+                 data-image="../../img/egor/4.jpg"
+                 data-description="nature">
+
+            <img alt="Image 5" src="../../img/egor/5.jpg"
+                 data-image="../../img/egor/5.jpg"
+                 data-description="nature">
+
+        </div>
+        <p class="container bg-warning mt-3 p-2 h2">Video slider</p>
+        <div id="gallery3" style="display:none;">
+
+            <div data-type="youtube"
+                 data-videoid="z6p9zT3wEw8"
+                 data-title="Ogon"
+                 data-description="Oh yeee"></div>
+
+            <div data-type="youtube"
+                 data-videoid="A3PDXmYoF5U"
+                 data-title="GoPro Demo"
+                 data-description="by Go Pro"></div>
+
+
+            <div data-type="youtube"
+                 data-videoid="lGWhZptUnNU"
+                 data-title="Vikings"
+                 data-description="Viking's music"></div>
+
+            <div data-type="youtube"
+                 data-videoid="wLlovxa3VJ0"
+                 data-title="Bard's music"
+                 data-description="Bard's music"></div>
+
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+
+
+    jQuery("#gallery2").unitegallery({
+        gallery_theme: "slider"
+    });
+    jQuery("#gallery3").unitegallery({
+        gallery_theme: "slider"
+    });
+
+    jQuery(document).ready(function () {
+        jQuery("#gallery1").unitegallery({
+            gallery_theme: "tiles",
+            tiles_type: "justified"
+        });
+    });
+</script>
+
+</body>
+</html>
