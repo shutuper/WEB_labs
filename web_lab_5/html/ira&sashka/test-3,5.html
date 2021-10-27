@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3, 5</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <style>
+        body{background-color: #eba6f1;
+            text-align: center;
+            color: #d70076;
+            font: italic small-caps bold 24px/2 cursive;
+        }
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa-instagram {
+            background: #125688;
+            color: white;
+        }
+
+        .fa-pinterest {
+            background: #cb2027;
+            color: white;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('a.fa-twitter').click(function() {
+                var url = "https://twitter.com/dmitry_gordon";
+                document.location.href = url;
+            });
+            $('a.fa-instagram').click(function() {
+                var url = "https://www.instagram.com/dron.sashka/";
+                document.location.href = url;
+            });
+            $('a.fa-pinterest').click(function() {
+                var url = "https://www.pinterest.ru/search/pins/?q=аниме%20парики&rs=typed&term_meta[]=аниме%7Ctyped&term_meta[]=парики%7Ctyped";
+                document.location.href = url;
+            });
+            $('a.fa-facebook').click(function() {
+                var url = "https://www.facebook.com/memes/";
+                document.location.href = url;
+            });
+        });
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+        $(document).ready(function () {
+            $("#tooltip").tooltip();
+        });
+    </script>
+</head>
+<body>
+<br>
+<p>Date: <input type="text" id="datepicker" title="Select a date"></p>
+<br>
+<p>Tooltip:<input id="tooltip" type="text" title="This is the tooltip. You can input everything you want"/></p>
+<br>
+<div id="slider"></div>
+<b>Slider: <span style="color:green" id="result"></span></b>
+<script type="text/javascript">
+    $("#slider").slider({
+        animate: "slow",
+        range: "min",
+        value: 50,
+        slide : function(event, ui) {
+            $("#result").text(ui.value);
+        }
+    });
+    $( "#result" ).text($( "#slider" ).slider( "value" ));
+</script>
+<br><br>
+If you like our website, check our social media:<br>
+<a class="fa fa-twitter"></a>
+<a class="fa fa-instagram"></a>
+<a class="fa fa-facebook"></a>
+<a class="fa fa-pinterest"></a>
+</body>
+</html>
