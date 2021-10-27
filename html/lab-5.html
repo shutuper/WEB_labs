@@ -28,7 +28,7 @@
     }
 
     function changeMain(id) {
-        const allIds = ['default', 'team_photo', 'socials', 'informs', 'punkt3', 'theme', 'conclusion', 'str_1', 'str_2', 'str_3'];
+        const allIds = ['default', 'team_photo', 'socials', 'punkt7', 'informs', 'punkt3', 'theme', 'conclusion', 'str_1', 'str_2', 'str_3'];
         for (let i = 0; i < allIds.length; i++) {
             if (!document.getElementById(allIds[i]).classList.contains('d-none')) {
                 document.getElementById(allIds[i]).classList.add('d-none');
@@ -129,9 +129,13 @@
                     <button type="button" value="socials" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Кнопки соціальних мереж
                     </button>
+
                     <button type="button" value="informs" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Інформери
-                        роботи
+                    </button>
+
+                    <button type="button" value="punkt7" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Модулі jQuery для мультимедіа
                     </button>
 
                     <button type="button" value="conclusion" onclick="changeMain(this)"
@@ -162,21 +166,22 @@
     </pre>     -->
 
             <!-- Блок для основной инфы -->
+
             <!-- Дефолтный контейнер -->
             <main id="default"
-                  class="container-fluid bg-light p-3 h-100 animate__animated animate__fadeIn border border-secondary">
+                  class="container-fluid bg-light p-3 mh-100 animate__animated animate__fadeIn border border-secondary">
                 <div class="container-fluid p-2 bg-light text-center">
                     <!-- header -->
                     <img src="../img/lab1/kpi_header.png"
                          class="animate__animated animate__lightSpeedInRight mw-100 img img-responsive" alt="kpi">
                     <h4 class="m-3">
-                        Міністерство освіти і науки України
-                        Національний технічний університет України
-                        “Київський політехнічний інститут імені Ігоря Сікорського”
-                        Факультет інформатики та обчислювальної техніки
-                        Кафедра автоматики та управління в технічних системах
+                        Міністерство освіти і науки України<br>
+                        Національний технічний університет України<br>
+                        “Київський політехнічний інститут імені Ігоря Сікорського”<br>
+                        Факультет інформатики та обчислювальної техніки<br>
+                        Кафедра інформаційних систем і технологій
                     </h4>
-                </div>
+                </div><br>
                 <!-- center info -->
                 <div class="container-fluid p-3 bg-light text-center mt-5">
                     <h3 class="animate__animated animate__lightSpeedInRight">Лабаратаорна робота № 5</h3>
@@ -199,6 +204,9 @@
                         <h4>Перевірила: Проскура С. Л.</h4>
                     </div>
 
+                </div>
+                <div class="container-fluid text-center h4 ">
+                    Київ 2021
                 </div>
             </main>
             <!-- ///Дефолтный контейнер -->
@@ -240,7 +248,14 @@
                     цієї бібіліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.
                     <br>
                     <br>
-                    <b>Постановка задачі:</b>
+                    <b>Постановка задачі:</b> головним завданням даної лабораторної роботи є ознайомлення з
+                    використанням
+                    в сценаріях JavaScript бібліотек крос-браузерних інтерфейсів методів dom та бібліотеки jQuery UI.
+                    <br>Теоретичні знання необхідно закріпити практичним виконанням завдань, як-от додавання до сайту
+                    динамічних елементів, плагіну галереї UniteGallery, кнопки соціальних мереж, інформерів та модулів
+                    jQuery для мультимедіа.
+                    <br>Після виконання вищеперелічених завдань необхідно запустити опрацьований
+                    документ у браузері для перевірки та переконатися, що все працює коректно.
                 </div>
                 <div class="text-center">
                     <a href="https://github.com/shutuper/WEB_labs/tree/master/web_lab_5" alt="github: shutuper"
@@ -269,17 +284,229 @@
                     <h2 class="m-3"> Висновки </h2>
                 </div>
                 <div class="container-fluid p-3 bg-light h4 mt-3">
-
+                    У ході виконання даної лабораторної роботі ми нагадали основні інструменти для використання
+                    бібліотеки jQuery UI та JavaScript у HTML-документі. Ми опрацювали теорію про використання в
+                    сценаріях JavaScript бібліотек крос-браузерних інтерфейсів методів dom та бібліотеки jQuery UI.
+                    <br>Використовуючи вивчений матеріал на практиці при виконанні завдань, ми також придбали практичні
+                    навички роботи з jQuery UI, додавання до сайту динамічні елементи цієї бібіліотеки, плагін галереї
+                    UniteGallery, кнопки соціальних мереж, інформери та інше. Запустили даний документ у браузері для
+                    перевірки та переконалися, що все працює коректно.
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab1/bussisman.jpg" alt="Мета - це твоє життя!">
                 </div>
             </main>
             <!-- ///Сonclusion block -->
 
             <!-- Structure blocks -->
+            <!-- Socials block-->
+            <main id="socials" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Кнопки соціальних мереж </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    На сайті посилання на соціальні мережі використовуються для того, щоб користувач знав про наявність
+                    на цих ресурсах офіційних сторінок цієї компанії, а також міг просто перейти туди. Використання
+                    віджету Button зводиться до використання jQuery для вибору елементів, які ви хочете перетворити, та
+                    виклику методу button(). Всі інші турботи jQuery UI бере на себе.<br>
+                    <b>File:</b> test-3,5.html
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive"
+                         src="../img/lab5/sashka-5.jpg"
+                         alt="socials icons">
+                </div>
+                <pre>
+                    <code class="language-javascript">
+                                $(document).ready(function() {
+            $('a.fa-twitter').click(function() {
+                var url = "https://twitter.com/dmitry_gordon";
+                document.location.href = url;
+            });
+            $('a.fa-instagram').click(function() {
+                var url = "https://www.instagram.com/dron.sashka/";
+                document.location.href = url;
+            });
+            $('a.fa-pinterest').click(function() {
+                var url =
+                "https://www.pinterest.ru/search/pins/?q=аниме%20парики&rs=typed&term_meta[]=аниме%7Ctyped&term_meta[]=парики%7Ctyped";
+                document.location.href = url;
+            });
+            $('a.fa-facebook').click(function() {
+                var url = "https://www.facebook.com/memes/";
+                document.location.href = url;
+            });
+        });
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+        $(document).ready(function () {
+            $("#tooltip").tooltip();
+        });
+                    </code></pre>
+            </main>
+            <!-- Informers block-->
+            <main id="informs" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Інформери </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Інформери</b> за замовчуванням не включені і вимагають ініціалізації, перш ніж ви зможете їх
+                    використовувати. Один із способів ініціалізації – розмістити наступний код десь після виклику
+                    jQuery.
+                    Ось базовий приклад інформера – використовуйте data-toggle="popover" для визначення інформера та
+                    data-content="" для його вмісту. За допомогою data-placement ви можете задати, де відображається
+                    інформер: зверху, знизу, ліворуч або праворуч. Ось основний приклад чотирьох інформерів із різним
+                    становищем.
+                    <br>
+                    <b>File:</b> task-6.html
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive"
+                         src="../img/lab5/dima6.jpg"
+                         alt="Мета - це твоє життя!">
+                </div>
+                <pre>
+                    <code class="language-html">
+&lt;body&gt;
+Курс валют
+&lt;br&gt;
+&lt;!-- ukrbanks.info: NbuInformer Begin --&gt;&lt;a href=&quot;http://www.ukrbanks.info&quot; target=&quot;_top&quot;&gt;&lt;img
+        src=&quot;http://www.ukrbanks.info/static/informer/nbu/composite_flag.png&quot; width=&quot;160&quot; height=&quot;139&quot; border=&quot;0&quot;
+        alt=&quot;Курсы валют Национального Банка Украины&quot;&gt;&lt;/a&gt;&lt;!-- ukrbanks.info: NbuInformer End --&gt;
+&lt;br&gt; прогноз погоди
+&lt;div id=&quot;SinoptikInformer&quot; style=&quot;width:240px;&quot; class=&quot;SinoptikInformer type1c1&quot;&gt;
+    &lt;div class=&quot;siHeader&quot;&gt;
+        &lt;div class=&quot;siLh&quot;&gt;
+            &lt;div class=&quot;siMh&quot;&gt;&lt;a onmousedown=&quot;siClickCount();&quot; class=&quot;siLogo&quot; href=&quot;https://sinoptik.ua/&quot;
+                                 target=&quot;_blank&quot; rel=&quot;nofollow&quot; title=&quot;Погода&quot;&gt; &lt;/a&gt;Погода &lt;span id=&quot;siHeader&quot;&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;siBody&quot;&gt;&lt;a onmousedown=&quot;siClickCount();&quot; href=&quot;https://sinoptik.ua/погода-киев&quot; title=&quot;Погода в Киеве&quot;
+                           target=&quot;_blank&quot;&gt;
+        &lt;div class=&quot;siCity&quot;&gt;
+            &lt;div class=&quot;siCityName&quot;&gt;&lt;span&gt;Киев&lt;/span&gt;&lt;/div&gt;
+            &lt;div id=&quot;siCont0&quot; class=&quot;siBodyContent&quot;&gt;
+                &lt;div class=&quot;siLeft&quot;&gt;
+                    &lt;div class=&quot;siTerm&quot;&gt;&lt;/div&gt;
+                    &lt;div class=&quot;siT&quot; id=&quot;siT0&quot;&gt;&lt;/div&gt;
+                    &lt;div id=&quot;weatherIco0&quot;&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;siInf&quot;&gt;&lt;p&gt;влажность: &lt;span id=&quot;vl0&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+                    &lt;p&gt;давление: &lt;span id=&quot;dav0&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+                    &lt;p&gt;ветер: &lt;span id=&quot;wind0&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+        &lt;div class=&quot;siLinks&quot;&gt;Погода на 10 дней от &lt;a href=&quot;https://sinoptik.ua/погода-киев/10-дней&quot;
+                                                     title=&quot;Погода на 10 дней&quot; target=&quot;_blank&quot;
+                                                     onmousedown=&quot;siClickCount();&quot;&gt;sinoptik.ua&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;siFooter&quot;&gt;
+        &lt;div class=&quot;siLf&quot;&gt;
+            &lt;div class=&quot;siMf&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot;
+        src=&quot;//sinoptik.ua/informers_js.php?title=4&amp;amp;wind=3&amp;amp;cities=303010783&amp;amp;lang=ru&quot;&gt;&lt;/script&gt;
+&lt;br&gt; годинник
+&lt;iframe style='width: 100%; height: 86px;' frameborder=0 scrolling=auto
+        src='http://calendar.volego.ru/informer?mode=2&amp;no_background=true'&gt;&lt;/iframe&gt;
+                    </code></pre>
+            </main>
+
+            <!-- Punkt 3 block-->
+            <main id="punkt3" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Динамічні елементи 3-го пункту: </h2>
+                </div>
+
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab5/ira-3.jpg"
+                         alt="socials icons">
+                </div>
+                <pre>
+                    <code class="language-javascript">
+                            $("#slider").slider({
+                             animate: "slow",
+                             range: "min",
+                             value: 50,
+                             slide : function(event, ui) {
+                                 $("#result").text(ui.value);
+                             }
+                             });
+                            $( "#result" ).text($( "#slider" ).slider( "value" ));
+                    </code></pre>
+            </main>
+
+            <!-- Punkt 7 block-->
+            <main id="punkt7" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Модулі jQuery для мультимедіа</h2>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab5/dima7.jpg"
+                         alt="socials icons">
+                </div>
+                <pre>
+                    <code class="language-javascript">
+&lt;body&gt;
+
+&lt;!-- Video Markup --&gt;
+&lt;section class=&quot;masthead&quot;&gt;
+    &lt;video class=&quot;masthead-video&quot; autoplay loop muted poster=&quot;dirties/poster.jpg&quot;&gt;
+        &lt;source src=&quot;dirties/dreamscapes.mp4&quot; type=&quot;video/mp4&quot;&gt;
+        &lt;source src=&quot;dirties/dreamscapes.webm&quot; type=&quot;video/webm&quot;&gt;
+    &lt;/video&gt;
+    &lt;div class=&quot;masthead-overlay&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;masthead-arrow&quot;&gt;&lt;/div&gt;
+    &lt;h1&gt;Володя тікай!&lt;span&gt;Він дуже близько, можливо вже за тобою!&lt;/span&gt;&lt;/h1&gt;
+    &lt;a class=&quot;masthead-video-credit&quot; href=&quot;http://vimeo.com/82495711&quot; target=&quot;_blank&quot;&gt;
+        &lt;span&gt;Владік привет&lt;/span&gt;
+    &lt;/a&gt;
+&lt;/section&gt;
+&lt;section class=&quot;content&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;h2&gt;Оп, оп дневник Демона !&lt;/h2&gt;
+        &lt;p&gt; Оце сидів увечері і думав щоб чекнуть, тіпа вже все бачив а клінок, реинкарнация в онгоингу
+            То крч грусть хз шо чекнуть, чекнув фільм чорного клевера а він зимою ток у японії вийде
+            То це вообще депресія, крч на зимніх канікулах буде багато чого можна буде почекать&lt;/p&gt;
+        &lt;h2&gt;Топ аніме 2021&lt;/h2&gt;
+        &lt;ol&gt;
+            &lt;li&gt;Клінок, рассекающий демонов 2&lt;/li&gt;
+            &lt;li&gt;Реинкарнация безработного&lt;/li&gt;
+            &lt;li&gt;Чорний клевер(фільм), хоча ще всі хз вийде він чи нє, ну то не важно главне шо буде і це буде імба
+                нова
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;!-- Load Scripts --&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;dirties/covervid.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;dirties/scripts.js&quot;&gt;&lt;/script&gt;
+
+&lt;!-- Call CoverVid --&gt;
+&lt;script&gt;
+    coverVid(document.querySelector('.masthead-video'), 640, 360);
+&lt;/script&gt;
+
+&lt;/body&gt;
+                    </code></pre>
+            </main>
 
             <!-- str_1 -->
             <main id="str_1" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
                     <h2 class="m-3"> Фотогалерея </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    File: task-4.html
                 </div>
                 <div class="container-fluid text-center mt-3">
                     <img class="img img-responsive"
@@ -345,6 +572,9 @@
                 <div class="container-fluid p-2 bg-info">
                     <h2 class="m-3"> Слайдер фотографій </h2>
                 </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    File: task-4.html
+                </div>
                 <div class="container-fluid text-center mt-3">
                     <img class="img img-responsive"
                          src="../img/lab5/egor4-2.jpg"
@@ -391,6 +621,9 @@
                 <div class="container-fluid p-2 bg-info">
                     <h2 class="m-3"> Слайдер відео </h2>
                 </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    File: task-4.html
+                </div>
                 <div class="container-fluid text-center mt-3">
                     <img class="img img-responsive"
                          src="../img/lab5/egor4-3.jpg"
@@ -432,6 +665,36 @@
     });
                     </code></pre>
             </main>
+
+            <!-- Photo block -->
+            <main id="team_photo" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Фото гарних людей: </h2>
+                </div>
+                <div class="container-fluid mt-3 h4 bg-light p-2">
+                    <div class="row">
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Терещенко Дмитро</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/dima.jpg" alt="фото">
+                        </div>
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Телесненко Ірина</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/ira.jpg" alt="фото">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Дронь Олександра</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/sashka.jpg" alt="фото">
+                        </div>
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Єгор Гнітій</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/egor.jpg" alt="фото">
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ///Photo block -->
 
             <!-- ///Structure blocks -->
 
