@@ -10,5 +10,15 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="jquery-ui" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="fluidbox-ghost-blog-plugin" level="application" />
+    <orderEntry type="library" name="jquery.ba-throttle-debounce" level="application" />
+    <orderEntry type="library" name="fluidbox" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="bootstrap-icons" level="application" />
+    <orderEntry type="library" name="animate.css" level="application" />
+    <orderEntry type="library" name="jquery-3.6.0" level="application" />
+    <orderEntry type="library" name="jquery-2.1.3" level="application" />
+    <orderEntry type="library" name="jquery-1.10.0" level="application" />
+    <orderEntry type="library" name="jquery-1.10.2" level="application" />
   </component>
 </module>
