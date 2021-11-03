@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Clown shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"/>
@@ -70,6 +71,7 @@
         <a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fsun9-9.userapi.com%2Fs%2Fv1%2Fig2%2FbClO1bftU_XdaW49NN7j0_UANIxEXTQuXz_7iNjPLlA2VCpKZjJ2wSd77ZhYszpLhuUAyr6V1XNfGWgXXX97KNzc.jpg%3Fsize%3D200x200%26quality%3D96%26crop%3D358%2C571%2C469%2C469%26ava%3D1&imgrefurl=https%3A%2F%2Fvk.com%2Fandreytrian&tbnid=9ETJVudS05wI3M&vet=12ahUKEwiPtLWx8fzzAhXUIMUKHacQAf4QMygCegQIARBg..i&docid=GGMQML3Hq_cfYM&w=200&h=200&itg=1&q=%D0%B0%D0%BD%D0%B4%D1%80%D1%96%D0%B9%20%D0%BA%D0%BE%D1%81%D0%BE%D0%B1%D1%83%D1%86%D0%BA%D0%B8%D0%B9&client=opera-gx&ved=2ahUKEwiPtLWx8fzzAhXUIMUKHacQAf4QMygCegQIARBg"
            title="That&apos;s what this widget is">Статистика для нас, для розуміння яка у нас вікова аудиторія</a>
     <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes."></p>
+
 
 </header>
 
