@@ -1,0 +1,37 @@
+main {
+    background-color: #170521 !important;
+    padding: 100px;
+    margin: 0;
+    font-family: monospace;
+    height: max-content;
+}
+
+html, main, body {
+    background: #070916;
+    font-size: 1.2em;
+}
+
+.photo-clown {
+    padding: 8px;
+}
+
+.main-div-float-left {
+    float: left;
+}
+
+main:last-child {
+    color: white;
+}
+
+#text-bigger {
+    font-size: 1.1em;
+}
+
+div list li {
+    padding-left: 40px;
+    margin: 15px auto;
+}
+
+li[value="text"] {
+    font-style: italic;
+}
