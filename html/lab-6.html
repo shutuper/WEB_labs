@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html dir="ltr" class="animate__animated animate__fadeIn text-monospace">
+
+<head>
+    <meta charset="utf-8">
+    <title>7 бригада</title>
+    <meta content="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../js/prism.js"></script>
+</head>
+
+<body>
+<script>
+    function changeClass() {
+        if (document.getElementById("changeArrow").classList.contains('bi-arrow-down-circle')) {
+            document.getElementById("changeArrow").classList.remove('bi-arrow-down-circle');
+            document.getElementById("changeArrow").classList.add('bi-arrow-up-circle');
+        } else {
+            document.getElementById("changeArrow").classList.remove('bi-arrow-up-circle');
+            document.getElementById("changeArrow").classList.add('bi-arrow-down-circle');
+        }
+    }
+
+    function changeMain(id) {
+        const allIds = ['default', 'team_photo', 'apache', 'punkt3', 'theme', 'conclusion', 'php'];
+        for (let i = 0; i < allIds.length; i++) {
+            if (!document.getElementById(allIds[i]).classList.contains('d-none')) {
+                document.getElementById(allIds[i]).classList.add('d-none');
+                break;
+            }
+        }
+        document.getElementById(id.value).classList.remove('d-none');
+    }</script>
+
+<!-- Верхний контейнер -->
+<header class="container-fluid bg-dark p-4 text-center text-white text-monospace back-brigada" data-bs-toggle="collapse"
+        href="#collapsedLabs" role="button" aria-expanded="false" aria-controls="collapsedLabs">
+    <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ
+        ІЗ ДИСЦИПЛІНИ «РОЗРОБЛЕННЯ WEB-ЗАСТОСУВАННЬ»
+    </h2>
+    <code>
+        <h4>7 БРИГАДА ІА-01 <i class="bi-award"></i></h4>
+    </code>
+</header>
+<!-- ///Верхний контейнер -->
+
+<!-- Навигация по лабах (выпадающий блок) -->
+<nav class="collapse text-center p-1 table-responsive" style="background-color: #a0a0a0;" id="collapsedLabs">
+    <div class="btn-group btn-group-lg btn-outline font-monospace text-dark btn-group-toggle animate__animated animate__flipInX"
+         role="group" data-toggle="buttons" aria-label="Basic example">
+        <!-- файл для следующей лабы размещаете в той же директории  -->
+        <button type="button" class="btn btn-muted"><a href="lab-1.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 1</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-2.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 2</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-3.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 3</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-4.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 4</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-5.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 5</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-6.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 6</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-7.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 7</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-8.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 8</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-9.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 9</a></button>
+    </div>
+</nav>
+
+<!-- Блок слевой стороны со структурой лабараторных -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 text-center">
+            <div class="container float-start p-4 font-monospace" style="background-color: #88e3f5d1">
+
+                <!-- Vertical menu -->
+                <div class="btn-group-vertical mw-100 p-3">
+
+                    <button type="button" value="theme" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Тема, постановка задачі лабараторної
+                        роботи
+                    </button>
+                    <button type="button" value="punkt3" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Динамічні елементи
+                    </button>
+
+                    <button type="button" value="apache" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Сервер Apache
+                    </button>
+
+                    <button type="button" value="php" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">PHP script
+                    </button>
+
+
+                    <button type="button" value="conclusion" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Висновки
+                    </button>
+
+                    <button type="button" class="btn btn-dark py-1 px-5" value="team_photo" onclick="changeMain(this)"
+                            name="button">Team photo
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- ///Блок слевой стороны со структурой лабараторных -->
+
+        <!-- Right block -->
+        <div class="col-9 p-3 font-monospace rightBlockOverflow">
+            <!--            Example code of images and code !!!-->
+            <!-- ______________Example code of images and code !!! _______________________
+
+    <img class="img img-responsive m-2 container" src="http://www.shukach.com/sites/default/files/imagecache/node-gallery-display/post_images/14/p1290798-53274.jpg" alt="">
+    <pre>
+        <code class="language-html">
+              &lt;div class=&quot;col-8 rightBlock&quot;&gt;
+      &lt;!-- блок для основной инфы --&gt;
+      &lt;main class=&quot;container-fluid p-2 &quot;&gt;
+        </code>
+    </pre>     -->
+
+            <!-- Блок для основной инфы -->
+
+            <!-- Дефолтный контейнер -->
+            <main id="default"
+                  class="container-fluid bg-light p-3 mh-100 animate__animated animate__fadeIn border border-secondary">
+                <div class="container-fluid p-2 bg-light text-center">
+                    <!-- header -->
+                    <img src="../img/lab1/kpi_header.png"
+                         class="animate__animated animate__lightSpeedInRight mw-100 img img-responsive" alt="kpi">
+                    <h4 class="m-3">
+                        Міністерство освіти і науки України<br>
+                        Національний технічний університет України<br>
+                        “Київський політехнічний інститут імені Ігоря Сікорського”<br>
+                        Факультет інформатики та обчислювальної техніки<br>
+                        Кафедра інформаційних систем і технологій
+                    </h4>
+                </div>
+                <br>
+                <!-- center info -->
+                <div class="container-fluid p-3 bg-light text-center mt-5">
+                    <h3 class="animate__animated animate__lightSpeedInRight">Лабаратаорна робота № 6</h3>
+                    <h4>На тему: WEB-СЕРВЕРИ ТА ПРИНЦИПИ ЇХ РОБОТИ З КОРИСТУВАЧЕМ.<br>
+                        СЕРВЕРНІ WEB-ЗАСТОСУВАННЯ
+                    </h4>
+                </div>
+
+                <!-- row -->
+                <div class="container-fluid row mt-5">
+                    <!-- column -->
+                    <div class="col-6 text-center mt-3 mb-5">
+                        <h4>Виконали: Гнітій Є.,<br>
+                            Терещенко Д., Дронь О.,<br>
+                            Телесненко І.</h4>
+                    </div>
+
+                    <!-- column -->
+                    <div class="col-6 text-center mt-4 mb-4">
+                        <h4>Перевірила: Проскура С. Л.</h4>
+                    </div>
+
+                </div>
+                <div class="container-fluid text-center h4 ">
+                    Київ 2021
+                </div>
+            </main>
+            <!-- ///Дефолтный контейнер -->
+
+
+            <!-- Theme block -->
+            <main id="theme" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Тема, мета лабараторної роботи </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Тема:</b> WEB-СЕРВЕРИ ТА ПРИНЦИПИ ЇХ РОБОТИ З КОРИСТУВАЧЕМ.
+                    СЕРВЕРНІ WEB-ЗАСТОСУВАННЯ.<br><br>
+                    <b>Мета:</b> Придбати практичні навички встановлення та конфігурування WEB-сервера, встановлення та
+                    налаштування Apache.
+                    <br>
+                    <br>
+                    <b>Постановка задачі:</b> Головним завданням даної лабораторної роботи є ознайомлення з
+                    використанням серверних web-застосувань, основних інструментів web-серверів та розумінням принципів
+                    їх роботи з користувачем.
+                    <br>Теоретичні знання необхідно закріпити практичним виконанням завдань, як-от
+                    додавання до сайту динамічних елементів, php-коду. Після виконання вищеперелічених завдань необхідно
+                    запустити опрацьований документ у браузері для перевірки та переконатися, що все працює коректно.
+                </div>
+                <div class="text-center">
+                    <a href="https://github.com/shutuper/WEB_labs/tree/master/web_lab_6" alt="github: shutuper"
+                       class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check lab code
+                        </button>
+                    </a>
+                    <br>
+                    <a href="https://github.com/shutuper/WEB_labs" alt="github: shutuper" class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check conclusion code
+                        </button>
+                    </a>
+                </div>
+                <!-- ///Button to github -->
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab1/bussisman.jpg" alt="Мета - це твоє життя!">
+                </div>
+            </main>
+            <!-- ///Theme block -->
+
+            <!-- Сonclusion block -->
+            <main id="conclusion" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Висновки </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    У ході виконання даної лабораторної роботі ми нагадали теорію про серверні web-застосування, основні
+                    інструменти web-серверів та принципи їх роботи з користувачем.
+                    <br>Використовуючи вивчений матеріал на
+                    практиці при виконанні завдань, ми також придбали практичні навички встановлення та конфігурування
+                    WEB-сервера, встановлення та налаштування Apache. Запустили даний документ у браузері для перевірки
+                    та переконалися, що все працює коректно.
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab1/bussisman.jpg" alt="Мета - це твоє життя!">
+                </div>
+            </main>
+            <!-- ///Сonclusion block -->
+
+            <!-- Structure blocks -->
+            <!-- Socials block-->
+            <main id="apache"
+                  class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Сервер Apache </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    Apache HTTP-сервер — відкритий веб-сервер Інтернет для UNIX-подібних, Microsoft Windows, Novell
+                    NetWare та інших операційних систем.
+                    <br> Apache передусім використовується для передачі через HTTP статичних та динамічних веб-сторінок
+                    у
+                    всесвітній павутині. Багато веб-застосунків спроектовано, зважаючи на середовище і можливості, які
+                    надає цей веб-сервер.
+                    <br>Продукт може працювати як кешувальний проксі-сервер, що дозволяє істотно підвищити
+                    продуктивність
+                    роботи користувачів локальної мережі при роботі з документами, розташованими в Інтернет.
+                </div>
+
+                <div class="container-fluid text-center mt-3">
+                    <div class="container-fluid h4 m-2 p-2">Настройка charset-а:</div>
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/charset.jpg"
+                         alt="socials icons">
+                    <div class="container-fluid h4 m-2 p-2">Скачали дистрибутив з http://www.apachelounge.com/</div>
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/1.png"
+                         alt="socials icons">
+                    <div class="container-fluid h4 m-2 p-2">Apache24 в директорії:</div>
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/2.png"
+                         alt="socials icons">
+                    <div class="container-fluid h4 m-2 p-2">Перевірка, чи сервер працює</div>
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/3.png"
+                         alt="socials icons">
+
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/4.png"
+                         alt="socials icons">
+                    <div class="container-fluid h4 m-2 p-2">Виконали деякі зміни у файлі httpd.conf</div>
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/5.png"
+                         alt="socials icons">
+                </div>
+
+            </main>
+
+
+            <!-- Punkt 3 block-->
+            <main id="punkt3" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Динамічні елементи: </h2>
+                </div>
+
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/dinamikalElement1.png"
+                         alt="socials icons">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/dinamikalElement2.png"
+                         alt="socials icons">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/dinamikalElement3.png"
+                         alt="socials icons">
+
+                </div>
+                <pre>
+                    <code class="language-javascript">
+    &lt;script&gt;
+        $(function () {
+            $(document).tooltip();
+        });
+    &lt;/script&gt;
+
+    &lt;script&gt;
+        $(function () {
+            $(&quot;#jQuery_accordion&quot;).accordion({
+                collapsible: true
+            });
+        });
+    &lt;/script&gt;
+function changeItemInForm(text) {
+  document.getElementById(&quot;product&quot;).value = text;
+}
+
+                    </code></pre>
+            </main>
+
+            <main id="php" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Php script: </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    PHP &mdash; скриптова мова програмування, була створена для генерації HTML-сторінок на стороні
+                    веб-сервера. PHP інтерпретується веб-сервером у HTML-код, який передається на сторону клієнта.
+                    <br>Документ PHP може містити розмітку html, так і код на мові php. Для переходу від розмітки html
+                    до
+                    коду php використовуються теги &lt;?php та ?&gt;, між якими йде код php. Дані теги є вказівкою
+                    інтерпретатору PHP, що їх вміст треба інтерпретувати як код php, а не розмітку html.
+
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab6/php.png"
+                         alt="socials icons">
+                </div>
+                <pre>
+                    <code class="language-php">
+    &lt;?php
+
+    if (!empty($_REQUEST['message'])) {
+        echo &quot;&lt;div class='container-fluid text-center p-2 m-2 text-white'&gt; Message: '&quot; . $_POST['message'] . &quot;' &quot;;
+        echo &quot;received!&quot; . &quot;&lt;br&gt;&quot;;
+        echo date(&quot;Y-m-d H:i:s&quot;, strtotime('+2 hours')) . &quot;&lt;/div&gt;&quot;;
+    }
+    ?&gt;
+
+                    </code></pre>
+
+            </main>
+            <!-- Photo block -->
+            <main id="team_photo" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Фото гарних людей: </h2>
+                </div>
+                <div class="container-fluid mt-3 h4 bg-light p-2">
+                    <div class="row">
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Терещенко Дмитро</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/dima.jpg" alt="фото">
+                        </div>
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Телесненко Ірина</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/ira.jpg" alt="фото">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Дронь Олександра</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/sashka.jpg" alt="фото">
+                        </div>
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Єгор Гнітій</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/egor.jpg" alt="фото">
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ///Photo block -->
+
+            <!-- ///Structure blocks -->
+
+        </div>
+        <!-- ///Right block -->
+
+    </div>
+    <!-- ///row -->
+
+</div>
+<!-- ///Блок слевой стороны со структурой лабараторных -->
+
+<!-- Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
