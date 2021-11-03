@@ -35,3 +35,15 @@ div list li {
 li[value="text"] {
     font-style: italic;
 }
+i-accordion .ui-accordion-header {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    margin: 2px 0 0 0;
+    padding: .5em .5em .5em .7em;
+    min-height: 0; /* support: IE7 */
+    font-size: 100%;
+    border:1px solid #FDF8E4;
+    background:#846733;
+    color:#fff;
+}

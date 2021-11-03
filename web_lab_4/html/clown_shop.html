@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Clown shop</title>
-    <meta content="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -13,18 +13,71 @@
     <script src="../js/main.js"></script>
     <script src="../js/prism.js"></script>
     <link rel="stylesheet" href="../css/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $(document).tooltip();
+        });
+    </script>
+
+    <script>
+        $(function() {
+            $( "#jQuery_accordion" ).accordion({
+                collapsible: true
+            });
+        });
+    </script>
+    <style>
+        label {
+            display: inline-block;
+            width: 5em;
+        }
+
+
+    </style>
+    <style>
+        .ui-accordion .ui-accordion-header {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            margin: 2px 0 0 0;
+            padding: .5em .5em .5em .7em;
+            min-height: 0; /* support: IE7 */
+            font-size: 100%;
+            border: 1px solid #070916;
+            background: #846733;
+            color: #fff;
+        }
+    </style>
+
 </head>
 
 <body>
-<header class="container-fluid bg-dark p-4 text-center text-white text-monospace">
 
+<header class="container-fluid bg-dark p-4 text-center text-white text-monospace">
     <h1>Магазин клоунських перук «У Демона <i class="bi bi-basket">»</i></h1>
     <code>
         <h4>7 БРИГАДА ІА-01 <i class="bi-award"></i></h4>
     </code>
+    <p>
+        <a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fsun9-9.userapi.com%2Fs%2Fv1%2Fig2%2FbClO1bftU_XdaW49NN7j0_UANIxEXTQuXz_7iNjPLlA2VCpKZjJ2wSd77ZhYszpLhuUAyr6V1XNfGWgXXX97KNzc.jpg%3Fsize%3D200x200%26quality%3D96%26crop%3D358%2C571%2C469%2C469%26ava%3D1&imgrefurl=https%3A%2F%2Fvk.com%2Fandreytrian&tbnid=9ETJVudS05wI3M&vet=12ahUKEwiPtLWx8fzzAhXUIMUKHacQAf4QMygCegQIARBg..i&docid=GGMQML3Hq_cfYM&w=200&h=200&itg=1&q=%D0%B0%D0%BD%D0%B4%D1%80%D1%96%D0%B9%20%D0%BA%D0%BE%D1%81%D0%BE%D0%B1%D1%83%D1%86%D0%BA%D0%B8%D0%B9&client=opera-gx&ved=2ahUKEwiPtLWx8fzzAhXUIMUKHacQAf4QMygCegQIARBg"
+           title="That&apos;s what this widget is">Статистика для нас, для розуміння яка у нас вікова аудиторія</a>
+    <p><label for="age">Your age:</label><input id="age" title="We ask for your age only for statistical purposes."></p>
+
+
 </header>
 
+
 <main class="container-fluid px-5 py-3 mt-2">
+
     <div class="row">
         <div class="col-6 ">
             <p class="container-fluid  w-100 border bg-dark text-white text-monospace h4 p-3 fw-bold">
@@ -32,7 +85,8 @@
             </p>
             <div class="row mx-0 container-fluid w-100 p-3" style="background-color: #27182c;">
                 <div class="col-6">
-                    <img class="img img-responsive mt-3 w-100 border rounded photo-clown" src="../img/kosobyc.jpg"
+                    <img class="img img-responsive mt-3 w-100 border rounded photo-clown"
+                         src="../img/kosobyc.jpg"
                          alt="Косуб клоун">
                 </div>
                 <div class="col-6">
@@ -124,8 +178,6 @@
             </div>
         </div>
     </div>
-
-
     <!-- Text after main block-->
     <div class="container-fluid mt-2 text-white h6 h-100">
         <div class="main-div-float-left mt-3 p-3 w-50">
@@ -148,7 +200,33 @@
         </div>
     </div>
     <!-- ///Text after main block-->
-
+    <div class="container-fluid mt-2 text-white h6 h-100">
+        <div class="main-div-float-left mt-3 p-3 w-50">
+            <div id="jQuery_accordion">
+                <h2>наш клоун актор</h2>
+                <div>
+                    <p>
+                        <input type="image" src="http://localhost:63342/web_lab/WEB_labs/web_lab_4/img/kosobyc.jpg"
+                               alt="наш клоун актор">
+                    </p>
+                </div>
+                <h3>Тренер нашої банди </h3>
+                <div>
+                    <p>
+                        <input type="image" src="http://localhost:63342/web_lab/WEB_labs/web_lab_5/html/dima/sicret.png"
+                               alt="наш тренер">
+                    </p>
+                </div>
+                <h4> 4 пара be like </h4>
+                <div>
+                    <p>
+                        <input type="image" src="http://localhost:63342/web_lab/WEB_labs/web_lab_5/html/dima/para.png"
+                               alt="наша 4 пара">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 </body>
