@@ -1,0 +1,10 @@
+.container{
+    background:linear-gradient(90deg, Red, Orange, Yellow, Green, Blue, Indigo,violet);
+    width:500px;
+    height:500px;
+}
+.rainbow{
+    height: 300px;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, Red , Orange, Yellow, Green, Blue, Indigo, Violet);
+}
