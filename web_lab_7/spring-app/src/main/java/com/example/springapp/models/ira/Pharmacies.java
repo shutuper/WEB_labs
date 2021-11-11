@@ -5,7 +5,7 @@ import java.util.Objects;
 
 @Entity
 public class Pharmacies {
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String location;
 

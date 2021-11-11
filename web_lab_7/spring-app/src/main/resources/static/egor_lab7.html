@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Egor</title>
+</head>
+<body>
+<h3>FORM 1 "save author "</h3>
+<form action="http://localhost:8091/api/v1/egor/authors" method="post">
+    <label for="firstname">FirstName: </label>
+    <input type="text" id="firstname" name="firstName"><br>
+
+    <label for="SecondName">SecondName: </label>
+    <input type="text" id="SecondName" name="secondName"><br>
+
+    <label for="Patronya">Patronya: </label>
+    <input type="text" id="Patronya" name="patronym"><br>
+
+    <label for="phone">Phone: </label>
+    <input type="text" id="phone" name="phone"><br>
+
+    <input type="submit" value="Забабахать дані в систему">
+</form>
+<br>
+<h3>FORM 2 "GET INFORMATION ABOUT authors by id"</h3>
+<form action="http://localhost:8091/api/v1/egor/authors/id" method="get">
+    <label for="id">ID:</label><br>
+    <input type="text" id="id" name="id"><br>
+
+    <input type="submit" value="Душануть паскуду">
+</form>
+<h3>FORM 3 "GET INFORMATION ABOUT ALL authors"</h3>
+<form action="http://localhost:8091/api/v1/egor/authors" method="get">
+    <input type="submit" value="GET DATA">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Task 9 Sashka</title>
+    <style type="text/css">
+        body{background-color: #eba6f1;
+            text-align: center;
+            color: #d70076;
+            font: italic small-caps bold 24px/2 cursive;
+        }
+        input[type=submit] {
+            border: 1px dotted #999;
+            border-radius: 0;
+
+            text-align: center;
+            color: #d70076;
+            font: italic small-caps bold 24px/2 cursive;
+            width : 200px;
+            margin: 0;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+<h3>FORM 1 "SEND DATA ABOUT PRESENTER"</h3>
+<form action="http://localhost:8091/api/v1/sasha/presenters" method="post">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fName" name="fName"><br>
+
+    <label for="sName">Last name:</label><br>
+    <input type="text" id="sName" name="sName"><br>
+
+    <label for="number">Phone number:</label><br>
+    <input type="text" id="number" name="number"><br>
+
+    <label for="MAN">Sex:</label><br>
+    <input type="radio" id="MAN" name="sex" value="MAN">
+    <label for="MAN">MAN</label><br>
+    <input type="radio" id="WOMAN" name="sex" value="WOMAN">
+    <label for="WOMAN">WOMAN</label><br>
+
+
+    <input type="submit" value="SEND DATA">
+</form>
+<h3>FORM 2 "GET INFORMATION ABOUT PRESENTER"</h3>
+<form action="http://localhost:8091/api/v1/sasha/presenters/id" action="get">
+    <label for="id">ID:</label><br>
+    <input type="text" id="id" name="id"><br>
+
+    <input type="submit" value="GET DATA">
+</form>
+<h3>FORM 3 "GET INFORMATION ABOUT ALL PRESENTER"</h3>
+<form action="http://localhost:8091/api/v1/sasha/presenters" action="get">
+
+    <input type="submit" value="GET DATA">
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <title>Ira</title>
+    <style type="text/css">
+        body {
+            background-color: #a6b5f1;
+            text-align: center;
+            color: #0004d7;
+            font: italic small-caps bold 22px cursive;
+        }
+
+        input[type=submit] {
+            border: 1px dotted #999;
+            border-radius: 0;
+
+            text-align: center;
+            color: #0004d7;
+            font: italic small-caps bold 24px/2 cursive;
+            width: 150px;
+            margin: 0;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+<br>
+<h3>FORM 1 "save presenter"</h3>
+<form action="http://localhost:8091/api/v1/ira/producers" method="post">
+    <label for="Name">Name:</label><br>
+    <input type="text" id="Name" name="Name"><br>
+    <br>
+    <label for="Country">Country:</label><br>
+    <input type="text" id="Country" name="Country"><br>
+    <br>
+    <input type="submit" value="Create">
+</form>
+<br><br><br>
+<h3>FORM 2 "GET INFORMATION ABOUT presenter by id"</h3>
+<form action="http://localhost:8091/api/v1/ira/producers/id" method="get">
+    <label for="ID">Search by ID:</label><br>
+    <input type="text" id="ID" name="id"><br>
+    <br>
+    <input type="submit" value="Search">
+</form>
+<h3>FORM 3 "GET INFORMATION ABOUT ALL presenters"</h3>
+<form action="http://localhost:8091/api/v1/ira/producers" method="get">
+
+    <input type="submit" value="GET DATA">
+</form>
+</body>
+</html>

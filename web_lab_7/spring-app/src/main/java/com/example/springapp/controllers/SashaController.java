@@ -1,7 +1,9 @@
 package com.example.springapp.controllers;
 
 
+import com.example.springapp.models.sasha.Presenter;
 import com.example.springapp.models.sasha.Program;
+import com.example.springapp.repos.sasha.PresenterRepo;
 import com.example.springapp.repos.sasha.ProgramRepo;
 import com.example.springapp.services.SashaService;
 import lombok.AllArgsConstructor;
@@ -14,24 +16,26 @@ import java.util.List;
 @AllArgsConstructor
 public class SashaController {
 
-	private final SashaService sashaService;
-	private final ProgramRepo programRepo;
+	private final PresenterRepo presenterRepo;
 
-	@PostMapping("programs")
-	public Program addProgram(@RequestBody Program program) {
-		return sashaService.saveProgram(program);
+	@PostMapping("presenters")
+	public Presenter addProgram(@RequestParam("fName") String fName,
+	                            @RequestParam("sName") String sName,
+	                            @RequestParam("number") String number,
+	                            @RequestParam("sex") String sex) {
+		Presenter presenter = new Presenter(fName, sName, number, sex);
+		return presenterRepo.save(presenter);
 	}
 
-	@GetMapping("programs/{id}")
-	public Program findProgram(@PathVariable Long id) {
-		return programRepo.findById(id).orElseThrow(
-				() -> new IllegalStateException(String.format("Program with id: %s does not exist", id))
-		);
+	@GetMapping("presenters/id")
+	public Presenter findProgram(@RequestParam Long id) {
+		return presenterRepo.findById(id).orElse(null);
 	}
 
-	@GetMapping("programs")
-	public List<Program> getAllProducers() {
-		return programRepo.findAll();
+	@GetMapping("presenters")
+	public List<Presenter> getAllProducers() {
+		List<Presenter> presenters = presenterRepo.findAll();
+		return presenters;
 	}
 
 }

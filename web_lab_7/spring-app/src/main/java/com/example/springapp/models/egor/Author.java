@@ -19,4 +19,15 @@ public class Author {
 	private String secondName;
 	private String patronym;
 	private String phone;
+
+	public Author(String firstName, String secondName, String patronym, String phone) {
+		this.firstName = firstName;
+		this.secondName = secondName;
+		this.patronym = patronym;
+		this.phone = phone;
+	}
+
+	public Author() {
+
+	}
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 6 Dima</title>
+    <style>
+        .container {
+            background: linear-gradient(90deg, Red, Orange, Yellow, Green, Blue, Indigo, violet);
+            width: 500px;
+            height: 500px;
+        }
+
+        .rainbow {
+            height: 300px;
+            background-color: red; /* For browsers that do not support gradients */
+            background-image: linear-gradient(to right, Red, Orange, Yellow, Green, Blue, Indigo, Violet);
+        }
+    </style>
+</head>
+<body>
+<div class="rainbow">
+    <h3>About Passagender</h3>
+    <form action="http://localhost:8091/api/v1/dima/passengers" method="post">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="surname">Surname: </label>
+        <input type="text" id="surname" name="surname"><br>
+
+        <label for="phone">Phone: </label>
+        <input type="text" id="phone" name="phone"><br>
+
+        <input type="submit" value="Забабахать дані в систему">
+        <h3>Vovika нюхачa id активировать:</h3>
+        <form action="">
+            <label for="id">ID:</label><br>
+            <input type="text" id="id" name="id"><br>
+
+            <input type="submit" value="Занюхнуть">
+        </form>
+    </form>
+
+</div>
+<h3>FORM 2 "GET INFORMATION ABOUT passengers by id"</h3>
+<form action="http://localhost:8091/api/v1/dima/passengers/id" method="get">
+    <label for="idd">Search by ID:</label><br>
+    <input type="text" id="idd" name="id"><br>
+    <br>
+    <input type="submit" value="Search">
+</form>
+<h3>FORM 3 "GET INFORMATION ABOUT ALL passengers"</h3>
+<form action="http://localhost:8091/api/v1/dima/passengers" method="get">
+
+    <input type="submit" value="GET DATA">
+</form>
+<img src="cosobysEscobys.png" width="100%" border=”25px”>
+</body>
+</html>

@@ -23,7 +23,9 @@ public class EgorController {
 
 
 	@PostMapping("authors")
-	public Author addProducer(@RequestBody Author author) {
+	public Author addProducer(@RequestParam("firstName") String firstName, @RequestParam("secondName") String secondName,
+	                          @RequestParam("patronym") String patronym, @RequestParam("firstName") String phone) {
+		Author author = new Author(firstName, secondName, patronym, phone);
 		return authorRepo.save(author);
 	}
 
@@ -32,11 +34,9 @@ public class EgorController {
 		return authorRepo.findAll();
 	}
 
-	@GetMapping("authors/{id}")
-	public Author findProducer(@PathVariable Long id) {
-		return authorRepo.findById(id).orElseThrow(
-				() -> new IllegalStateException(String.format("Author with id: %s does not exist", id))
-		);
+	@GetMapping("authors/id")
+	public Author findProducer(@RequestParam("id") Long id) {
+		return authorRepo.findById(id).orElse(null);
 	}
 
 

@@ -1,9 +1,7 @@
-package com.example.springapp.models.egor;
+package com.example.springapp.models.dima;
 
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,18 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
-public class Place {
+public class Transport {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
-	private Long numberOfDepart;
+	private Boolean state;
+	private Integer passengerSeats;
 
-	private String description;
+	private Double costs;
 
 
 }

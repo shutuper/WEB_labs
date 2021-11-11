@@ -16,10 +16,17 @@ public class Presenter {
 	private String sName;
 	private String phone;
 
-	@Enumerated(EnumType.STRING)
-	private Sex sex;
 
-	private enum Sex {
-		MAN, WOMAN
+	private String sex;
+
+	public Presenter(String fName, String sName, String phone, String sex) {
+		this.fName = fName;
+		this.sName = sName;
+		this.phone = phone;
+		this.sex = sex;
+	}
+
+	public Presenter() {
+
 	}
 }

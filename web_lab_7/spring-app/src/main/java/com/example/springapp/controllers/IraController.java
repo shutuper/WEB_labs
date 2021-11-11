@@ -15,7 +15,10 @@ public class IraController {
 	private final ProducersRepo producersRepo;
 
 	@PostMapping("producers")
-	public Producers addProducer(@RequestBody Producers producers) {
+	public Producers addProducer(@RequestParam("Name") String Name,
+	                             @RequestParam("Country") String Country
+	) {
+		Producers producers = new Producers(Name, Country);
 		return producersRepo.save(producers);
 	}
 
@@ -24,11 +27,9 @@ public class IraController {
 		return producersRepo.findAll();
 	}
 
-	@GetMapping("producers/{id}")
-	public Producers findProducer(@PathVariable Integer id) {
-		return producersRepo.findById(id).orElseThrow(
-				() -> new IllegalStateException(String.format("Producer with id: %s does not exist", id))
-		);
+	@GetMapping("producers/id")
+	public Producers findProducer(@RequestParam("id") Integer id) {
+		return producersRepo.findById(id).orElse(null);
 	}
 
 }
