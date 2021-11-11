@@ -190,7 +190,18 @@
                     <br>
                     <br>
                     <b>Постановка задачі:</b>
-                    <br>
+                    Відповідно до варіанту індивідуального завдання Таблиці №1 (номер варіанта відповідає останій
+                    цифрі<br>
+                    студента у списку групи, наприклад, студент 18 за списком – буде виконувати 8 варіант) потрібно:<br>
+                    визначити класи об’єктів предметної області, дані які будуть зберігатися у БД;<br>
+                    створити інфологічну модель;<br>
+                    нормалізувати реляційну базу та перейти до датологічної моделі;<br>
+                    Для прискорення та полегшення розробки інфологічної моделі , яка містить таблиці і зв’яки між
+                    ними,<br>
+                    рекомендовано встановити програму MySQL Workbench.<br>
+                    Реалізувати БД в СУБД MySQL використовуючи веб-інтерфейс для роботи із сервером MySQL
+                    phpMyAdmin.<br>
+                    Написати скрипти на PHP для внесення даних до БД, виведення даних на екран та для пошуку даних в БД.<br>
                 </div>
                 <div class="text-center">
                     <a href="https://github.com/shutuper/WEB_labs/tree/master/web_lab_7" alt="github: shutuper"
@@ -219,7 +230,14 @@
                     <h2 class="m-3"> Висновки </h2>
                 </div>
                 <div class="container-fluid p-3 bg-light h4 mt-3">
-
+                    У ході данної лабораторної роботи ми навчились користуватись mysql, обробляти запити до mysql.
+                    Це<br>
+                    була неймовірно важка лаба, якби не сувмісна праця, ми б так і не досягли бажаного результата,
+                    але<br>
+                    то не важливо, головне що зробили. Тепер можна через сайт виконувати пошук по ключовим словам, також<br>
+                    можна уведені дані вносити до бд. Ще ми глянули на 8лабу і охуїли, там пздц, можете якось
+                    упростити<br>
+                    завдання будь ласка, а так це була класна лаба.
                 </div>
                 <div class="container-fluid text-center mt-3">
                     <img class="img img-responsive mw-100" src="../img/lab1/bussisman.jpg" alt="Мета - це твоє життя!">
@@ -236,40 +254,334 @@
                 <div class="container-fluid p-2 bg-info">
                     <h2 class="m-3"> Хід роботи: </h2>
                 </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/egor.png"
+                         alt="socials icons">
+                </div>
                 <div class="container h4 p-3 m-2">
-
+                    <b>Інфологічна модель – Архів фотографій</b><br>
+                    База даних створюється для технічного обслуговування архіву. Користуватися нею будуть лише
+                    працівники архіву.<br>
+                    Відповідно до предметної області база даних має містити такі сутності: фотографії, автори, місця
+                    зберігання.<br>
+                    Стуності фотогографії мають містити такі атрибути: дата створення, автор, ступінь краси, місце
+                    зберігання.<br>
+                    Автори – ІПН, ПІБ, номер телефону.<br>
+                    Місця зберігання – номер відділу, опис, кількість фотографій.<br>
+                    Інфологічна модель:
                 </div>
                 <div class="container-fluid text-center mt-3">
                     <img class="img img-responsive w-100"
-                         src="../img/lab6/dinamikalElement1.png"
+                         src="../img/lab7/egorBD1.png"
                          alt="socials icons">
+                </div>
+                <div class="container h4 p-3 m-2">
+                    Додамо до кожної сутності унікальний ідентифікатор.<br>
+                    Оскільки сутність “Автори” містить атрибут ПІБ який складається з 3 окремих слів, то порушує
+                    1НФ.<br>
+                    Розіб’ємо атрибут ПІБ на 3: прізвище, ім’я, по-батькові. Оскільки сутність “Автори” містить
+                    атрибут<br>
+                    “кількість фотографій”, який весь час обраховується і його можна отримати викликавши функцію
+                    COUNT<br>
+                    видалимо його.<br>
+                    Будуємо даталогічну модель:
+                </div>
+                <div class="container-fluid text-center mt-3">
                     <img class="img img-responsive w-100"
-                         src="../img/lab6/dinamikalElement2.png"
+                         src="../img/lab7/egorBD2.png"
                          alt="socials icons">
-                    <img class="img img-responsive w-100"
-                         src="../img/lab6/dinamikalElement3.png"
-                         alt="socials icons">
-
                 </div>
                 <pre>
-                    <code class="language-javascript">
-    &lt;script&gt;
-        $(function () {
-            $(document).tooltip();
-        });
-    &lt;/script&gt;
+                    <code class="language-sql">
+create table place
+(
+    id               bigint not null,
+    description      varchar(255),
+    number_of_depart bigint,
+    primary key (id)
+);
+create table author
+(
+    id          bigint       not null
+        primary key,
+    first_name  varchar(255) null,
+    patronym    varchar(255) null,
+    phone       varchar(255) null,
+    second_name varchar(255) null
+);
+create table photos
+(
+    id        bigint       not null
+        primary key,
+    date      varchar(255) not null,
+    quality   varchar(255) not null,
+    author_id bigint       null,
+    place_id  bigint       null
+);
 
-    &lt;script&gt;
-        $(function () {
-            $(&quot;#jQuery_accordion&quot;).accordion({
-                collapsible: true
-            });
-        });
-    &lt;/script&gt;
-function changeItemInForm(text) {
-  document.getElementById(&quot;product&quot;).value = text;
-}
+create index FKcc15lc58klmdxvgs5r5vpa84n
+    on photos (place_id);
 
+create index FKsg9oj97lr73olxv03f7yxiila
+    on photos (author_id);
+                    </code></pre>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/sasha.png"
+                         alt="socials icons">
+                </div>
+                <div class="container h4 p-3 m-2">
+                    <b>Предметна область: «Програми передач для телебачення»</b><br>
+                    База даних створюється для інформаційного обслуговування та контролю програм передач для<br>
+                    телебачення. Вона повинна містити дані про передачі, канали, ведучих та телестудії, надавати<br>
+                    можливість отримувати різні звіти.
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/sashaBD3.png"
+                         alt="socials icons">
+                </div>
+                <div class="container h4 p-3 m-2">
+                    Для побудови даталогічної моделі необхідно мати інфологічну модель предметної області.
+                    ER–діаграма<br>
+                    дитячої кімнати приведена на наступному рисунку. Я використовувала нотацію Чена для побудови<br>
+                    інфологічної моделі (ER-діаграми).<br>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/sashaBD2.png"
+                         alt="socials icons">
+                </div>
+                <div class="container h4 p-3 m-2">
+                    Етап перетворення елементів ER–діаграми у таблиці.<br>
+                    Згідно з першим правилом перетворення сутність з атрибутами перетворюється у таблицю БД з
+                    відповідними атрибутами за типом.<br>
+                    Отже, в результаті перетворення отримаємо:<br>
+                    • Сутність Передачі Таблиця Іграшки<br>
+                    • Сутність Канали Таблиця Зони<br>
+                    • Сутність Телестудії Таблиця Працівники<br>
+                    • Сутність Ведучі Таблиця Білети<br>
+                    • Зв'язок Передачі-Канали «йти» Таблиця Передачі_Канали<br>
+                    • Зв'язок Передачі-Ведучі «вести»  Таблиця Передачі_Ведучі<br>
+
+                    Виконуємо інші правила перетворення елементів ER–діаграми у таблиці, як-от перетворення зв’язку типу<br>
+                    1:M у зовнішній ключ між двома таблицями, перетворення кожного зв’язку зі ступенем більше двох
+                    та<br>
+                    зв’язок, що має атрибути, на таблицю БД, реалізація зв’язку 1:1 в межах однієї таблиці,
+                    враховуючи<br>
+                    винятки, та реалізація бінарного зв’язок типу N:M реалізується за допомогою допоміжної таблиці.<br>
+
+                    Етап нормалізації.<br>
+                    Проаналізуємо атрибути моделі та знайдемо явні порушення.<br>
+                    Перша нормальна форма<br>
+                    Наявність зв’язків M:N, як-от «Передачі-Канали» та «Передачі-Ведучі», є порушенням 1НФ. Щоб<br>
+                    позбутися такого зв’язку потрібно добавити ще одну таблицю, наприклад «Передачі_Канали» та<br>
+                    «Передачі_Ведучі», які будуть бінарними зв’язками.<br>
+                    Виконаємо вищезазначені зміни.<br>
+                    Висновок: Таблиці не містять складних атрибутів. В кожній комірці зберігається лише одне
+                    значення<br>
+                    атрибуту, а не масив даних. Немає зв’язків M:N. Отже таблиця приведена до 1-ї НФ.<br>
+                    Друга нормальна форма<br>
+                    Висновок: Оскільки в кожній сутності присутній ідентифікатор (майбутній первинний ключ), то всі<br>
+                    таблиці автоматично знаходяться у 2НФ.<br>
+                    Третя нормальна форма<br>
+                    Висновок: Жодне відношення не порушує 3НФ, тому що нема атрибутів, які не залежать від сутності,
+                    до<br>
+                    якої вони належать, та які знаходяться у транзитивній залежності між собою.<br>
+                    <br>
+                    При побудові даталогічної моделі я застосовувала обмеження цілісності. У всіх таблицях присутній<br>
+                    унікальний первинний ключ (PRIMARY KEY), а там, де потрібно, ввела зовнішні ключі (FOREIGN KEY).<br>
+                    Забезпечила унікальність ключового поля чи комбінації значень ключових полів (UNIQUE). Продумала<br>
+                    наперед введення порожніх значень (NOT NULL / NULL) та задання умови на значення атрибуту
+                    (CHECK).<br>
+                    Для побудови даталогічної моделі я взяла за основу схему даних в MSAccess2016<br>
+                    (за спрощеною моделлю). Саме дана модель була зроблена за допомогою сервісу app.diagrams.net. В<br>
+                    якості нотації для побудови даталогічної моделі я обирала ту саму, що і для інфологічного<br>
+                    моделювання.<br>
+                    По готовій інфологічній моделі побудована спрощена даталогічна модель, представлена на
+                    наступному<br>
+                    малюнку:
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/sashaBD1.png"
+                         alt="socials icons">
+                </div>
+                <pre>
+                    <code class="language-sql">
+create table program_presenters
+(
+    program_id    bigint not null,
+    presenters_id bigint not null
+);
+
+
+create index FK764n74t7qy7kd7wa24ld2wtxn
+    on program_presenters (presenters_id);
+
+create index FKfihd3ayjkyevge5s21lsip59u
+    on program_presenters (program_id);
+
+create table program
+(
+    id     bigint       not null
+        primary key,
+    budget bigint       null,
+    title  varchar(255) null
+);
+create table presenter
+(
+    id     bigint       not null
+        primary key,
+    f_name varchar(255) null,
+    phone  varchar(255) null,
+    s_name varchar(255) null,
+    sex    varchar(255) null
+);
+create table program_studios
+(
+    program_id bigint not null,
+    studios_id bigint not null
+);
+
+create index FKncythvq1vcl5d6i04ocd84n4v
+    on program_studios (program_id);
+
+create index FKqn197di5ukq1m8y9pv26xu0j
+    on program_studios (studios_id);
+
+create table studio
+(
+    id       bigint       not null
+        primary key,
+    location varchar(255) null,
+    title    varchar(255) null
+);
+                    </code></pre>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/ira.png"
+                         alt="socials icons"></div>
+                <div class="container h4 p-3 m-2">
+                    <b>Предметна область «Аптеки».</b><br>
+                    База даних створюється для інформаційного обслуговування адміністраторів, продавців та інших<br>
+                    робітників аптеки. БД повинна містити дані про аптеки та ліки, котрі є в наявності, надавати<br>
+                    можливість відслідковувати кількість товару та отримувати всілякі звіти.<br>
+                    Після аналізу предметної області можна виділити ряд сутностей, і приступити до проектування
+                    інфологічної моделі.
+                    Виділимо базові сутності цієї предметної області:<br>
+                    Аптеки: ID, адреса<br>
+                    Виробники: ID, назва, країна<br>
+                    Ліки: ID, назва, ціна, описБ
+                </div>
+
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/iraBD1.png"
+                         alt="socials icons"></div>
+                <div class="container h4 p-3 m-2">Зв'язок багато до багатьох формалізований асоціативною сутністю<br>
+                    Наявність з ID ліків, ID аптеки та кількістю ліків.
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/iraBD2.png"
+                         alt="socials icons"></div>
+
+                <pre>
+                    <code class="language-sql">
+CREATE TABLE Pharmacies
+(
+    ID       int          NOT NULL AUTO_INCREMENT,
+    Location varchar(255) NOT NULL,
+
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Producers
+(
+    ID      int         NOT NULL AUTO_INCREMENT,
+    Name    varchar(50) NOT NULL,
+    Country varchar(50) NOT NULL,
+
+    PRIMARY KEY (ID)
+);
+CREATE TABLE Medicines
+(
+    ID          int         NOT NULL AUTO_INCREMENT,
+    Name        varchar(50) NOT NULL,
+    Description varchar(50) NOT NULL,
+    Price       int         NOT NULL,
+    ProducerId  int,
+    FOREIGN KEY (ProducerId) REFERENCES Producers (ID),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE Available
+(
+    ID         int NOT NULL AUTO_INCREMENT,
+    MedicineId int,
+    PharmacyId int,
+    Price      int NOT NULL,
+    FOREIGN KEY (MedicineId) REFERENCES Medicines (ID),
+    FOREIGN KEY (PharmacyId) REFERENCES Pharmacies (ID),
+    PRIMARY KEY (ID)
+);
+                    </code></pre>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/dima.png"
+                         alt="socials icons"></div>
+                <div class="container h4 p-3 m-2">БД: розкладу руху залізничного транспорту</div>
+
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/dimaBD1.png"
+                         alt="socials icons">
+                    <img class="img img-responsive w-100"
+                         src="../img/lab7/dimaBD2.png"
+                         alt="socials icons">
+                </div>
+                <pre>
+                    <code class="language-sql">
+create table passenger
+(
+    id       bigint       not null
+        primary key,
+    name     varchar(255) null,
+    phone    varchar(255) null,
+    sur_name varchar(255) null
+);
+create table transport
+(
+    id              bigint not null
+        primary key,
+    costs           double null,
+    passenger_seats int    null,
+    state           bit    null
+);
+create table race
+(
+    id           bigint auto_increment
+        primary key,
+    date         varchar(255) null,
+    place        varchar(255) null,
+    price        double       null,
+    transport_id bigint       null
+)
+    engine = MyISAM;
+
+create index FK34v1jqm91hojils3wrnyjw9vq
+    on race (transport_id);
+
+create table station
+(
+    id        bigint       not null
+        primary key,
+    arrive_at varchar(255) null,
+    dispatch  varchar(255) null,
+    stop      varchar(255) null
+);
                     </code></pre>
             </main>
 
