@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html dir="ltr" class="animate__animated animate__fadeIn text-monospace">
+
+<head>
+    <meta charset="utf-8">
+    <title>7 бригада</title>
+    <meta content="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/prism.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="../js/prism.js"></script>
+</head>
+
+<body>
+<script>
+    function changeClass() {
+        if (document.getElementById("changeArrow").classList.contains('bi-arrow-down-circle')) {
+            document.getElementById("changeArrow").classList.remove('bi-arrow-down-circle');
+            document.getElementById("changeArrow").classList.add('bi-arrow-up-circle');
+        } else {
+            document.getElementById("changeArrow").classList.remove('bi-arrow-up-circle');
+            document.getElementById("changeArrow").classList.add('bi-arrow-down-circle');
+        }
+    }
+
+    function changeMain(id) {
+        const allIds = ['default', 'team_photo', 'database', 'frontend', 'backend', 'theme', 'conclusion'];
+        for (let i = 0; i < allIds.length; i++) {
+            if (!document.getElementById(allIds[i]).classList.contains('d-none')) {
+                document.getElementById(allIds[i]).classList.add('d-none');
+                break;
+            }
+        }
+        document.getElementById(id.value).classList.remove('d-none');
+    }</script>
+
+<!-- Верхний контейнер -->
+<header class="container-fluid bg-dark p-4 text-center text-white text-monospace back-brigada" data-bs-toggle="collapse"
+        href="#collapsedLabs" role="button" aria-expanded="false" aria-controls="collapsedLabs">
+    <h2>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ
+        ІЗ ДИСЦИПЛІНИ «РОЗРОБЛЕННЯ WEB-ЗАСТОСУВАННЬ»
+    </h2>
+    <code>
+        <h4>7 БРИГАДА ІА-01 <i class="bi-award"></i></h4>
+    </code>
+</header>
+<!-- ///Верхний контейнер -->
+
+<!-- Навигация по лабах (выпадающий блок) -->
+<nav class="collapse text-center p-1 table-responsive" style="background-color: #a0a0a0;" id="collapsedLabs">
+    <div class="btn-group btn-group-lg btn-outline font-monospace text-dark btn-group-toggle animate__animated animate__flipInX"
+         role="group" data-toggle="buttons" aria-label="Basic example">
+        <!-- файл для следующей лабы размещаете в той же директории  -->
+        <button type="button" class="btn btn-muted"><a href="lab-1.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 1</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-2.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 2</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-3.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 3</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-4.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 4</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-5.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 5</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-6.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 6</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-7.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 7</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-8.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 8</a></button>
+        <button type="button" class="btn btn-muted"><a href="lab-9.html"
+                                                       class="btn btn-outline-secondary link-dark text-decoration-none txtbigger1">Лабараторна
+            № 9</a></button>
+    </div>
+</nav>
+
+<!-- Блок слевой стороны со структурой лабараторных -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-3 text-center">
+            <div class="container float-start p-4 font-monospace" style="background-color: #88e3f5d1">
+
+                <!-- Vertical menu -->
+                <div class="btn-group-vertical mw-100 p-3">
+
+                    <button type="button" value="theme" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Тема, постановка задачі лабараторної
+                        роботи
+                    </button>
+                    <button type="button" value="database" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Database
+                    </button>
+                    <button type="button" value="frontend" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Frontend
+                    </button>
+                    <button type="button" value="backend" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Backend
+                    </button>
+
+                    <button type="button" value="conclusion" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Висновки
+                    </button>
+
+                    <button type="button" class="btn btn-dark py-1 px-5" value="team_photo" onclick="changeMain(this)"
+                            name="button">Team photo
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <!-- ///Блок слевой стороны со структурой лабараторных -->
+
+        <!-- Right block -->
+        <div class="col-9 p-3 font-monospace rightBlockOverflow">
+            <!--            Example code of images and code !!!-->
+            <!-- ______________Example code of images and code !!! _______________________
+
+    <img class="img img-responsive m-2 container" src="http://www.shukach.com/sites/default/files/imagecache/node-gallery-display/post_images/14/p1290798-53274.jpg" alt="">
+    <pre>
+        <code class="language-html">
+              &lt;div class=&quot;col-8 rightBlock&quot;&gt;
+      &lt;!-- блок для основной инфы --&gt;
+      &lt;main class=&quot;container-fluid p-2 &quot;&gt;
+        </code>
+    </pre>     -->
+
+            <!-- Блок для основной инфы -->
+
+            <!-- Дефолтный контейнер -->
+            <main id="default"
+                  class="container-fluid bg-light p-3 mh-100 animate__animated animate__fadeIn border border-secondary">
+                <div class="container-fluid p-2 bg-light text-center">
+                    <!-- header -->
+                    <img src="../img/lab1/kpi_header.png"
+                         class="animate__animated animate__lightSpeedInRight mw-100 img img-responsive" alt="kpi">
+                    <h4 class="m-3">
+                        Міністерство освіти і науки України<br>
+                        Національний технічний університет України<br>
+                        “Київський політехнічний інститут імені Ігоря Сікорського”<br>
+                        Факультет інформатики та обчислювальної техніки<br>
+                        Кафедра інформаційних систем і технологій
+                    </h4>
+                </div>
+                <br>
+                <!-- center info -->
+                <div class="container-fluid p-3 bg-light text-center mt-5">
+                    <h3 class="animate__animated animate__lightSpeedInRight">Лабораторна робота № 8</h3>
+                    <h4>На тему: ІНТЕРФЕЙСИ ВЗАЄМОДІЇ WEB-ЗАСТОСУВАНЬ З СИСТЕМОЮ КЕРУВАННЯ БАЗ ДАНИХ (СКБД).
+                        SQL-ЗАПИТИ<br>
+                        У PHP-СЦЕНАРІЯХ. ІНТЕРФЕЙСИ WEB-ЗАСТОСУВАНЬ з СКБД. ВИКОРИСТАННЯ СЕСІЙ І COOKIES В СЦЕНАРІЯХ<br>
+                        АВТОРИЗАЦІЇ. РОЗРОБКА СЦЕНАРІЇВ ОБРОБКИ ДАНИХ З ФАЙЛІВ.
+
+                    </h4>
+                </div>
+
+                <!-- row -->
+                <div class="container-fluid row mt-5">
+                    <!-- column -->
+                    <div class="col-6 text-center mt-3 mb-5">
+                        <h4>Виконали: Гнітій Є.,<br>
+                            Терещенко Д., Дронь О.,<br>
+                            Телесненко І.</h4>
+                    </div>
+
+                    <!-- column -->
+                    <div class="col-6 text-center mt-4 mb-4">
+                        <h4>Перевірила: Проскура С. Л.</h4>
+                    </div>
+
+                </div>
+                <div class="container-fluid text-center h4 ">
+                    Київ 2021
+                </div>
+            </main>
+            <!-- ///Дефолтный контейнер -->
+
+
+            <!-- Theme block -->
+            <main id="theme" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Тема, мета лабараторної роботи </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Тема:</b> ІНТЕРФЕЙСИ ВЗАЄМОДІЇ WEB-ЗАСТОСУВАНЬ З СИСТЕМОЮ КЕРУВАННЯ БАЗ ДАНИХ (СКБД).
+                    SQL-ЗАПИТИ<br>
+                    У PHP-СЦЕНАРІЯХ. ІНТЕРФЕЙСИ WEB-ЗАСТОСУВАНЬ з СКБД. ВИКОРИСТАННЯ СЕСІЙ І COOKIES В СЦЕНАРІЯХ<br>
+                    АВТОРИЗАЦІЇ. РОЗРОБКА СЦЕНАРІЇВ ОБРОБКИ ДАНИХ З ФАЙЛІВ.
+                    <br><br>
+                    <b>Мета:</b> придбати практичні навички роботи взаємодії WEB- застосувань з СКБД, використання сесій<br>
+                    і cookies в сценаріях авторизації, розробки сценаріїв обробки даних з файлів.
+                    <br>
+                    <br>
+                    <b>Постановка задачі:</b><br>
+                    Головним завданням даної лабораторної роботи є ознайомлення з інтерфейсами взаємодії web-застосувань<br>
+                    з системою керування баз даних (СКБД), sql-запитами у php-сценаріях, інтерфейсами web-застосувань
+                    з<br>
+                    СКБД, використанням сесій і cookies в сценаріях авторизації, розробкою сценаріїв обробки даних з<br>
+                    файлів. Теоретичні знання необхідно закріпити практичним виконанням завдань, як-от проектування
+                    БД<br>
+                    нашого сайту, створення інфологічної та даталогічної моделей майбутньої БД, створення БД за<br>
+                    допомогою DDL-скриптів, використання сесій і cookies в сценаріях авторизації. Після виконання<br>
+                    вищеперелічених завдань необхідно запустити опрацьований документ у браузері для перевірки та<br>
+                    переконатися, що все працює коректно.
+                </div>
+                <div class="text-center">
+                    <a href="https://github.com/shutuper/clown-shop-front" alt="github: shutuper"
+                       class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check frontend
+                        </button>
+                    </a>
+                    <br>
+                    <a href="https://github.com/shutuper/clown-shop-back"
+                       alt="github: shutuper"
+                       class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check backend
+                        </button>
+                    </a>
+                    <br>
+                    <a href="https://github.com/shutuper/WEB_labs" alt="github: shutuper" class="btn">
+                        <button type="button" class="btn btn-lg bg-dark rounded text-white my-3 p-1 px-5" name="button">
+                            <i class="bi bi-github "></i> Check conclusion
+                        </button>
+                    </a>
+                </div>
+                <!-- ///Button to github -->
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab1/bussisman.jpg" alt="Мета - це твоє життя!">
+                </div>
+            </main>
+            <!-- ///Theme block -->
+
+            <!-- Сonclusion block -->
+            <main id="conclusion" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Висновки </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    У ході виконання даної лабораторної роботі ми ознайомились з інтерфейсами взаємодії
+                    web-застосувань<br>
+                    з системою керування баз даних (СКБД), sql-запитами у php-сценаріях, інтерфейсами web-застосувань
+                    з<br>
+                    СКБД, використанням сесій і cookies в сценаріях авторизації, розробкою сценаріїв обробки даних з<br>
+                    файлів. Використовуючи вивчений матеріал на практиці при виконанні завдань, ми також придбали<br>
+                    практичні проектування БД власного сайту, створення інфологічної та даталогічної моделей
+                    майбутньої<br>
+                    БД, створення БД за допомогою DDL-скриптів, використання сесій і cookies в сценаріях
+                    авторизації.<br>
+                    Запустили даний документ у браузері для перевірки та переконалися, що все працює коректно.
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab1/bussisman.jpg" alt="Мета - це твоє життя!">
+                </div>
+            </main>
+            <!-- ///Conclusion block -->
+
+            <!-- Backend block -->
+            <main id="backend" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Backend </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Structure:</b>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/backstructure.png"
+                         alt="Мета - це твоє життя!">
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Task with cookies:</b>
+                </div>
+                <pre><code class="language-java">
+private static final Map&lt;String, String&gt; langs = new HashMap&lt;&gt;() {
+		{
+			put(&quot;ru&quot;, &quot;Russian&quot;);
+			put(&quot;ua&quot;, &quot;Ukrainian&quot;);
+			put(&quot;en&quot;, &quot;English&quot;);
+			put(&quot;de&quot;, &quot;German&quot;);
+			put(&quot;fr&quot;, &quot;French&quot;);
+		}
+	};
+
+	@GetMapping(&quot;{lang}&quot;)
+	public ResponseEntity&lt;?&gt; changeLanguage(@PathVariable String lang,
+	                                        HttpServletResponse response) {
+		log.info(&quot;User want to change lang on {}&quot;, lang);
+		if (langs.containsKey(lang)) {
+			Cookie cookie = new Cookie(&quot;lang&quot;, langs.get(lang));
+			cookie.setMaxAge(halfYearInSeconds);
+			cookie.setPath(&quot;/&quot;);
+			response.addCookie(cookie);
+			return new ResponseEntity(HttpStatus.OK);
+		} else {
+			return ResponseEntity.badRequest().build();
+		}
+
+	}
+                </code></pre>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Making orders:</b>
+                </div>
+                <pre><code class="language-java">
+                    @Slf4j
+@Service
+@AllArgsConstructor
+public class OrdersService {
+
+	private final OrdersRepo ordersRepo;
+	private final AppUserService appUserService;
+	private final ProductService productService;
+
+	@Transactional
+	public Orders makeOrder(OrdersDTO orderDTO, Authentication authentication) {
+		log.info(orderDTO.toString());
+
+		AppUser appUser = (AppUser) authentication.getPrincipal();
+		log.info(&quot;User {} try to make an order&quot;, appUser.getEmail());
+
+		AppUser user = appUserService.getByEmail(appUser.getEmail());
+		Product product = productService.getProductById(orderDTO.getProductId());
+
+		int productQ = product.getQuantity();
+		if (productQ &lt; orderDTO.getQuantity()
+				|| List.of(EXPECTED, OUTOFSTOCK).contains(product.getInventoryStatus()))
+			throw new IllegalStateException(&quot;Order quantity bigger than possible quantity&quot;);
+
+		changeProductStatus(product, orderDTO.getQuantity());
+
+		Orders order = new Orders(orderDTO);
+		order.setAppUser(user);
+		order.setProduct(product);
+
+		log.info(&quot;Saving user {} order with product id {}&quot;, appUser.getEmail(), product.getId());
+		return ordersRepo.save(order);
+	}
+
+
+	private void changeProductStatus(Product product, int orderQ) {
+		int productQ = product.getQuantity();
+		product.setQuantity(productQ - orderQ);
+		productQ = product.getQuantity();
+		if (productQ &lt;= 0)
+			product.setInventoryStatus(OUTOFSTOCK);
+		else if (productQ &lt;= 15)
+			product.setInventoryStatus(LOWSTOCK);
+	}
+                </code></pre>
+
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Receiving orders:</b>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/orders.png"
+                         alt="orders!">
+                </div>
+            </main>
+            <!-- ///Backend block -->
+
+            <!-- Frontend block -->
+            <main id="frontend" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Frontend </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Main page:</b>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/mainpage.png" alt="Main page!">
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Project structure:</b>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/frontstructe.png"
+                         alt="structure">
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Task with languages:</b>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/languages.png"
+                         alt="structure">
+                </div>
+                <pre>
+                    <code class="language-html">
+  &lt;div class=&quot;card mt-4 w-100 justify-content-center fluid align-content-center&quot;&gt;
+    &lt;div&gt;
+      &lt;p class=&quot;my-2&quot;&gt;{{lang}}&lt;/p&gt;
+      &lt;div class=&quot;dropdown-menu&quot; aria-labelledby=&quot;navbarDropdownMenuLink78&quot;&gt;
+        &lt;a (click)=&quot;changeLang('en')&quot; class=&quot;dropdown-item mx-1 mt-2&quot;&gt;&lt;span class=&quot;flag-icon flag-icon-us&quot;&gt;&lt;/span&gt;
+          English&lt;/a&gt;
+        &lt;a (click)=&quot;changeLang('fr')&quot; class=&quot;dropdown-item mx-1 mt-2&quot;&gt;&lt;span class=&quot;flag-icon flag-icon-fr&quot;&gt;&lt;/span&gt;
+          Fran&ccedil;ais&lt;/a&gt;
+        &lt;a (click)=&quot;changeLang('de')&quot; class=&quot;dropdown-item mx-1 mt-2&quot;&gt;&lt;span class=&quot;flag-icon flag-icon-de&quot;&gt;&lt;/span&gt;
+          Deutsch&lt;/a&gt;
+        &lt;a (click)=&quot;changeLang('ru')&quot; class=&quot;dropdown-item mx-1 mt-2&quot;&gt;&lt;span class=&quot;flag-icon flag-icon-ru&quot;&gt;&lt;/span&gt;
+          Russian&lt;/a&gt;
+        &lt;a (click)=&quot;changeLang('ua')&quot; class=&quot;dropdown-item mx-1 mt-2&quot;&gt;&lt;span class=&quot;flag-icon flag-icon-ua&quot;&gt;&lt;/span&gt;
+          Ukraine&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+                    </code></pre>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Login page:</b>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/login.png"
+                         alt="structure">
+                </div>
+                <pre>
+                    <code class="language-html">
+&lt;p-toast&gt;&lt;/p-toast&gt;
+&lt;div class=&quot;card grid p-2 mt-2 fluid h-full justify-content-center align-content-center align-items-center&quot;&gt;
+
+  &lt;form #form=&quot;ngForm&quot; class=&quot;flex-column flex&quot;&gt;
+
+    &lt;label class=&quot;text-xl&quot; for=&quot;em&quot;&gt;Enter email:&lt;/label&gt;
+    &lt;input type=&quot;email&quot; id=&quot;em&quot; [ngModel]=&quot;loginInpt&quot; pInputText email required #email=&quot;ngModel&quot; name=&quot;email&quot;
+           placeholder=&quot;test@gmail.com&quot;
+           [ngClass]=&quot;(form.touched &amp;&amp; form.invalid)? 'ng-invalid ng-dirty mt-2':'mt-2'&quot;&gt;
+    &lt;small class=&quot;text-pink-800 text-sm mt-2&quot; *ngIf=&quot;email.touched &amp;&amp; email.invalid&quot;&gt;Enter valid email!&lt;/small&gt;
+
+    &lt;br&gt;
+
+    &lt;label for=&quot;pass&quot; class=&quot;text-xl&quot;&gt;Enter password:&lt;/label&gt;
+    &lt;input type=&quot;password&quot; id=&quot;pass&quot; minlength=&quot;8&quot; [ngModel]=&quot;passwordInpt&quot; pPassword required
+           #password=&quot;ngModel&quot;
+           name=&quot;password&quot;
+           placeholder=&quot;Password&quot;
+           [ngClass]=&quot;(form.touched &amp;&amp; form.invalid)? 'ng-invalid ng-dirty mt-2':'mt-2'&quot;&gt;
+
+    &lt;small class=&quot;text-pink-800 text-sm mt-2&quot; *ngIf=&quot; password.touched &amp;&amp; password.invalid&quot;&gt;Password length should be
+      &gt;=8!&lt;/small&gt;
+
+    &lt;span class=&quot;p-buttonset w-12 card p-2&quot;&gt;
+        &lt;input type=&quot;submit&quot; (click)=&quot;login(form)&quot; class=&quot;p-button-primary text-0 justify-content-center p-button mt-4&quot;
+               pButton
+               [disabled]=&quot;!form.valid&quot;
+               value=&quot;Login&quot;&gt;
+
+        &lt;input type=&quot;submit&quot; class=&quot;p-button-primary text-0 justify-content-center p-button mt-4&quot; pButton
+               [disabled]=&quot;!form.valid&quot; (click)=&quot;registrate(form)&quot; value=&quot;Registrate&quot;&gt;
+
+         &lt;div class=&quot;block mt-4 text-xl align-content-center&quot;&gt;
+        &lt;label for=&quot;remember&quot;&gt;Remember me: &lt;/label&gt;
+           &lt;span&gt;
+          &lt;p-inputSwitch id=&quot;remember&quot;
+                         (onChange)=&quot;changeRemember(rememb)&quot;
+                         name=&quot;remember&quot;
+                         #rememb
+                         [(ngModel)]=&quot;remember&quot;&gt;&lt;/p-inputSwitch&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;/span&gt;
+  &lt;/form&gt;
+
+  &lt;!--  &lt;input type=&quot;submit&quot; class=&quot;p-button-primary text-0 justify-content-center p-button mt-4&quot; pButton--&gt;
+  &lt;!--         (click)=&quot;sayEcho('dsfsdfsdf')&quot; value=&quot;echo&quot;&gt;--&gt;
+  &lt;!--  &lt;input type=&quot;submit&quot; class=&quot;p-button-primary text-0 justify-content-center p-button mt-4&quot; pButton--&gt;
+  &lt;!--         (click)=&quot;logout()&quot; value=&quot;logout&quot;&gt;--&gt;
+
+&lt;/div&gt;
+&lt;div class=&quot;card fluid mt-0  text-center&quot;&gt;
+  &lt;p-divider align=&quot;center&quot; class=&quot;overflow-hidden&quot;&gt;
+    &lt;span class=&quot;p-tag bg-primary-reverse&quot;&gt;
+      clown-shop-clown-shop-clown-shop
+    &lt;/span&gt;
+  &lt;/p-divider&gt;
+  &lt;button pButton [routerLink]=&quot;'/'&quot; class=&quot;p-button-primary mx-auto mt-4&quot;&gt;Go back?!&lt;/button&gt;
+&lt;/div&gt;
+
+                    </code></pre>
+            </main>
+            <!-- ///Frontend block -->
+
+            <!-- Database block -->
+            <main id="database" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Database </h2>
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Предметна область: «Інтернет-магазин перук»</b><br>
+                    База даних створюється для інформаційного обслуговування та контролю інтернет-магазину перук.
+                    Вона<br>
+                    повинна містити дані про авторизованих користувачів, продукти, їх наявність і статус, надавати<br>
+                    можливість отримувати різні звіти.<br>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/table.png" alt="Tables">
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    Для побудови даталогічної моделі необхідно мати інфологічну модель предметної області.
+                    ER–діаграма<br>
+                    дитячої кімнати приведена на наступному рисунку. Я використовувала нотацію Чена для побудови<br>
+                    інфологічної моделі (ER-діаграми).<br>
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/infomodel.png" alt="Tables">
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    <b>Етап перетворення елементів ER–діаграми у таблиці.</b><br>
+                    Згідно з першим правилом перетворення сутність з атрибутами перетворюється у таблицю БД з<br>
+                    відповідними атрибутами за типом.<br>
+                    Отже, в результаті перетворення отримаємо:<br>
+                    • Сутність Користувачі Таблиця Користувачі<br>
+                    • Сутність Продукти Таблиця Продукти<br>
+                    • Сутність Замовлення Таблиця Замовлення<br>
+                    <br>
+                    Виконуємо інші правила перетворення елементів ER–діаграми у таблиці, як-от перетворення зв’язку типу<br>
+                    1:M у зовнішній ключ між двома таблицями, перетворення кожного зв’язку зі ступенем більше двох
+                    та<br>
+                    зв’язок, що має атрибути, на таблицю БД, реалізація зв’язку 1:1 в межах однієї таблиці,
+                    враховуючи<br>
+                    винятки, та реалізація бінарного зв’язок типу N:M реалізується за допомогою допоміжної таблиці.<br>
+                    <br>
+                    <b>Етап нормалізації.</b><br>
+                    Проаналізуємо атрибути моделі та знайдемо явні порушення.<br>
+                    Перша нормальна форма<br>
+                    Висновок: Таблиці не містять складних атрибутів. В кожній комірці зберігається лише одне
+                    значення<br>
+                    атрибуту, а не масив даних. Немає зв’язків M:N. Отже таблиця приведена до 1-ї НФ.<br>
+                    Друга нормальна форма<br>
+                    Висновок: Оскільки в кожній сутності присутній ідентифікатор (майбутній первинний ключ), то всі<br>
+                    таблиці автоматично знаходяться у 2НФ.<br>
+                    Третя нормальна форма<br>
+                    Висновок: Жодне відношення не порушує 3НФ, тому що нема атрибутів, які не залежать від сутності,
+                    до<br>
+                    якої вони належать, та які знаходяться у транзитивній залежності між собою.<br>
+                    Для побудови даталогічної моделі ми взяли за основу схему даних в MSAccess2016 (за спрощеною<br>
+                    моделлю). Саме дана модель була зроблена за допомогою сервісу app.diagrams.net.<br>
+                    По готовій інфологічній моделі побудована спрощена <b>даталогічна модель</b>, представлена на
+                    наступному<br>
+                    малюнку:
+                </div>
+                <div class="container-fluid text-center mt-3">
+                    <img class="img img-responsive mw-100" src="../img/lab8/datamodel.png" alt="Tables">
+                </div>
+                <div class="container-fluid p-3 bg-light h4 mt-3">
+                    При проектуванні бази даних ми застосовували обмеження цілісності. У всіх таблицях присутній<br>
+                    унікальний первинний ключ (PRIMARY KEY), а там, де потрібно, ввела зовнішні ключі (FOREIGN KEY).<br>
+                    Забезпечила унікальність ключового поля чи комбінації значень ключових полів (UNIQUE). Продумала<br>
+                    наперед введення порожніх значень (NOT NULL / NULL) та задання умови на значення атрибуту (CHECK).
+                </div>
+                <pre><code class="language-sql">
+                    create table orders
+(
+    order_id    bigint       not null
+        primary key,
+    address     varchar(255) not null,
+    is_paid     bit          not null,
+    name        varchar(255) not null,
+    phone       varchar(255) not null,
+    quantity    int          not null,
+    surname     varchar(255) not null,
+    app_user_id bigint       not null,
+    product_id  bigint       not null,
+    constraint FK48n435ufa0g2h7tn8hb31emnu
+        foreign key (app_user_id) references app_user (id),
+    constraint FK787ibr3guwp6xobrpbofnv7le
+        foreign key (product_id) references product (id)
+);
+
+create table app_user
+(
+    id       bigint       not null
+        primary key,
+    email    varchar(255) not null,
+    password varchar(255) not null,
+    role     varchar(255) not null,
+    constraint UK_1j9d9a06i600gd43uu3km82jw
+        unique (email)
+);
+
+create table product
+(
+    id               bigint       not null
+        primary key,
+    category         varchar(255) not null,
+    description      varchar(255) not null,
+    image            varchar(255) not null,
+    inventory_status varchar(255) null,
+    name             varchar(255) not null,
+    price            int          not null,
+    quantity         int          not null,
+    rating           int          not null
+);
+                </code></pre>
+            </main>
+            <!-- ///Database block -->
+
+            <!-- Photo block -->
+            <main id="team_photo" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
+                <div class="container-fluid p-2 bg-info">
+                    <h2 class="m-3"> Фото гарних людей: </h2>
+                </div>
+                <div class="container-fluid mt-3 h4 bg-light p-2">
+                    <div class="row">
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Терещенко Дмитро</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/dima.jpg" alt="фото">
+                        </div>
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Телесненко Ірина</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/ira.jpg" alt="фото">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Дронь Олександра</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/sashka.jpg" alt="фото">
+                        </div>
+                        <div class="col-6 w-50 h-50">
+                            <p class="h3 font-weight-bold p-3">Єгор Гнітій</p>
+                            <img class="img img-responsive w-100 h-100" src="../img/lab1/egor.jpg" alt="фото">
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- ///Photo block -->
+
+            <!-- ///Structure blocks -->
+
+        </div>
+        <!-- ///Right block -->
+
+    </div>
+    <!-- ///row -->
+
+</div>
+<!-- ///Блок слевой стороны со структурой лабараторных -->
+
+<!-- Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
