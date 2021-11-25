@@ -76,6 +76,15 @@
                     <button value="description" type="button" onclick="changeMain(this)"
                             class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Тема, мета лабараторної роботи
                     </button>
+                    <button type="button" value="lists" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Ajax- запити у власному сайті
+                    </button>
+                    <button type="button" value="idents" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Повний список функціоналу програми
+                    </button>
+                    <button type="button" value="margs_pads" onclick="changeMain(this)"
+                            class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2">Порівняння функціоналу першої та девятої лабораторної роботи
+                    </button>
                     <button type="button" class="btn btn-info p-3 py-4 h4 mt-2  txtbigger2" onclick="changeClass()"
                             data-bs-toggle="collapse" href="#collapseStructe" role="button" aria-expanded="false"
                             aria-controls="collapseStructe">Работяги 7 Бригади
@@ -280,11 +289,21 @@
             <!-- str_1 -->
             <main id="str_1" class="container-fluid mainBg p-3 mh-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Сашка: </h2>
+                    <h2 class="m-3"> Сашка Ajax персоналізатор сторінки </h2>
+                    <img src="../img/lab9/sasha1.jpg" alt="SashaTask">
+                    <img src="../img/lab9/sasha2.jpg" alt="SashaTask">
                 </div>
                 <div class="container-fluid">
                     <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                        Інфа Сашки
+                        <br>
+                        Структура проекта:
+                        <img src="../img/lab9/sashaKod4.jpg" alt="Structure">
+                        <br>
+                        <br>
+                        Трошки Коду:<br>
+                        <img src="../img/lab9/sashaKod1.jpg" alt="Kod">
+                        <img src="../img/lab9/sashaKod2.jpg" alt="Kod">
+                        <img src="../img/lab9/sashaKod3.jpg" alt="Kod">
                     </div>
                 </div>
             </main>
@@ -352,54 +371,42 @@
 
             <main id="margs_pads" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Відступи: </h2>
-                </div>
-                <div class="container-fluid p-3 text-center">
-                    <img src="../img/lab2/margs_pads.png" alt="Плаваючі елементи">
+                    <h2 class="m-3"> Порівняння функціоналу 1 і 9 лаби </h2>
                 </div>
                 <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-
+                    <img src="../img/lab9/compare.jpg" alt="Compare19">
                 </div>
             </main>
 
             <main id="idents" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Ідентифікатори: </h2>
+                    <h2 class="m-3"> Повний список функціоналу сайту: </h2>
                 </div>
-                <div class="container-fluid p-3 text-center">
-                    <img class="img mw-100" src="../img/lab2/idents.png" alt="Плаваючі елементи">
-                </div>
-
                 <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                    Ідентифікатор (званий також «ID селектор») визначає унікальне ім'я елемента, яке використовується
-                    для зміни його стилю і звернення до нього через скрипти.
-                    Синтаксис застосування ідентифікатора наступний.
-                    # Ім'я ідентифікатора {властивість1: значення; властивість2: значення; ...}
-                    При описі ідентифікатора спочатку вказується символ решітки (#), потім йде ім'я ідентифікатора. Воно
-                    повинно починатися з латинської символу і може містити в собі символ дефіса (-) і підкреслення (_).
-                    Використання російських букв в іменах ідентифікатора неприпустимо. На відміну від класів
-                    ідентифікатори повинні бути унікальні, іншими словами, зустрічатися в коді документа лише один раз.
-                    Звернення до ідентифікатора відбувається аналогічно класам, але в якості ключового слова у тега
-                    використовується атрибут id, значенням якого виступає ім'я ідентифікатора. Символ решітки при цьому
-                    вже не вказується.
+                    <br>•	Обрана предметна область та тема сайту<br>
+                    <br> •	Наявний основний макет сайту<br>
+                    <br>•	Наявність списку з товарами<br>
+                    <br> •	Наявність форми для оформлення замовлення<br>
+                    <br>  •	Наявність елементів  jQuery<br>
+                    <br>  •	Наявність блоків з додатковою інформацією<br>
+                    <br>   •	Застосування скриптової мови програмування PHP<br>
+                    <br>  •	Застосування Apache HTTP-серверу<br>
+                    <br>  •	Зберігання даних у СУБД MySQL<br>
+                    <br>  •	Застосування підходу AJAX<br>
+                    <br>  •	Підтвердження замовлення за допомогою електронного листа<br>
+                    <br> •	Можливість авторизації<br>
+                    <br> •	Можливість для адміністратора сайту добавляти та видаляти товари<br>
+
                 </div>
             </main>
 
             <main id="lists" class="container-fluid mainBg p-3 h-100 d-none animate__animated animate__fadeIn">
                 <div class="container-fluid p-2 bg-info">
-                    <h2 class="m-3"> Списки: </h2>
-                </div>
-                <div class="container-fluid p-3 text-center">
-                    <img class="img mw-100" src="../img/lab2/lists.png" alt="Списки">
+                    <h2 class="m-3"> Ajax- запити у власному сайті </h2>
                 </div>
                 <div class="container-fluid mt-3 p-3 bg-light text-monospace h4">
-                    Списком називається взаємо пов'язаний набір окремих фраз чи речень. Списки надають можливість
-                    упорядкувати та систематизувати різні данні та представити їх в наочному і зручному для користувача
-                    вигляді.
-                    Списки бувають:<br>
-                    &bull; маркировані: контейнер &lt;ul&gt; та пункт списку починається з тега &lt;li&gt;<br>
-                    &bull; нумеровні: контейнер &lt;ol&gt; та пункт списку починається з тега &lt;li&gt;<br>
-                    &bull; список визначень: контейнер &lt;dl&gt;, термін &lt;dt&gt;<br>
+                    <img src="../img/lab9/ajax.jpg" alt="AjaxZapit">
+                    <img src="../img/lab9/ajax2.jpg" alt="AjaxZapit">
                 </div>
             </main>
 
