@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="indexCSS.css">
+    <title>text maker</title>
+</head>
+<body>
+<div id="text_editor">
+    <br>
+    <p>Edit file</p>
+    <div id="input_text" contenteditable="true">
+
+    </div>
+</div>
+<div id="other">
+    <br><br><br><br><br><br><br>
+    <form id="form">
+        <input id="yy" type="text" name="nm"><br>
+        <input type="submit" value="CREATE">
+    </form>
+    <br><br>
+<!--    <button type="button" class="save_button">SAVE</button>-->
+    <br><br>
+    <!--    <select name="nubexSelect" size="3">-->
+    <!--        <option>Электроник</option>-->
+    <!--        <option>Сыроежкин</option>-->
+    <!--        <option>Чижиков</option>-->
+    <!--        <option>Кукушкина</option>-->
+    <!--    </select>-->
+    <p id="sel">SELECT:</p>
+    <div class="select" id="there">
+<!--        <select id='MYselected'>-->
+<!--            <option value='dsrbt'>sebry</option>-->
+<!--            <option value='bry'>nyfu</option>-->
+<!--            <option value='vert'>sebsrtybry</option>-->
+<!--        </select>-->
+    </div>
+
+    <br><br>
+<!--    <button type="button" id='delete_button' class="delete_button">DELETE</button>-->
+</div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        // // $('select').prepend()
+        // let xmlhttp = new XMLHttpRequest();
+        // xmlhttp.onreadystatechange = function() {
+        //     if (this.readyState == 4 && this.status == 200) {
+        //         document.getElementById("txtHint").innerHTML = this.responseText;
+        //     }
+        // };
+        // xmlhttp.open("POST","getuser.php",true);
+        // xmlhttp.send();
+        var http = new XMLHttpRequest();
+        var url = 'indexPHP.php';
+        // var params = 'orem=ipsum&name=binny';
+        http.open('POST', url, true);
+
+//Send the proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        http.onreadystatechange = function () {//Call a function when the state changes.
+            if (http.readyState == 4 && http.status == 200) {
+                document.getElementById("there").innerHTML = this.responseText;
+            }
+        }
+        http.send();
+        // http.send(params);
+
+
+        $('#there').on('change', '#MYselected', function () {
+            // var val = $("#MYselected option:selected").text();
+            // alert(val);
+            // alert('tdybr');
+            let tag = $("#MYselected option:selected").text();
+            var http = new XMLHttpRequest();
+            var url = 'selectPHP.php?q=' + tag;
+            http.open('GET', url, true);
+            http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            http.onreadystatechange = function () {//Call a function when the state changes.
+                if (http.readyState == 4 && http.status == 200) {
+                    document.getElementById("input_text").innerHTML = this.responseText;
+                }
+            }
+            http.send();
+        });
+
+
+        $("input[type=submit]").on('click', function () {
+            let name = document.getElementById('yy').value;
+            alert(name);
+            var http = new XMLHttpRequest();
+            var url = 'createPHP.php?name=' + name;
+            http.open('GET', url, true);
+            http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            http.send();
+        });
+
+
+    })
+
+</script>
+</body>
+</html>

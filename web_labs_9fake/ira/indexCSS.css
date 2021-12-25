@@ -1,0 +1,155 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+    font-family: sans-serif;
+    font-weight: 1000;
+    background-color: #ffb9f6;
+}
+
+/*html{*/
+/*    background-color: #ffb9f6;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*}*/
+#text_editor {
+    float: left;
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    /*align-content: center;*/
+    /*text-align: center;*/
+    margin: 0;
+    height: 100%;
+    width: 60%;
+    background-color: palevioletred;
+}
+
+label {
+    /*text-align: center;*/
+    font-size: 1.5em;
+}
+
+p {
+    /*padding-top: 10px;*/
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+#input_text {
+    /*text-align: center;*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f1ddfd;
+    font-weight: normal;
+    border: 1px solid;
+    width: 90%;
+    height: 78%;
+}
+
+#other {
+    text-align: center;
+    width: available;
+    background-color: #FECB00;
+    height: 100%;
+}
+select{
+    background-color: #8300fe;
+    padding: 32px 20px;
+    font-size: 30px;
+}
+
+select:hover{
+    background-color: #9f3bff;
+    padding: 32px 20px;
+    font-size: 30px;
+}
+
+select option{
+    padding: 32px 64px;
+    text-align: center;
+    background-color: #8300fe;
+    /*text-decoration: none;*/
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+input[type="submit"]{
+    /*border: none;*/
+    background-color: white;
+    padding: 32px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button[type="button"]{
+    /*border: none;*/
+    /*color: white;*/
+    padding: 32px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+/*.save_button{*/
+/*    background-color: #1ede2e;*/
+/*    color: black;*/
+/*    border: 2px solid #109616;*/
+/*}*/
+/*.save_button:hover {*/
+/*    background-color: #109616;*/
+/*    color: white;*/
+/*}*/
+
+/*.delete_button{*/
+/*    background-color: #de1e1e;*/
+/*    color: black;*/
+/*    border: 2px solid #961010;*/
+/*}*/
+/*.delete_button:hover {*/
+/*    background-color: #961010;*/
+/*    color: white;*/
+/*}*/
+.save_button{
+    background-color: #08fe00;
+    color: black;
+    border: 2px solid #02b209;
+}
+.save_button:hover {
+    background-color: #02b209;
+    color: white;
+}
+
+
+
+.delete_button{
+    background-color: #fe0000;
+    color: black;
+    border: 2px solid #b20202;
+}
+.delete_button:hover {
+    background-color: #b20202;
+    color: white;
+}
+
+input[type="text"]{
+    padding: 15px;
+    font-size: 22px;
+}
+
+p[id="sel"]{
+    font-size: 30px;
+    font-weight: normal;
+}
